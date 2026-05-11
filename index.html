@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meine Insel Karte</title>
+</head>
+<body>
+
+<h2>Rügen Karte</h2>
+<canvas id="mapCanvas"></canvas>
+
+<script>
+fetch("selectedIslands/Ruegen-map.json")
+  .then(res => res.json())
+  .then(map => {
+    const canvas = document.getElementById("mapCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const tileSize = map.tilewidth;
+    canvas.width = map.width * tileSize;
+    canvas.height = map.height * tileSize;
+
+    const data = map.layers[0].data;
+
+    for (let y = 0; y < map.height; y++) {
+      for (let x = 0; x < map.width; x++) {
+        const index = y * map.width + x;
+        const value = data[index];
+
+        if (value !== 0) {
+          ctx.fillStyle = "green";
+        } else {
+          ctx.fillStyle = "lightblue";
+        }
+
+        ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
