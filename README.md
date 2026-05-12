@@ -37,6 +37,12 @@ Downloaded and generated JSON files will be saved in folder "selectedIslands" wh
 * `xxx_simplified.json` simplified polygon with geometric simplification 
 * `xxx-map.json` TileEd/WorkAdventure world with indexed tile map
 
+## Lokaler Webserver
+Im Projektordner starten:
+python3 -m http.server 8080
+
+Dann im Browser öffnen:
+http://localhost:8080/index.html
 
 
 
