@@ -1,5 +1,23 @@
 These Python scripts generate maps for [Workadventurei](https://workadventu.re) from [OpenStreetMap](https://openstreetmap.org) island polygons.
-
+## Projekt einrichten
+Für das Projekt wird Python 3 verwendet.
+```bash
+python3 --version
+```
+Virtuelle Umgebung erstellen:
+```bash
+python3 -m venv venv
+```
+Virtuelle Umgebung aktivieren:
+```bash
+source venv/bin/activate
+```
+Pakete installieren:
+```bash
+pip install -r requirements.txt
+```
+Der Ordner `venv/` wird über `.gitignore` nicht in GitLab hochgeladen.
+ 
 Generate a single WA map
 ============================
 
