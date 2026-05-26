@@ -61,6 +61,7 @@ python3 -m http.server 8080
 
 Dann im Browser öffnen:
 http://localhost:8080/index.html
+oder den verwendeten lokalen Port (z.B. 8081)
 
 
 
