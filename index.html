@@ -10,33 +10,46 @@
 
 <script>
 fetch("ruegen-map.json")
-  .then(res => res.json())
-  .then(map => {
-    const canvas = document.getElementById("mapCanvas");
-    const ctx = canvas.getContext("2d");
 
-    const tileSize = 8;
-    canvas.width = map.width * tileSize;
-    canvas.height = map.height * tileSize;
+.then(response => response.json())
 
-    const data = map.index;
+.then(map => {
 
+  const data = map.index;
+  const width = map.width;
+  const height = map.height;
+  const tileSize = 8;
 
-    for (let y = 0; y < map.height; y++) {
-      for (let x = 0; x < map.width; x++) {
-        const index = y * map.width + x;
-        const value = data[index];
+  const canvas = document.getElementById("mapCanvas");
+  canvas.width = width * tileSize;
+  canvas.height = height * tileSize;
+  const ctx = canvas.getContext("2d");
+  for (let y = 0; y < height; y++) {
+    for (let x = 0; x < width; x++) {
+      const value = data[y * width + x];
+      if (value === 0) {
+        ctx.fillStyle = "#4da6ff"; // Wasser
 
-        if (value !== 0) {
-          ctx.fillStyle = "green";
-        } else {
-          ctx.fillStyle = "lightblue";
-        }
+      } else if (value === 1) {
+        ctx.fillStyle = "#66cc66"; // Land
 
-        ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+      } else {
+        ctx.fillStyle = "#d9b38c"; // Küste
+
       }
+
+      ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
+
     }
-  });
+
+  }
+
+})
+
+.catch(error => {
+  document.body.innerHTML += "<p>Fehler beim Laden der map.json</p>";
+  console.error(error);
+});
 </script>
 
 </body>
