@@ -5,20 +5,28 @@
 </head>
 <body>
 
-<h2>Rügen Karte</h2>
+<h2>Insel Karte</h2>
+<p>
+  JSON-Datei auswählen:
+  <input type="file" id="fileInput" accept=".json">
+</p>
 <canvas id="mapCanvas"></canvas>
-
 <script>
-fetch("ruegen-map.json")
+function drawMap(map) {
+const layer = map.layers 
+? (map.layers.find(l => l.name === "tiles") ||
+ map.layers.find(l => l.type === "tilelayer"))
+: null;
+  const data = map.index || (layer ? layer.data : null);
 
-.then(response => response.json())
-
-.then(map => {
-
-  const data = map.index;
   const width = map.width;
   const height = map.height;
   const tileSize = 8;
+
+  if (!data || !width || !height) {
+    alert("Die JSON-Datei enthält keine gültigen Kartendaten.");
+    return;
+  }
 
   const canvas = document.getElementById("mapCanvas");
   canvas.width = width * tileSize;
@@ -39,16 +47,35 @@ fetch("ruegen-map.json")
       }
 
       ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
-
     }
 
   }
+}
 
-})
+fetch("ruegen-map.json")
+  .then(response => response.json())
+  .then(map => drawMap(map))
+  .catch(error => {
+    document.body.innerHTML += "<p>Fehler beim Laden der Standardkarte.</p>";
+    console.error(error);
+  });
 
-.catch(error => {
-  document.body.innerHTML += "<p>Fehler beim Laden der map.json</p>";
-  console.error(error);
+document.getElementById("fileInput").addEventListener("change", function(event) {
+  const file = event.target.files[0];
+  if (!file) {
+    return;
+  }
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      const map = JSON.parse(e.target.result);
+      drawMap(map);
+    } catch (error) {
+      alert("Die ausgewählte Datei ist kein gültiges JSON.");
+      console.error(error);
+    }
+  };
+  reader.readAsText(file);
 });
 </script>
 
