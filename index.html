@@ -14,38 +14,48 @@
 <script>
 function drawMap(map) {
 const layer = map.layers 
-? (map.layers.find(l => l.name === "tiles") ||
- map.layers.find(l => l.type === "tilelayer"))
-: null;
-  const data = map.index || (layer ? layer.data : null);
-
-  const width = map.width;
-  const height = map.height;
-  const tileSize = 8;
-
-  if (!data || !width || !height) {
+   ? (map.layers.find(l => l.name === "tiles") ||
+    map.layers.find(l => l.type === "tilelayer"))
+   : null;
+   const data = map.index || (layer ? layer.data : null);
+   console.log("Unique values:", [...new Set(data)]);
+   const width = map.width;
+   const height = map.height;
+   const tileSize = 8;
+   const isTiledMap = !!map.layers;
+    if (!data || !width || !height) {
     alert("Die JSON-Datei enthält keine gültigen Kartendaten.");
-    return;
-  }
+   return;
+     }
 
-  const canvas = document.getElementById("mapCanvas");
+   const canvas = document.getElementById("mapCanvas");
   canvas.width = width * tileSize;
   canvas.height = height * tileSize;
   const ctx = canvas.getContext("2d");
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
       const value = data[y * width + x];
-      if (value === 0) {
-        ctx.fillStyle = "#4da6ff"; // Wasser
+      if (isTiledMap) {
 
-      } else if (value === 1) {
-        ctx.fillStyle = "#66cc66"; // Land
+if (value === 1) {
+  ctx.fillStyle = "#4da6ff"; // Wasser
+} else if (value === 2) {
+  ctx.fillStyle = "#66cc66"; // Land
+} else {
+  ctx.fillStyle = "#d9b38c"; // Küste
+}
 
-      } else {
-        ctx.fillStyle = "#d9b38c"; // Küste
+} else {
 
-      }
+if (value === 0) {
+  ctx.fillStyle = "#4da6ff"; // Wasser
+} else if (value === 1) {
+  ctx.fillStyle = "#66cc66"; // Land
+} else {
+  ctx.fillStyle = "#d9b38c"; // Küste
+}
 
+}
       ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
     }
 
