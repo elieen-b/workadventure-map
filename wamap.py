@@ -95,7 +95,28 @@ def island(data, start):
       # imageLayer("image", 4, "..\/..\/Downloads\/Ruegen2.png", visible=False), 
       tileLayer("start", 1, start),
       tileLayer("tiles", 2, data),
-      objectLayer("floorLayer", 5, [])
+      objectLayer("places", 5, [
+  {
+    "id": 1,
+    "name": "Bergen",
+    "type": "village",
+    "x": 500,
+    "y": 500,
+    "width": 16,
+    "height": 16,
+    "point": True
+  },
+  {
+    "id": 2,
+    "name": "Sassnitz",
+    "type": "town",
+    "x": 900,
+    "y": 350,
+    "width": 20,
+    "height": 20,
+    "point": True
+  }
+])
     ]
   }
 
