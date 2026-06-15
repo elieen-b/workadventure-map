@@ -61,7 +61,131 @@ python3 -m http.server 8080
 
 Dann im Browser öffnen:
 http://localhost:8080/index.html
-oder den verwendeten lokalen Port (z.B. 8081)
+
+
+## Sprint 1 – Umgesetzte Funktionen
+
+### US-01: Inselkarte aus OpenStreetMap erzeugen
+
+Mit dem Skript tile.py kann aus einer OpenStreetMap-Relation eine WorkAdventure-kompatible Karte erzeugt werden.
+
+Beispiel:
+
+bash python tile.py --polygon 3403603 --output JSON 
+
+Das Skript führt folgende Schritte aus:
+
+1. Herunterladen der Inselgeometrie von OpenStreetMap.
+2. Skalierung der Koordinaten auf eine feste Tile-Größe.
+3. Erzeugung eines Tile-Indexes für Wasser, Land und Küstenlinien.
+4. Erzeugung einer JSON-Datei für Tiled und WorkAdventure.
+5. Erzeugung einer Vorschaukarte als PNG.
+
+Ergebnis:
+
+- island-data-xxxx.json
+- island-map-xxxx.json
+- map.png
+
+---
+
+### US-02: Karte im Browser anzeigen
+
+Die erzeugte JSON-Datei kann lokal im Browser dargestellt werden.
+
+Webserver starten:
+
+bash python3 -m http.server 8080 
+
+Browser öffnen:
+
+text http://localhost:8080/index.html 
+
+Die Karte wird auf einem HTML5-Canvas dargestellt.
+
+Farben:
+
+- Blau = Wasser
+- Grün = Land
+- Braun = Küstenlinie
+
+Standardmäßig wird beim Start die Datei ruegen-map.json geladen.
+
+---
+
+### US-03: Beliebige JSON-Datei auswählen
+
+Zusätzlich wurde eine Dateiauswahl implementiert.
+
+Der Benutzer kann über den Button „Datei auswählen“ eine beliebige JSON-Karte laden.
+
+Getestete Karten:
+
+- Rügen
+- Bali
+- Amrum
+- sylt
+
+Bei ungültigen Dateien wird eine Fehlermeldung angezeigt.
+
+---
+
+### US-04: Deployment und Nutzung dokumentieren
+
+Ziel dieser User Story war die Dokumentation der notwendigen Schritte zum Starten und Testen der Anwendung.
+
+#### Lokalen Webserver starten
+
+Im Projektordner:
+
+bash python3 -m http.server 8080 
+
+#### Browser öffnen
+
+text http://localhost:8080/index.html 
+
+Dadurch wird die Browseransicht der Karte geladen.
+
+#### WorkAdventure verwenden
+
+Die erzeugten Karten können zusätzlich über GitHub Pages veröffentlicht und anschließend in WorkAdventure geladen werden.
+
+#### Durchgeführte Tests
+
+- Lokaler Webserver startet erfolgreich.
+- Browseransicht wird geladen.
+- JSON Dateien können ausgewählt werden.
+- Karte wird korrekt dargestellt.
+- WorkAdventure kann die veröffentlichte Karte laden.
+
+#### Ergebnis
+
+Die Anwendung kann anhand der Dokumentation von einer anderen Person gestartet und getestet werden, ohne den Quellcode verändern zu müssen.
+
+---
+
+### US-05: Karte in WorkAdventure anzeigen
+
+Die erzeugten Karten wurden über GitHub Pages veröffentlicht.
+
+Beispiel einer Karten-URL:
+
+text https://elieen-b.github.io/workadventure-map/island-map-1434381.json 
+
+Für WorkAdventure wird die Karten-URL in einen WorkAdventure-Link eingebettet:
+
+text https://play.workadventu.re/_/global/elieen-b.github.io/workadventure-map/island-map-1434381.json 
+
+Dadurch kann die Karte direkt in WorkAdventure geladen werden.
+
+Getestet mit:
+
+- Rügen
+- Bali
+- Amrum
+- sylt
+
+---
 
 
 
