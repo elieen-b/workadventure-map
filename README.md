@@ -83,8 +83,8 @@ Das Skript führt folgende Schritte aus:
 
 Ergebnis:
 
-- island-data-xxxx.json
-- island-map-xxxx.json
+- island-data-1434381.json
+- island-map-1434381.json
 - map.png
 
 ---
