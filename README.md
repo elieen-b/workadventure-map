@@ -188,4 +188,27 @@ Getestet mit:
 ---
 
 
+## US-06: Punktförmige Orte als Object Layer speichern
+
+Für US-06 wurde die erzeugte WorkAdventure-JSON um einen Object Layer erweitert.
+
+Der neue Layer heißt `places` und speichert Orte als Objekte.
+
+Beispiel:
+
+```json
+
+{
+
+  "name": "Bergen",
+
+  "type": "village",
+
+  "x": 500,
+
+  "y": 500,
+
+  "point": true
+
+}
 
