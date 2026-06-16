@@ -75,6 +75,25 @@ if (placesLayer && placesLayer.objects)
         ctx.fillText(place.name, place.x + 8, place.y - 8);
     }); 
  }
+  const roadsLayer = map.layers
+   ? map.layers.find(l => l.name === "roads")
+   : null;
+
+ if (roadsLayer && roadsLayer.objects) {
+   roadsLayer.objects.forEach(road => {
+     ctx.strokeStyle = "black";
+     ctx.lineWidth = 3;
+     ctx.beginPath();
+
+     ctx.moveTo(road.polyline[0].x, road.polyline[0].y);
+
+     for (let i = 1; i < road.polyline.length; i++) {
+       ctx.lineTo(road.polyline[i].x, road.polyline[i].y);
+     }
+
+     ctx.stroke();
+   });
+ }
 }
 
 fetch("ruegen-map.json")
