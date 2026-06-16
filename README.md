@@ -243,7 +243,7 @@ US-08: Straßen / Wege als Linien speichern
 Für US-08 wurde die erzeugte Karten-Datei um einen weiteren Object Layer erweitert.
 Der neue Layer heißt roads. In diesem Layer werden Straßen bzw. Wege als Linien gespeichert.
 Eine Linie besteht aus mehreren Koordinatenpunkten. Diese Punkte werden später verbunden und ergeben dadurch einen Weg oder eine Straße.
-
+```json
 Beispiel:
 {
   "id": 1,
@@ -257,7 +257,8 @@ Beispiel:
     { "x": 300, "y": 180 }
   ]
 }
-
+```
+```json
 Zusätzlich wurde ein zweiter Beispielweg gespeichert:
 {
   "id": 2,
@@ -271,7 +272,7 @@ Zusätzlich wurde ein zweiter Beispielweg gespeichert:
     { "x": 600, "y": 320 }
   ]
 }
-
+```
 Die Umsetzung erfolgt in wamap.py. Beim Ausführen von python3 wamap.py wird die Datei island-map-1434381.json neu erzeugt und enthält danach den Layer roads.
 Durchgeführte Tests:
 1. Karte neu erzeugen
