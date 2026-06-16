@@ -20942,6 +20942,35 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "placeLabels",
+            "id": 7,
+            "x": 0,
+            "y": 0,
+            "width": 92,
+            "height": 113,
+            "visible": true,
+            "opacity": 1,
+            "type": "objectgroup",
+            "objects": [
+                {
+                    "id": 1,
+                    "name": "Bergen Label",
+                    "type": "text",
+                    "x": 508,
+                    "y": 492,
+                    "text": "Bergen"
+                },
+                {
+                    "id": 2,
+                    "name": "Sassnitz Label",
+                    "type": "text",
+                    "x": 68,
+                    "y": 32,
+                    "text": "Sassnitz"
+                }
+            ]
         }
     ]
 }

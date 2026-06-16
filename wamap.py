@@ -142,6 +142,24 @@ def island(data, start):
             {"x": 600, "y": 320}
           ]
         }
+      ]),
+      objectLayer("placeLabels", 7, [
+        {
+    "id": 1,
+          "name": "Bergen Label",
+          "type": "text",
+          "x": 508,
+          "y": 492,
+          "text": "Bergen"
+        },
+        {
+    "id": 2,
+          "name": "Sassnitz Label",
+          "type": "text",
+          "x": 68,
+          "y": 32,
+          "text": "Sassnitz"
+        }
       ])
     ]
   }
