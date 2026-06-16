@@ -211,6 +211,7 @@ Beispiel:
   "point": true
 
 }
+```
 ---
 
 ## US-07: Punkte im Browser anzeigen
@@ -234,7 +235,7 @@ Durchgeführter Test:
 1. Lokalen Webserver starten
 ```bash
 python3 -m http.server 8080
-
+```
 ---
 
 US-08: Straßen / Wege als Linien speichern
@@ -314,7 +315,7 @@ Beispiel:
     { "x": 300, "y": 180 }
   ]
 }
-
+```
 In der Browseransicht wird der Layer roads ausgelesen.
 Der erste Punkt der polyline wird als Startpunkt verwendet.
 Alle weiteren Punkte werden mit Linien verbunden.
