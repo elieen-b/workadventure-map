@@ -212,3 +212,24 @@ Beispiel:
 
 }
 
+## US-07: Punkte im Browser anzeigen
+
+Für US-07 wurde die Browseranzeige erweitert.
+
+Die Anwendung sucht in der geladenen JSON-Datei nach einem Layer mit dem Namen `places`. Aus diesem Layer werden die gespeicherten Orte ausgelesen und anschließend auf der Karte dargestellt.
+
+Die Darstellung erfolgt als:
+
+- roter Punkt für den Ort
+- Ortsname als Beschriftung neben dem Punkt
+
+Die Umsetzung erfolgt in `index.html`.
+
+Getestet wurde mit den Beispielorten:
+- Bergen
+- Sassnitz
+
+Durchgeführter Test:
+1. Lokalen Webserver starten
+```bash
+python3 -m http.server 8080
