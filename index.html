@@ -60,6 +60,21 @@ if (value === 0) {
     }
 
   }
+  const placesLayer = map.layers
+    ? map.layers.find(l => l.name === "places")
+    : null;
+if (placesLayer && placesLayer.objects)
+ {
+    placesLayer.objects.forEach(place => {
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(place.x, place.y, 5, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.fillStyle = "black";
+        ctx.font = "12px Arial";
+        ctx.fillText(place.name, place.x + 8, place.y - 8);
+    }); 
+ }
 }
 
 fetch("ruegen-map.json")

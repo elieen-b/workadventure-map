@@ -110,8 +110,8 @@ def island(data, start):
     "id": 2,
     "name": "Sassnitz",
     "type": "town",
-    "x": 900,
-    "y": 350,
+    "x": 60,
+    "y": 40,
     "width": 20,
     "height": 20,
     "point": True
