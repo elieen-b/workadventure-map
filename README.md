@@ -233,3 +233,59 @@ Durchgeführter Test:
 1. Lokalen Webserver starten
 ```bash
 python3 -m http.server 8080
+
+US-08: Straßen / Wege als Linien speichern
+
+Für US-08 wurde die erzeugte Karten-Datei um einen weiteren Object Layer erweitert.
+Der neue Layer heißt roads. In diesem Layer werden Straßen bzw. Wege als Linien gespeichert.
+Eine Linie besteht aus mehreren Koordinatenpunkten. Diese Punkte werden später verbunden und ergeben dadurch einen Weg oder eine Straße.
+
+Beispiel:
+{
+  "id": 1,
+  "name": "Beispielweg 1",
+  "type": "road",
+  "x": 0,
+  "y": 0,
+  "polyline": [
+    { "x": 100, "y": 100 },
+    { "x": 200, "y": 140 },
+    { "x": 300, "y": 180 }
+  ]
+}
+
+Zusätzlich wurde ein zweiter Beispielweg gespeichert:
+{
+  "id": 2,
+  "name": "Beispielweg 2",
+  "type": "path",
+  "x": 0,
+  "y": 0,
+  "polyline": [
+    { "x": 400, "y": 300 },
+    { "x": 500, "y": 350 },
+    { "x": 600, "y": 320 }
+  ]
+}
+
+Die Umsetzung erfolgt in wamap.py. Beim Ausführen von python3 wamap.py wird die Datei island-map-1434381.json neu erzeugt und enthält danach den Layer roads.
+Durchgeführte Tests:
+1. Karte neu erzeugen
+
+python3 wamap.py
+
+2. Prüfen, ob der Roads-Layer vorhanden ist
+grep roads island-map-1434381.json
+
+3. Prüfen, ob Linienobjekte gespeichert wurden
+grep polyline island-map-1434381.json
+
+Ergebnis:
+
+* Der Object Layer roads wird erzeugt.
+* Zwei Beispielwege werden als Polyline-Objekte gespeichert.
+* Die Linieninformationen sind in der JSON-Datei vorhanden.
+* Die JSON-Datei bleibt gültig.
+* Die Daten können in US-09 im Browser dargestellt werden.
+
+!!! Die Straßenkoordinaten wurden für Sprint 2 als Beispielwerte gesetzt. Eine automatische Übernahme echter Straßen aus OpenStreetMap ist noch nicht umgesetzt.
