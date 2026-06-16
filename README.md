@@ -211,6 +211,7 @@ Beispiel:
   "point": true
 
 }
+---
 
 ## US-07: Punkte im Browser anzeigen
 
@@ -233,6 +234,8 @@ Durchgeführter Test:
 1. Lokalen Webserver starten
 ```bash
 python3 -m http.server 8080
+
+---
 
 US-08: Straßen / Wege als Linien speichern
 
@@ -290,6 +293,7 @@ Ergebnis:
 
 !!! Die Straßenkoordinaten wurden für Sprint 2 als Beispielwerte gesetzt. Eine automatische Übernahme echter Straßen aus OpenStreetMap ist noch nicht umgesetzt.
 
+---
 
 ### US-09: Straßen im Browser anzeigen
 
