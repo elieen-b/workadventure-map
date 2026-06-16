@@ -188,7 +188,7 @@ Getestet mit:
 ---
 
 
-## US-06: Punktförmige Orte als Object Layer speichern
+### US-06: Punktförmige Orte als Object Layer speichern
 
 Für US-06 wurde die erzeugte WorkAdventure-JSON um einen Object Layer erweitert.
 
@@ -214,7 +214,7 @@ Beispiel:
 ```
 ---
 
-## US-07: Punkte im Browser anzeigen
+### US-07: Punkte im Browser anzeigen
 
 Für US-07 wurde die Browseranzeige erweitert.
 
@@ -238,7 +238,7 @@ python3 -m http.server 8080
 ```
 ---
 
-## US-08: Straßen / Wege als Linien speichern
+### US-08: Straßen / Wege als Linien speichern
 
 Für US-08 wurde die erzeugte Karten-Datei um einen weiteren Object Layer erweitert.
 Der neue Layer heißt roads. In diesem Layer werden Straßen bzw. Wege als Linien gespeichert.
