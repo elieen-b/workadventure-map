@@ -289,3 +289,48 @@ Ergebnis:
 * Die Daten können in US-09 im Browser dargestellt werden.
 
 !!! Die Straßenkoordinaten wurden für Sprint 2 als Beispielwerte gesetzt. Eine automatische Übernahme echter Straßen aus OpenStreetMap ist noch nicht umgesetzt.
+
+
+### US-09: Straßen im Browser anzeigen
+
+In US-09 werden die in US-08 gespeicherten Straßen und Wege im Browser sichtbar dargestellt.
+Die Straßen liegen in der JSON-Datei im Object Layer `roads`.
+Jede Straße enthält eine `polyline`.  
+Eine `polyline` besteht aus mehreren Punkten mit `x`- und `y`-Koordinaten.
+
+Beispiel:
+
+```json
+{
+  "name": "Beispielweg 1",
+  "type": "road",
+  "polyline": [
+    { "x": 100, "y": 100 },
+    { "x": 200, "y": 140 },
+    { "x": 300, "y": 180 }
+  ]
+}
+
+In der Browseransicht wird der Layer roads ausgelesen.
+Der erste Punkt der polyline wird als Startpunkt verwendet.
+Alle weiteren Punkte werden mit Linien verbunden.
+
+Dadurch werden Straßen und Wege als schwarze Linien auf der Karte angezeigt.
+
+für den Test
+
+1. Lokalen Webserver starten:
+
+python3 -m http.server 8080
+
+2. Browser öffnen:
+
+http://localhost:8080/index.html
+
+3. Datei island-map-1434381.json auswählen.
+
+Erwartetes Ergebnis
+
+* Die Karte wird angezeigt.
+* Die Orte aus dem Layer places werden angezeigt.
+* Die Straßen aus dem Layer roads werden als schwarze Linien angezeigt.
