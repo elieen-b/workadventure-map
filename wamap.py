@@ -116,7 +116,33 @@ def island(data, start):
     "height": 20,
     "point": True
   }
-])
+]),
+         objectLayer("roads", 6, [
+        {
+          "id": 1,
+          "name": "Beispielweg 1",
+          "type": "road",
+          "x": 0,
+          "y": 0,
+          "polyline": [
+            {"x": 100, "y": 100},
+            {"x": 200, "y": 140},
+            {"x": 300, "y": 180}
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Beispielweg 2",
+          "type": "path",
+          "x": 0,
+          "y": 0,
+          "polyline": [
+            {"x": 400, "y": 300},
+            {"x": 500, "y": 350},
+            {"x": 600, "y": 320}
+          ]
+        }
+      ])
     ]
   }
 
