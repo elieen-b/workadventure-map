@@ -106,6 +106,18 @@ def create_overpass_query(bounds):
 out geom;
 """
 
+def download_osm_roads(query):
+  url = "https://overpass-api.de/api/interpreter"
+  data = urllib.parse.urlencode({"data": query}).encode("utf-8")
+  request = urllib.request.Request(
+     url,
+     data=data,
+     headers={"User-Agent": "team-9-workadventure-inselszenario"}
+     )
+
+  with urllib.request.urlopen(request) as response:
+    return json.load(response)
+
 def island(data, start):
   return {
     "compressionlevel":-1,
@@ -239,6 +251,11 @@ if __name__ == "__main__":
   import json
   import sys
 
+  #bounds = get_bounds_from_geojson("osm-ruegen.geojson")
+  #query = create_overpass_query(bounds) 
+  #osm_data = download_osm_roads(query)
+  #print(len(osm_data["elements"]))
+  
   dataFile = len(sys.argv)>1 and sys.argv[1] or "island-data-1434381.json"
   with open(dataFile) as dataJson:
     data = json.load(dataJson)
