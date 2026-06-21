@@ -290,37 +290,7 @@ def island(data, start, places=None, roads=None, roadLabels=None):
 
       objectLayer("roadLabels", 8, roadLabels),
 
-<<<<<<< HEAD
-      objectLayer("placeLabels", 7, [
-        {
-    "id": 1,
-          "name": "Bergen Label",
-          "type": "text",
-          "x": 508,
-          "y": 492,
-          "text": "Bergen"
-        },
-        {
-    "id": 2,
-          "name": "Sassnitz Label",
-          "type": "text",
-          "x": 68,
-          "y": 32,
-          "text": "Sassnitz"
-        }
-      ])
-=======
-          "id": 2,
-          "name": "Beispielweg 2 Label",
-          "type": "text",
-          "x": 500,
-          "y": 350,
-          "text": "Beispielweg 2"
-        }
-
-]),
-objectLayer("placeLabels", 7, createPlaceLabels(places))
->>>>>>> origin/main
+      objectLayer("placeLabels", 7, createPlaceLabels(places))
     ]
   }
 
@@ -331,6 +301,7 @@ if __name__ == "__main__":
   bounds = get_bounds_from_geojson("osm-ruegen.geojson")
   query = create_overpass_query(bounds)
   osm_data = download_osm_roads(query)
+  roads = create_road_objects(osm_data, bounds)
   roadLabels = create_road_label_objects(roads)  
   print(len(roads))
   
