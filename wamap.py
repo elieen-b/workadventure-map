@@ -3,6 +3,11 @@ mapHeight=89
 tileSize= 32
 exit="map.json"
 
+import json
+import urllib.request
+import urllib.parse
+
+osmRoads = []
 
 def exitLayer(name, layerId, exitTile, exitCoords, exitUrl, visible=True):
   data = [0] * (mapWidth*mapHeight)
