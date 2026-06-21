@@ -60,7 +60,31 @@ def baseLayer(name, layerId, layerType, visible=True):
     "opacity":1,
     "type": layerType
   }
+def defaultPlaces():
 
+  return [
+    {
+      "id": 1,
+      "name": "Bergen",
+      "type": "village",
+      "x": 500,
+      "y": 500,
+      "width": 16,
+      "height": 16,
+      "point": True
+
+    },
+    {
+      "id": 2,
+      "name": "Sassnitz",
+      "type": "town",
+      "x": 60,
+      "y": 40,
+      "width": 20,
+      "height": 20,
+      "point": True
+    }
+  ]
 def create_osm_roads():
   print("OSM roads loader started")
   return []
@@ -80,18 +104,13 @@ def get_bounds_from_geojson(filename):
           collect(item)
 
   for geometry in geojson["geometries"]:
-   collect(geometry["coordinates"])
+    collect(geometry["coordinates"])
 
   lons = [p[0] for p in coordinates]
   lats = [p[1] for p in coordinates]
 
-  return (
-    min(lons),
-    min(lats),
-    max(lons),
-    max(lats)
-  )
-  
+  return (min(lons), min(lats), max(lons), max(lats))
+
 def create_overpass_query(bounds):
   south = bounds[1]
   west = bounds[0]
@@ -110,10 +129,10 @@ def download_osm_roads(query):
   url = "https://overpass-api.de/api/interpreter"
   data = urllib.parse.urlencode({"data": query}).encode("utf-8")
   request = urllib.request.Request(
-     url,
-     data=data,
-     headers={"User-Agent": "team-9-workadventure-inselszenario"}
-    )
+    url,
+    data=data,
+    headers={"User-Agent": "team-9-workadventure-inselszenario"}
+  )
 
   with urllib.request.urlopen(request) as response:
     return json.load(response)
@@ -129,26 +148,24 @@ def lonlat_to_pixel(lon, lat, bounds):
   return x, y
 
 def create_road_objects(osm_data, bounds):
-
   roads = []
   road_id = 1
+
   for element in osm_data["elements"]:
     if element.get("type") != "way":
       continue
+
     geometry = element.get("geometry", [])
     if len(geometry) < 2:
       continue
+
     tags = element.get("tags", {})
     road_name = tags.get("name", "OSM road")
     road_type = tags.get("highway", "road")
 
     polyline = []
     for point in geometry:
-      x, y = lonlat_to_pixel(
-        point["lon"],
-        point["lat"],
-        bounds
-      )
+      x, y = lonlat_to_pixel(point["lon"], point["lat"], bounds)
       polyline.append({"x": x, "y": y})
 
     road = {
@@ -160,11 +177,16 @@ def create_road_objects(osm_data, bounds):
       "polyline": polyline,
       "geometry": geometry
     }
+
     roads.append(road)
     road_id += 1
+
   return roads
 
-def island(data, start, roads):
+def island(data, start, roads, places=None):
+  if places is None:
+    places = defaultPlaces()
+
   return {
     "compressionlevel":-1,
     "version":1.4,
@@ -203,29 +225,9 @@ def island(data, start, roads):
       # imageLayer("image", 4, "..\/..\/Downloads\/Ruegen2.png", visible=False), 
       tileLayer("start", 1, start),
       tileLayer("tiles", 2, data),
-      objectLayer("places", 5, [
-  {
-    "id": 1,
-    "name": "Bergen",
-    "type": "village",
-    "x": 500,
-    "y": 500,
-    "width": 16,
-    "height": 16,
-    "point": True
-  },
-  {
-    "id": 2,
-    "name": "Sassnitz",
-    "type": "town",
-    "x": 60,
-    "y": 40,
-    "width": 20,
-    "height": 20,
-    "point": True
-  }
-]),
-       objectLayer("roads", 6, roads),
+      objectLayer("floorLayer", 4, []),
+      objectLayer("places", 5, places),
+      objectLayer("roads", 6, roads),
 
         objectLayer("roadLabels", 8, [
         {
