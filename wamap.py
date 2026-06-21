@@ -126,6 +126,16 @@ def lonlat_to_pixel(lon, lat, bounds):
   y = int((max_lat - lat) / (max_lat - min_lat) * canvas_height)
   return x, y
 
+def create_road_objects(osm_data, bounds):
+  roads = []
+  road_id = 1
+
+  for element in osm_data["elements"]:
+    if element.get("type") != "way":
+      continue
+
+  return roads
+
 def island(data, start):
   return {
     "compressionlevel":-1,
