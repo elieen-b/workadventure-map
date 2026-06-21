@@ -132,7 +132,11 @@ def create_road_objects(osm_data, bounds):
 
   for element in osm_data["elements"]:
     if element.get("type") != "way":
-      continue
+       continue
+
+    geometry = element.get("geometry", [])
+    if len(geometry) < 2:
+       continue
 
   return roads
 
