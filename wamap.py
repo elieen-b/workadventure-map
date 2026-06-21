@@ -85,6 +85,28 @@ def defaultPlaces():
       "point": True
     }
   ]
+
+def createPlaceLabels(places):
+  labels = []
+  label_id = 1
+
+  for place in places:
+    if not place.get("name"):
+      continue
+
+    labels.append({
+      "id": label_id,
+      "name": place["name"] + " Label",
+      "type": "text",
+      "x": place["x"] + 8,
+      "y": place["y"] - 8,
+      "text": place["name"]
+    })
+
+    label_id += 1
+
+  return labels
+
 def create_osm_roads():
   print("OSM roads loader started")
   return []
@@ -249,24 +271,7 @@ def island(data, start, roads, places=None):
         }
 
 ]),
-      objectLayer("placeLabels", 7, [
-        {
-    "id": 1,
-          "name": "Bergen Label",
-          "type": "text",
-          "x": 508,
-          "y": 492,
-          "text": "Bergen"
-        },
-        {
-    "id": 2,
-          "name": "Sassnitz Label",
-          "type": "text",
-          "x": 68,
-          "y": 32,
-          "text": "Sassnitz"
-        }
-      ])
+objectLayer("placeLabels", 7, createPlaceLabels(places))
     ]
   }
 

@@ -10,7 +10,8 @@ class Island:
     self.polygon = polygon
 
 islands = [
-    Island("Sylt", 11, 1576925),
+  #Island("Sylt", 11, 1576925),
+  Island("Ruegen", 10, 1434381),
   # Island("New Guinea", 6, 3986076), # downloaded, but segmentation fails
   # Island("Borneo", 6, 3986083), # extent 0?
   # Island("Great Britain", 6, 6038068), # broken
@@ -211,7 +212,7 @@ def tileIndex(geoJson, shortIslandName, polygon):
       data["height"]
 ) 
 
-  mapJson = wamap.island(index, start, places)
+  mapJson = wamap.island(index, start, [], places)
   
   with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
       json.dump(mapJson, f, indent=4)

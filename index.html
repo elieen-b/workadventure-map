@@ -65,6 +65,8 @@ function drawMap(map) {
   }
 
   // Straßen zeichnen
+  console.log(map.layers);
+  
   const roadsLayer = map.layers
     ? map.layers.find(l => l.name === "roads")
     : null;
@@ -111,10 +113,18 @@ function drawMap(map) {
 
   if (placesLayer && placesLayer.objects) {
     placesLayer.objects.forEach(place => {
-      ctx.fillStyle = "red";
-      ctx.beginPath();
-      ctx.arc(place.x, place.y, 5, 0, 2 * Math.PI);
-      ctx.fill();
+      const placeSize = place.size || place.width || 10;
+      const placeColor = place.color || "red";
+      const radius = placeSize / 2;
+
+     ctx.fillStyle = placeColor;
+     ctx.beginPath();
+     ctx.arc(place.x, place.y, radius, 0, 2 * Math.PI);
+     ctx.fill();
+
+     ctx.strokeStyle = "black";
+     ctx.lineWidth = 1;
+     ctx.stroke();
 
       ctx.fillStyle = "black";
       ctx.font = "12px Arial";
