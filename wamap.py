@@ -65,6 +65,32 @@ def create_osm_roads():
   print("OSM roads loader started")
   return []
 
+def get_bounds_from_geojson(filename):
+  with open(filename) as f:
+    geojson = json.load(f)
+
+  coordinates = []
+
+  def collect(data):
+    if isinstance(data, list):
+      if len(data) == 2 and isinstance(data[0], (int, float)):
+        coordinates.append(data)
+      else:
+        for item in data:
+          collect(item)
+
+  collect(geojson["coordinates"])
+
+  lons = [p[0] for p in coordinates]
+  lats = [p[1] for p in coordinates]
+
+  return (
+    min(lons),
+    min(lats),
+    max(lons),
+    max(lats)
+  )
+  
 def island(data, start):
   return {
     "compressionlevel":-1,
