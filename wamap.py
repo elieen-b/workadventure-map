@@ -144,6 +144,14 @@ def create_road_objects(osm_data, bounds):
 
   polyline = []
 
+  for point in geometry:
+    x, y = lonlat_to_pixel(
+      point["lon"],
+      point["lat"],
+      bounds
+    )
+    polyline.append({"x": x, "y": y})
+
   road = {
     "id": road_id,
     "name": road_name,
