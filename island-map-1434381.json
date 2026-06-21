@@ -20856,6 +20856,18 @@
             ]
         },
         {
+            "name": "floorLayer",
+            "id": 4,
+            "x": 0,
+            "y": 0,
+            "width": 92,
+            "height": 113,
+            "visible": true,
+            "opacity": 1,
+            "type": "objectgroup",
+            "objects": []
+        },
+        {
             "name": "places",
             "id": 5,
             "x": 0,

@@ -55,9 +55,36 @@ def baseLayer(name, layerId, layerType, visible=True):
     "opacity":1,
     "type": layerType
   }
+def defaultPlaces():
+    return [
+        {
+            "id": 1,
+            "name": "Bergen",
+            "type": "village",
+            "x": 500,
+            "y": 500,
+            "width": 16,
+            "height": 16,
+            "point": True
+        },
 
-def island(data, start):
-  return {
+        {
+            "id": 2,
+            "name": "Sassnitz",
+            "type": "town",
+            "x": 60,
+            "y": 40,
+            "width": 20,
+            "height": 20,
+            "point": True
+        }
+    ]
+
+def island(data, start, places=None):
+    if places is None:
+        places = defaultPlaces()
+
+    return {
     "compressionlevel":-1,
     "version":1.4,
     "type":"map",
@@ -95,29 +122,11 @@ def island(data, start):
       # imageLayer("image", 4, "..\/..\/Downloads\/Ruegen2.png", visible=False), 
       tileLayer("start", 1, start),
       tileLayer("tiles", 2, data),
-      objectLayer("places", 5, [
-  {
-    "id": 1,
-    "name": "Bergen",
-    "type": "village",
-    "x": 500,
-    "y": 500,
-    "width": 16,
-    "height": 16,
-    "point": True
-  },
-  {
-    "id": 2,
-    "name": "Sassnitz",
-    "type": "town",
-    "x": 60,
-    "y": 40,
-    "width": 20,
-    "height": 20,
-    "point": True
-  }
-]),
-         objectLayer("roads", 6, [
+
+      objectLayer("floorLayer", 4, []),
+      objectLayer("places", 5, places),
+ 
+      objectLayer("roads", 6, [
         {
           "id": 1,
           "name": "Beispielweg 1",
