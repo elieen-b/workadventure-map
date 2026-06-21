@@ -127,41 +127,37 @@ def lonlat_to_pixel(lon, lat, bounds):
   return x, y
 
 def create_road_objects(osm_data, bounds):
+
   roads = []
   road_id = 1
-
   for element in osm_data["elements"]:
     if element.get("type") != "way":
-       continue
-
+      continue
     geometry = element.get("geometry", [])
     if len(geometry) < 2:
-       continue
+      continue
+    tags = element.get("tags", {})
+    road_name = tags.get("name", "OSM road")
+    road_type = tags.get("highway", "road")
 
-  tags = element.get("tags", {})
-  road_name = tags.get("name", "OSM road")
-  road_type = tags.get("highway", "road")
+    polyline = []
+    for point in geometry:
+      x, y = lonlat_to_pixel(
+        point["lon"],
+        point["lat"],
+        bounds
+      )
+      polyline.append({"x": x, "y": y})
 
-  polyline = []
-
-  for point in geometry:
-    x, y = lonlat_to_pixel(
-      point["lon"],
-      point["lat"],
-      bounds
-    )
-    polyline.append({"x": x, "y": y})
-
-  road = {
-    "id": road_id,
-    "name": road_name,
-    "type": road_type,
-    "polyline": polyline,
-    "geometry": geometry
-  }
-  roads.append(road)
-  road_id += 1
-
+    road = {
+      "id": road_id,
+      "name": road_name,
+      "type": road_type,
+      "polyline": polyline,
+      "geometry": geometry
+    }
+    roads.append(road)
+    road_id += 1
   return roads
 
 def island(data, start):
