@@ -171,10 +171,20 @@ def tileIndex(geoJson, shortIslandName, polygon):
   data = createTileIndex(geoJson)
   wamap.mapWidth = data["width"]
   wamap.mapHeight = data["height"]
+
   index = [d+1 for d in data["index"]]
   start = [2 if d1==2 and d2>2  else 0 for (d1,d2) in zip(index[:-1],index[1:])] + [0]
-  mapJson = wamap.island(index, start)
-  with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
+
+  places = placesFromOSM(
+    polygon,
+    geoJson,
+    data["width"],
+    data["height"]
+)
+
+mapJson = wamap.island(index, start, places)
+  
+with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
     json.dump(mapJson, f)
 
 def islandIndex():
