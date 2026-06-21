@@ -131,7 +131,27 @@ out;
          if "name" not in tags:
              continue
 
-    return None  
+         lon = element["lon"]
+         lat = element["lat"]
+
+          x = int((lon - minLon) / (maxLon - minLon) * width * wamap.tileSize)
+          y = int((maxLat - lat) / (maxLat - minLat) * height * wamap.tileSize)
+
+          places.append({
+              "id": len(places) + 1,
+              "name": tags["name"],
+              "type": tags.get("place", "place"),
+              "x": x,
+              "y": y,
+              "width": 16,
+              "height": 16,
+              "point": True
+    })
+
+    if len(places) == 0:
+        return None
+
+    return places
     
 
 def readAndMap(action):
