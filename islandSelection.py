@@ -1,5 +1,5 @@
 from tile import jsonFromPolygon, jsonFromFile, multiPolyCoords, createMap, scaleFor, createTileIndex
-import os, math, json, wamap
+import os, math, json, wamap, errno
 import urllib.request
 import urllib.parse
 
@@ -10,7 +10,7 @@ class Island:
     self.polygon = polygon
 
 islands = [
-  # Island("Sylt", 11, 1576925),
+  Island("Ruegen", 10, 1434381),
   # Island("New Guinea", 6, 3986076), # downloaded, but segmentation fails
   # Island("Borneo", 6, 3986083), # extent 0?
   # Island("Great Britain", 6, 6038068), # broken
@@ -33,7 +33,7 @@ islands = [
   # Island("Tenerife", 10, 2108882),
   # Island("Majorca", 10, 6803636),
   # Island("Falster", 10, 5178556),
-    Island("Ruegen", 10, 1434381),
+  # Island("Ruegen", 10, 1434381),
   # Island("Bali", 10, 2130352),
   # Island("Long Island", 10, 3955977),
   # Island("Fischland", 11, 10650535),
@@ -146,16 +146,36 @@ out;
         x = int((lon - minLon) / (maxLon - minLon) * width * wamap.tileSize)
         y = int((maxLat - lat) / (maxLat - minLat) * height * wamap.tileSize)
 
+        placeType = tags.get("place", "place")
+
+        if placeType == "city":
+            placeSize = 28
+            placeColor = "red"
+        elif placeType == "town":
+            placeSize = 22
+            placeColor = "red"
+        elif placeType == "village":
+            placeSize = 16
+            placeColor = "orange"
+        elif placeType == "hamlet":
+            placeSize = 10
+            placeColor = "yellow"
+        else:
+            placeSize = 14
+            placeColor = "orange"
+
         places.append({
             "id": len(places) + 1,
             "name": tags["name"],
-            "type": tags.get("place", "place"),
+            "type": placeType,
             "x": x,
             "y": y,
-            "width": 16,
-            "height": 16,
+            "width": placeSize,
+            "height": placeSize,
+            "size": placeSize,
+            "color": placeColor,
             "point": True
-      })
+        })
 
     if len(places) == 0:
         return None
@@ -195,6 +215,7 @@ def tileIndex(geoJson, shortIslandName, polygon):
   osm_data = wamap.download_osm_roads(query)
   roads = wamap.create_road_objects(osm_data, bounds)
 
+<<<<<<< HEAD
   roadLabels = wamap.create_road_label_objects(roads)
 
   mapJson = wamap.island(
@@ -205,6 +226,10 @@ def tileIndex(geoJson, shortIslandName, polygon):
     roads,
     roadLabels
   )
+=======
+  mapJson = wamap.island(index, start, [], places)
+  
+>>>>>>> origin/main
   with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
       json.dump(mapJson, f, indent=4)
 

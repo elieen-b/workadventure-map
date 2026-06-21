@@ -65,6 +65,8 @@ function drawMap(map) {
   }
 
   // Straßen zeichnen
+  console.log(map.layers);
+  
   const roadsLayer = map.layers
     ? map.layers.find(l => l.name === "roads")
     : null;
@@ -106,48 +108,32 @@ function drawMap(map) {
 
   // Orte zeichnen
   const placesLayer = map.layers
-<<<<<<< HEAD
-  ? map.layers.find(l => l.name === "places")
-  : null;
-
-if (placesLayer && placesLayer.objects) {
-  console.log("Places loaded:", placesLayer.objects.length);
-
-  placesLayer.objects.forEach(place => {
-    const placeX = place.x * tileSize / 32;
-    const placeY = place.y * tileSize / 32;
-
-    ctx.fillStyle = "red";
-    ctx.beginPath();
-    ctx.arc(placeX, placeY, 6, 0, 2 * Math.PI);
-    ctx.fill();
-
-    ctx.fillStyle = "black";
-    ctx.font = "12px Arial";
-    ctx.fillText(place.name, placeX + 8, placeY - 8);
-  });
-}
-  const roadsLayer = map.layers
-   ? map.layers.find(l => l.name === "roads")
-   : null;
-=======
     ? map.layers.find(l => l.name === "places")
     : null;
 
   if (placesLayer && placesLayer.objects) {
     placesLayer.objects.forEach(place => {
-      ctx.fillStyle = "red";
+      const scale = tileSize / 32;
+      const placeX = place.x * scale;
+      const placeY = place.y * scale;
+      const placeSize = place.size || place.width || 10;
+      const placeColor = place.color || "red";
+      const radius = (placeSize * scale) / 2;
+
+      ctx.fillStyle = placeColor;
       ctx.beginPath();
-      ctx.arc(place.x, place.y, 5, 0, 2 * Math.PI);
+      ctx.arc(placeX, placeY, radius, 0, 2 * Math.PI);
       ctx.fill();
->>>>>>> origin/main
+
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 1;
+      ctx.stroke();
 
       ctx.fillStyle = "black";
       ctx.font = "12px Arial";
-      ctx.fillText(place.name, place.x + 8, place.y - 8);
+      ctx.fillText(place.name, placeX + 8, placeY - 8);
     });
   }
-
   // Straßenlabels zeichnen
   const roadLabelsLayer = map.layers
     ? map.layers.find(l => l.name === "roadLabels")
