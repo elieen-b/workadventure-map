@@ -92,6 +92,20 @@ def get_bounds_from_geojson(filename):
     max(lats)
   )
   
+def create_overpass_query(bounds):
+  south = bounds[1]
+  west = bounds[0]
+  north = bounds[3]
+  east = bounds[2]
+
+  return f"""
+[out:json];
+(
+  way["highway"]({south},{west},{north},{east});
+);
+out geom;
+"""
+
 def island(data, start):
   return {
     "compressionlevel":-1,
