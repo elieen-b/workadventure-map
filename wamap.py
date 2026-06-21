@@ -79,7 +79,8 @@ def get_bounds_from_geojson(filename):
         for item in data:
           collect(item)
 
-  collect(geojson["coordinates"])
+  for geometry in geojson["geometries"]:
+   collect(geometry["coordinates"])
 
   lons = [p[0] for p in coordinates]
   lats = [p[1] for p in coordinates]
@@ -223,6 +224,7 @@ def island(data, start):
 if __name__ == "__main__":
   import json
   import sys
+
   dataFile = len(sys.argv)>1 and sys.argv[1] or "island-data-1434381.json"
   with open(dataFile) as dataJson:
     data = json.load(dataJson)
