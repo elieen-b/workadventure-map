@@ -143,6 +143,27 @@ def island(data, start):
           ]
         }
       ]),
+
+        objectLayer("roadLabels", 8, [
+        {
+          "id": 1,
+          "name": "Beispielweg 1 Label",
+          "type": "text",
+          "x": 200,
+          "y": 140,
+          "text": "Beispielweg 1"
+        },
+        {
+
+          "id": 2,
+          "name": "Beispielweg 2 Label",
+          "type": "text",
+          "x": 500,
+          "y": 350,
+          "text": "Beispielweg 2"
+        }
+
+]),
       objectLayer("placeLabels", 7, [
         {
     "id": 1,

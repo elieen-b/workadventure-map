@@ -94,6 +94,25 @@ if (placesLayer && placesLayer.objects)
      ctx.stroke();
    });
  }
+ const roadLabelsLayer = map.layers
+
+  ? map.layers.find(l => l.name === "roadLabels")
+
+  : null;
+
+if (roadLabelsLayer && roadLabelsLayer.objects) {
+
+  roadLabelsLayer.objects.forEach(label => {
+
+    ctx.fillStyle = "black";
+
+    ctx.font = "14px Arial";
+
+    ctx.fillText(label.text, label.x, label.y);
+
+  });
+
+}
 }
 
 fetch("ruegen-map.json")

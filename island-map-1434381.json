@@ -20944,6 +20944,35 @@
             ]
         },
         {
+            "name": "roadLabels",
+            "id": 8,
+            "x": 0,
+            "y": 0,
+            "width": 92,
+            "height": 113,
+            "visible": true,
+            "opacity": 1,
+            "type": "objectgroup",
+            "objects": [
+                {
+                    "id": 1,
+                    "name": "Beispielweg 1 Label",
+                    "type": "text",
+                    "x": 200,
+                    "y": 140,
+                    "text": "Beispielweg 1"
+                },
+                {
+                    "id": 2,
+                    "name": "Beispielweg 2 Label",
+                    "type": "text",
+                    "x": 500,
+                    "y": 350,
+                    "text": "Beispielweg 2"
+                }
+            ]
+        },
+        {
             "name": "placeLabels",
             "id": 7,
             "x": 0,
