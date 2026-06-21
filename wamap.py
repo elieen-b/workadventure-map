@@ -156,7 +156,8 @@ def create_road_objects(osm_data, bounds):
     "id": road_id,
     "name": road_name,
     "type": road_type,
-    "polyline": polyline
+    "polyline": polyline,
+    "geometry": geometry
   }
   roads.append(road)
   road_id += 1
