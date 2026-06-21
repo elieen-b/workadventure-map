@@ -138,10 +138,18 @@ def create_road_objects(osm_data, bounds):
     if len(geometry) < 2:
        continue
 
-       tags = element.get("tags", {})
-       road_name = tags.get("name", "OSM road")
-       road_type = tags.get("highway", "road")
-  
+  tags = element.get("tags", {})
+  road_name = tags.get("name", "OSM road")
+  road_type = tags.get("highway", "road")
+
+  road = {
+    "id": road_id,
+    "name": road_name,
+    "type": road_type
+  }
+  roads.append(road)
+  road_id += 1
+
   return roads
 
 def island(data, start):
