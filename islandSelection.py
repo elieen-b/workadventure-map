@@ -121,8 +121,9 @@ out;
         result = json.loads(response.read().decode("utf-8"))
      except Exception as error:
         print("OSM places could not be loaded:", error)
-  
-    return None    
+        return None 
+    return None  
+    
 
 def readAndMap(action):
  for island in islands:
