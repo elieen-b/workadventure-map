@@ -112,41 +112,42 @@ area({})->.searchArea;
 node["place"](area.searchArea);
 out;
 """.format(areaId)
-    url = "https://overpass-api.de/api/interpreter?" + urllib.parse.urlencode({
+    url = "https://overpass-api.de/api/interpreter"
+    data = urllib.parse.urlencode({
         "data": query
-    })
+    }).encode("utf-8")
 
-     try:
-        response = urllib.request.urlopen(url, timeout=25)
+    try:
+        response = urllib.request.urlopen(url, data=data, timeout=25)
         result = json.loads(response.read().decode("utf-8"))
-     except Exception as error:
+    except Exception as error:
         print("OSM places could not be loaded:", error)
         return None 
 
-     minLon, minLat, maxLon, maxLat = geoJsonBounds(geoJson)
-     places = []
+    minLon, minLat, maxLon, maxLat = geoJsonBounds(geoJson)
+    places = []
 
-     for element in result["elements"]:
-         tags = element.get("tags", {})
-         if "name" not in tags:
-             continue
+    for element in result["elements"]:
+        tags = element.get("tags", {})
+        if "name" not in tags:
+            continue
 
-         lon = element["lon"]
-         lat = element["lat"]
+        lon = element["lon"]
+        lat = element["lat"]
 
-          x = int((lon - minLon) / (maxLon - minLon) * width * wamap.tileSize)
-          y = int((maxLat - lat) / (maxLat - minLat) * height * wamap.tileSize)
+        x = int((lon - minLon) / (maxLon - minLon) * width * wamap.tileSize)
+        y = int((maxLat - lat) / (maxLat - minLat) * height * wamap.tileSize)
 
-          places.append({
-              "id": len(places) + 1,
-              "name": tags["name"],
-              "type": tags.get("place", "place"),
-              "x": x,
-              "y": y,
-              "width": 16,
-              "height": 16,
-              "point": True
-    })
+        places.append({
+            "id": len(places) + 1,
+            "name": tags["name"],
+            "type": tags.get("place", "place"),
+            "x": x,
+            "y": y,
+            "width": 16,
+            "height": 16,
+            "point": True
+      })
 
     if len(places) == 0:
         return None
@@ -176,16 +177,16 @@ def tileIndex(geoJson, shortIslandName, polygon):
   start = [2 if d1==2 and d2>2  else 0 for (d1,d2) in zip(index[:-1],index[1:])] + [0]
 
   places = placesFromOSM(
-    polygon,
-    geoJson,
-    data["width"],
-    data["height"]
-)
+      polygon,
+      geoJson,
+      data["width"],
+      data["height"]
+) 
 
-mapJson = wamap.island(index, start, places)
+  mapJson = wamap.island(index, start, places)
   
-with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
-    json.dump(mapJson, f)
+  with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
+      json.dump(mapJson, f)
 
 def islandIndex():
   for island in islands:
