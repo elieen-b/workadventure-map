@@ -1,5 +1,7 @@
 from tile import jsonFromPolygon, jsonFromFile, multiPolyCoords, createMap, scaleFor, createTileIndex
 import os, math, json, wamap
+import urllib.request
+import urllib.parse
 
 class Island:
   def __init__(self, name, zoom, polygon):
