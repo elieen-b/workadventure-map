@@ -113,25 +113,27 @@ function drawMap(map) {
 
   if (placesLayer && placesLayer.objects) {
     placesLayer.objects.forEach(place => {
+      const scale = tileSize / 32;
+      const placeX = place.x * scale;
+      const placeY = place.y * scale;
       const placeSize = place.size || place.width || 10;
       const placeColor = place.color || "red";
-      const radius = placeSize / 2;
+      const radius = (placeSize * scale) / 2;
 
-     ctx.fillStyle = placeColor;
-     ctx.beginPath();
-     ctx.arc(place.x, place.y, radius, 0, 2 * Math.PI);
-     ctx.fill();
+      ctx.fillStyle = placeColor;
+      ctx.beginPath();
+      ctx.arc(placeX, placeY, radius, 0, 2 * Math.PI);
+      ctx.fill();
 
-     ctx.strokeStyle = "black";
-     ctx.lineWidth = 1;
-     ctx.stroke();
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 1;
+      ctx.stroke();
 
       ctx.fillStyle = "black";
       ctx.font = "12px Arial";
-      ctx.fillText(place.name, place.x + 8, place.y - 8);
+      ctx.fillText(place.name, placeX + 8, placeY - 8);
     });
   }
-
   // Straßenlabels zeichnen
   const roadLabelsLayer = map.layers
     ? map.layers.find(l => l.name === "roadLabels")
