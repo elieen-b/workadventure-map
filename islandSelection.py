@@ -1,5 +1,5 @@
 from tile import jsonFromPolygon, jsonFromFile, multiPolyCoords, createMap, scaleFor, createTileIndex
-import os, math, json, wamap
+import os, math, json, wamap, errno
 import urllib.request
 import urllib.parse
 
@@ -146,16 +146,36 @@ out;
         x = int((lon - minLon) / (maxLon - minLon) * width * wamap.tileSize)
         y = int((maxLat - lat) / (maxLat - minLat) * height * wamap.tileSize)
 
+        placeType = tags.get("place", "place")
+
+        if placeType == "city":
+            placeSize = 28
+            placeColor = "red"
+        elif placeType == "town":
+            placeSize = 22
+            placeColor = "red"
+        elif placeType == "village":
+            placeSize = 16
+            placeColor = "orange"
+        elif placeType == "hamlet":
+            placeSize = 10
+            placeColor = "yellow"
+        else:
+            placeSize = 14
+            placeColor = "orange"
+
         places.append({
             "id": len(places) + 1,
             "name": tags["name"],
-            "type": tags.get("place", "place"),
+            "type": placeType,
             "x": x,
             "y": y,
-            "width": 16,
-            "height": 16,
+            "width": placeSize,
+            "height": placeSize,
+            "size": placeSize,
+            "color": placeColor,
             "point": True
-      })
+        })
 
     if len(places) == 0:
         return None
