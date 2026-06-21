@@ -61,6 +61,10 @@ def baseLayer(name, layerId, layerType, visible=True):
     "type": layerType
   }
 
+def create_osm_roads():
+  print("OSM roads loader started")
+  return []
+
 def island(data, start):
   return {
     "compressionlevel":-1,
