@@ -10,126 +10,130 @@
   JSON-Datei auswählen:
   <input type="file" id="fileInput" accept=".json">
 </p>
+
 <canvas id="mapCanvas"></canvas>
+
 <script>
 function drawMap(map) {
-const layer = map.layers 
-   ? (map.layers.find(l => l.name === "tiles") ||
-    map.layers.find(l => l.type === "tilelayer"))
-   : null;
-   const data = map.index || (layer ? layer.data : null);
-   console.log("Unique values:", [...new Set(data)]);
-   const width = map.width;
-   const height = map.height;
-   const tileSize = 8;
-   const isTiledMap = !!map.layers;
-    if (!data || !width || !height) {
-    alert("Die JSON-Datei enthält keine gültigen Kartendaten.");
-   return;
-     }
+  const layer = map.layers
+    ? (map.layers.find(l => l.name === "tiles") ||
+       map.layers.find(l => l.type === "tilelayer"))
+    : null;
 
-   const canvas = document.getElementById("mapCanvas");
+  const data = map.index || (layer ? layer.data : null);
+  const width = map.width;
+  const height = map.height;
+  const tileSize = 8;
+  const isTiledMap = !!map.layers;
+
+  if (!data || !width || !height) {
+    alert("Die JSON-Datei enthält keine gültigen Kartendaten.");
+    return;
+  }
+
+  const canvas = document.getElementById("mapCanvas");
   canvas.width = width * tileSize;
   canvas.height = height * tileSize;
+
   const ctx = canvas.getContext("2d");
+
+  // Tiles zeichnen
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
       const value = data[y * width + x];
+
       if (isTiledMap) {
+        if (value === 1) {
+          ctx.fillStyle = "#4da6ff"; // Wasser
+        } else if (value === 2) {
+          ctx.fillStyle = "#66cc66"; // Land
+        } else {
+          ctx.fillStyle = "#d9b38c"; // Küste
+        }
+      } else {
+        if (value === 0) {
+          ctx.fillStyle = "#4da6ff"; // Wasser
+        } else if (value === 1) {
+          ctx.fillStyle = "#66cc66"; // Land
+        } else {
+          ctx.fillStyle = "#d9b38c"; // Küste
+        }
+      }
 
-if (value === 1) {
-  ctx.fillStyle = "#4da6ff"; // Wasser
-} else if (value === 2) {
-  ctx.fillStyle = "#66cc66"; // Land
-} else {
-  ctx.fillStyle = "#d9b38c"; // Küste
-}
-
-} else {
-
-if (value === 0) {
-  ctx.fillStyle = "#4da6ff"; // Wasser
-} else if (value === 1) {
-  ctx.fillStyle = "#66cc66"; // Land
-} else {
-  ctx.fillStyle = "#d9b38c"; // Küste
-}
-
-}
       ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
     }
-
   }
+
+  // Straßen zeichnen
+  const roadsLayer = map.layers
+    ? map.layers.find(l => l.name === "roads")
+    : null;
+
+  if (roadsLayer && roadsLayer.objects) {
+    roadsLayer.objects.forEach(road => {
+      if (!road.polyline || road.polyline.length < 2) {
+        return;
+      }
+
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+
+      // dunkler Rand
+      ctx.strokeStyle = "#8b6f47";
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo(road.polyline[0].x, road.polyline[0].y);
+
+      for (let i = 1; i < road.polyline.length; i++) {
+        ctx.lineTo(road.polyline[i].x, road.polyline[i].y);
+      }
+
+      ctx.stroke();
+
+      // helle Straße innen
+      ctx.strokeStyle = "#f7e7b7";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(road.polyline[0].x, road.polyline[0].y);
+
+      for (let i = 1; i < road.polyline.length; i++) {
+        ctx.lineTo(road.polyline[i].x, road.polyline[i].y);
+      }
+
+      ctx.stroke();
+    });
+  }
+
+  // Orte zeichnen
   const placesLayer = map.layers
     ? map.layers.find(l => l.name === "places")
     : null;
-if (placesLayer && placesLayer.objects)
- {
+
+  if (placesLayer && placesLayer.objects) {
     placesLayer.objects.forEach(place => {
-        ctx.fillStyle = "red";
-        ctx.beginPath();
-        ctx.arc(place.x, place.y, 5, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.fillStyle = "black";
-        ctx.font = "12px Arial";
-        ctx.fillText(place.name, place.x + 8, place.y - 8);
-    }); 
- }
-  const roadsLayer = map.layers
-   ? map.layers.find(l => l.name === "roads")
-   : null;
+      ctx.fillStyle = "red";
+      ctx.beginPath();
+      ctx.arc(place.x, place.y, 5, 0, 2 * Math.PI);
+      ctx.fill();
 
-   if (roadsLayer && roadsLayer.objects) {
-  roadsLayer.objects.forEach(road => {
-    if (!road.polyline || road.polyline.length < 2) {
-      return;
-    }
+      ctx.fillStyle = "black";
+      ctx.font = "12px Arial";
+      ctx.fillText(place.name, place.x + 8, place.y - 8);
+    });
+  }
 
-    if (road.type === "motorway" || road.type === "trunk") {
-      ctx.strokeStyle = "#f2c94c";
-      ctx.lineWidth = 4;
-    } else if (road.type === "primary") {
-      ctx.strokeStyle = "#f2994a";
-      ctx.lineWidth = 3;
-    } else if (road.type === "secondary") {
-      ctx.strokeStyle = "#ffffff";
-      ctx.lineWidth = 2;
-    } else {
-      ctx.strokeStyle = "#dddddd";
-      ctx.lineWidth = 1;
-    }
+  // Straßenlabels zeichnen
+  const roadLabelsLayer = map.layers
+    ? map.layers.find(l => l.name === "roadLabels")
+    : null;
 
-    ctx.lineCap = "round";
-    ctx.lineJoin = "round";
-
-    ctx.beginPath();
-    ctx.moveTo(road.polyline[0].x, road.polyline[0].y);
-
-    for (let i = 1; i < road.polyline.length; i++) {
-      ctx.lineTo(road.polyline[i].x, road.polyline[i].y);
-    }
-    ctx.stroke();
-  });
-}
- const roadLabelsLayer = map.layers
-
-  ? map.layers.find(l => l.name === "roadLabels")
-
-  : null;
-
-if (roadLabelsLayer && roadLabelsLayer.objects) {
-
-  roadLabelsLayer.objects.forEach(label => {
-
-    ctx.fillStyle = "black";
-
-    ctx.font = "14px Arial";
-
-    ctx.fillText(label.text, label.x, label.y);
-
-  });
-
-}
+  if (roadLabelsLayer && roadLabelsLayer.objects) {
+    roadLabelsLayer.objects.forEach(label => {
+      ctx.fillStyle = "black";
+      ctx.font = "14px Arial";
+      ctx.fillText(label.text, label.x, label.y);
+    });
+  }
 }
 
 fetch("ruegen-map.json")
@@ -142,10 +146,13 @@ fetch("ruegen-map.json")
 
 document.getElementById("fileInput").addEventListener("change", function(event) {
   const file = event.target.files[0];
+
   if (!file) {
     return;
   }
+
   const reader = new FileReader();
+
   reader.onload = function(e) {
     try {
       const map = JSON.parse(e.target.result);
@@ -155,6 +162,7 @@ document.getElementById("fileInput").addEventListener("change", function(event) 
       console.error(error);
     }
   };
+
   reader.readAsText(file);
 });
 </script>
