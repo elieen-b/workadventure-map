@@ -95,6 +95,14 @@ def latLongExtension(geoJson):
     minLat = min([longLat[1] for longLat in outlineLongLat])
     return max([maxLong-minLong, maxLat-minLat])
 
+def geoJsonBounds(geoJson):
+
+    multiPoly = multiPolyCoords(geoJson)
+    outline = max([poly[0] for poly in multiPoly], key=len)
+    lons = [point[0] for point in outline]
+    lats = [point[1] for point in outline]
+    return min(lons), min(lats), max(lons), max(lats)
+
 def readAndMap(action):
  for island in islands:
     shortIslandName = island.name.replace(" ","")
