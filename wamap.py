@@ -169,6 +169,14 @@ def lonlat_to_pixel(lon, lat, bounds):
   y += 30
   return x, y
 
+def roadStyle(road_type):
+  if road_type in ["motorway", "trunk", "primary"]:
+    return 6, "#d95f02"
+  elif road_type in ["secondary", "tertiary"]:
+    return 4, "#7570b3"
+  else:
+    return 2, "#666666"
+
 def create_road_objects(osm_data, bounds):
   roads = []
   road_id = 1
@@ -184,6 +192,7 @@ def create_road_objects(osm_data, bounds):
     tags = element.get("tags", {})
     road_name = tags.get("name", "OSM road")
     road_type = tags.get("highway", "road")
+    road_width, road_color = roadStyle(road_type)
 
     polyline = []
     for point in geometry:
@@ -196,6 +205,8 @@ def create_road_objects(osm_data, bounds):
       "type": road_type,
       "x": 0,
       "y": 0,
+      "lineWidth": road_width,
+      "color": road_color,
       "polyline": polyline,
       "geometry": geometry
     }
