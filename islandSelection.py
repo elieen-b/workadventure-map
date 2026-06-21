@@ -10,7 +10,7 @@ class Island:
     self.polygon = polygon
 
 islands = [
-    Island("Sylt", 11, 1576925),
+  # Island("Sylt", 11, 1576925),
   # Island("New Guinea", 6, 3986076), # downloaded, but segmentation fails
   # Island("Borneo", 6, 3986083), # extent 0?
   # Island("Great Britain", 6, 6038068), # broken
@@ -33,7 +33,7 @@ islands = [
   # Island("Tenerife", 10, 2108882),
   # Island("Majorca", 10, 6803636),
   # Island("Falster", 10, 5178556),
-  # Island("Ruegen", 10, 1434381),
+    Island("Ruegen", 10, 1434381),
   # Island("Bali", 10, 2130352),
   # Island("Long Island", 10, 3955977),
   # Island("Fischland", 11, 10650535),
