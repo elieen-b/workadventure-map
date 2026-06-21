@@ -115,6 +115,12 @@ out;
     url = "https://overpass-api.de/api/interpreter?" + urllib.parse.urlencode({
         "data": query
     })
+
+     try:
+        response = urllib.request.urlopen(url, timeout=25)
+        result = json.loads(response.read().decode("utf-8"))
+     except Exception as error:
+        print("OSM places could not be loaded:", error)
   
     return None    
 
