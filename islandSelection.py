@@ -100,13 +100,13 @@ def readAndMap(action):
     print("==============")
     print(island.name, island.zoom, scaleFor(geoJson))
     print("simplification factor: ", latLongExtension(geoJson)/750)
-    action(geoJson, shortIslandName)
+    action(geoJson, shortIslandName, island.polygon)
 
 def image(geoJson, shortIslandName):
   img = createMap(geoJson)
   img.save('selectedIslands/'+shortIslandName+".png")
    
-def tileIndex(geoJson, shortIslandName):
+def tileIndex(geoJson, shortIslandName, polygon):
   data = createTileIndex(geoJson)
   wamap.mapWidth = data["width"]
   wamap.mapHeight = data["height"]
