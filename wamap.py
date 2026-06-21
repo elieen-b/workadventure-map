@@ -142,6 +142,8 @@ def create_road_objects(osm_data, bounds):
   road_name = tags.get("name", "OSM road")
   road_type = tags.get("highway", "road")
 
+  polyline = []
+
   road = {
     "id": road_id,
     "name": road_name,
