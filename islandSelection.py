@@ -122,9 +122,14 @@ out;
      except Exception as error:
         print("OSM places could not be loaded:", error)
         return None 
-        
+
      minLon, minLat, maxLon, maxLat = geoJsonBounds(geoJson)
      places = []
+
+     for element in result["elements"]:
+         tags = element.get("tags", {})
+         if "name" not in tags:
+             continue
 
     return None  
     
