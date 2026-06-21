@@ -79,21 +79,38 @@ if (placesLayer && placesLayer.objects)
    ? map.layers.find(l => l.name === "roads")
    : null;
 
- if (roadsLayer && roadsLayer.objects) {
-   roadsLayer.objects.forEach(road => {
-     ctx.strokeStyle = "black";
-     ctx.lineWidth = 3;
-     ctx.beginPath();
+   if (roadsLayer && roadsLayer.objects) {
+  roadsLayer.objects.forEach(road => {
+    if (!road.polyline || road.polyline.length < 2) {
+      return;
+    }
 
-     ctx.moveTo(road.polyline[0].x, road.polyline[0].y);
+    if (road.type === "motorway" || road.type === "trunk") {
+      ctx.strokeStyle = "#f2c94c";
+      ctx.lineWidth = 4;
+    } else if (road.type === "primary") {
+      ctx.strokeStyle = "#f2994a";
+      ctx.lineWidth = 3;
+    } else if (road.type === "secondary") {
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 2;
+    } else {
+      ctx.strokeStyle = "#dddddd";
+      ctx.lineWidth = 1;
+    }
 
-     for (let i = 1; i < road.polyline.length; i++) {
-       ctx.lineTo(road.polyline[i].x, road.polyline[i].y);
-     }
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
 
-     ctx.stroke();
-   });
- }
+    ctx.beginPath();
+    ctx.moveTo(road.polyline[0].x, road.polyline[0].y);
+
+    for (let i = 1; i < road.polyline.length; i++) {
+      ctx.lineTo(road.polyline[i].x, road.polyline[i].y);
+    }
+    ctx.stroke();
+  });
+}
  const roadLabelsLayer = map.layers
 
   ? map.layers.find(l => l.name === "roadLabels")
