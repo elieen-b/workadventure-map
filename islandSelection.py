@@ -103,6 +103,21 @@ def geoJsonBounds(geoJson):
     lats = [point[1] for point in outline]
     return min(lons), min(lats), max(lons), max(lats)
 
+def placesFromOSM(polygon, geoJson, width, height):
+
+    areaId = 3600000000 + int(polygon)
+    query = """
+[out:json][timeout:25];
+area({})->.searchArea;
+node["place"](area.searchArea);
+out;
+""".format(areaId)
+    url = "https://overpass-api.de/api/interpreter?" + urllib.parse.urlencode({
+        "data": query
+    })
+  
+    return None    
+
 def readAndMap(action):
  for island in islands:
     shortIslandName = island.name.replace(" ","")
