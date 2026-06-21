@@ -122,6 +122,10 @@ out;
      except Exception as error:
         print("OSM places could not be loaded:", error)
         return None 
+        
+     minLon, minLat, maxLon, maxLat = geoJsonBounds(geoJson)
+     places = []
+
     return None  
     
 
