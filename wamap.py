@@ -101,8 +101,7 @@ def create_overpass_query(bounds):
   return f"""
 [out:json];
 (
-  way["highway"~"motorway|trunk|primary|secondary|tertiary|residential"]({south},{west},{north},{east});
-);
+  way["highway"~"motorway|trunk|primary|secondary"]({south},{west},{north},{east}););
 out geom;
 """
 
