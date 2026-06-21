@@ -113,10 +113,18 @@ def download_osm_roads(query):
      url,
      data=data,
      headers={"User-Agent": "team-9-workadventure-inselszenario"}
-     )
+    )
 
   with urllib.request.urlopen(request) as response:
     return json.load(response)
+
+def lonlat_to_pixel(lon, lat, bounds):
+  min_lon, min_lat, max_lon, max_lat = bounds
+  canvas_width = mapWidth * 8
+  canvas_height = mapHeight * 8
+  x = int((lon - min_lon) / (max_lon - min_lon) * canvas_width)
+  y = int((max_lat - lat) / (max_lat - min_lat) * canvas_height)
+  return x, y
 
 def island(data, start):
   return {
