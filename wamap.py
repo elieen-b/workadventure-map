@@ -123,8 +123,8 @@ def lonlat_to_pixel(lon, lat, bounds):
   canvas_height = mapHeight * 8
   x = int((lon - min_lon) / (max_lon - min_lon) * canvas_width)
   y = int((max_lat - lat) / (max_lat - min_lat) * canvas_height)
-  x += 55
-  y += 25
+  x += 50
+  y += 30
   return x, y
 
 def create_road_objects(osm_data, bounds):
