@@ -3,6 +3,11 @@ mapHeight=89
 tileSize= 32
 exit="map.json"
 
+import json
+import urllib.request
+import urllib.parse
+
+osmRoads = []
 
 def exitLayer(name, layerId, exitTile, exitCoords, exitUrl, visible=True):
   data = [0] * (mapWidth*mapHeight)
@@ -56,35 +61,133 @@ def baseLayer(name, layerId, layerType, visible=True):
     "type": layerType
   }
 def defaultPlaces():
-    return [
-        {
-            "id": 1,
-            "name": "Bergen",
-            "type": "village",
-            "x": 500,
-            "y": 500,
-            "width": 16,
-            "height": 16,
-            "point": True
-        },
 
-        {
-            "id": 2,
-            "name": "Sassnitz",
-            "type": "town",
-            "x": 60,
-            "y": 40,
-            "width": 20,
-            "height": 20,
-            "point": True
-        }
-    ]
+  return [
+    {
+      "id": 1,
+      "name": "Bergen",
+      "type": "village",
+      "x": 500,
+      "y": 500,
+      "width": 16,
+      "height": 16,
+      "point": True
 
-def island(data, start, places=None):
-    if places is None:
-        places = defaultPlaces()
+    },
+    {
+      "id": 2,
+      "name": "Sassnitz",
+      "type": "town",
+      "x": 60,
+      "y": 40,
+      "width": 20,
+      "height": 20,
+      "point": True
+    }
+  ]
+def create_osm_roads():
+  print("OSM roads loader started")
+  return []
 
-    return {
+def get_bounds_from_geojson(filename):
+  with open(filename) as f:
+    geojson = json.load(f)
+
+  coordinates = []
+
+  def collect(data):
+    if isinstance(data, list):
+      if len(data) == 2 and isinstance(data[0], (int, float)):
+        coordinates.append(data)
+      else:
+        for item in data:
+          collect(item)
+
+  for geometry in geojson["geometries"]:
+    collect(geometry["coordinates"])
+
+  lons = [p[0] for p in coordinates]
+  lats = [p[1] for p in coordinates]
+
+  return (min(lons), min(lats), max(lons), max(lats))
+
+def create_overpass_query(bounds):
+  south = bounds[1]
+  west = bounds[0]
+  north = bounds[3]
+  east = bounds[2]
+
+  return f"""
+[out:json];
+(
+  way["highway"~"motorway|trunk|primary|secondary|tertiary"]({south},{west},{north},{east});
+);
+out geom;
+"""
+
+def download_osm_roads(query):
+  url = "https://overpass-api.de/api/interpreter"
+  data = urllib.parse.urlencode({"data": query}).encode("utf-8")
+  request = urllib.request.Request(
+    url,
+    data=data,
+    headers={"User-Agent": "team-9-workadventure-inselszenario"}
+  )
+
+  with urllib.request.urlopen(request) as response:
+    return json.load(response)
+
+def lonlat_to_pixel(lon, lat, bounds):
+  min_lon, min_lat, max_lon, max_lat = bounds
+  canvas_width = mapWidth * 8
+  canvas_height = mapHeight * 8
+  x = int((lon - min_lon) / (max_lon - min_lon) * canvas_width)
+  y = int((max_lat - lat) / (max_lat - min_lat) * canvas_height)
+  x += 50
+  y += 30
+  return x, y
+
+def create_road_objects(osm_data, bounds):
+  roads = []
+  road_id = 1
+
+  for element in osm_data["elements"]:
+    if element.get("type") != "way":
+      continue
+
+    geometry = element.get("geometry", [])
+    if len(geometry) < 2:
+      continue
+
+    tags = element.get("tags", {})
+    road_name = tags.get("name", "OSM road")
+    road_type = tags.get("highway", "road")
+
+    polyline = []
+    for point in geometry:
+      x, y = lonlat_to_pixel(point["lon"], point["lat"], bounds)
+      polyline.append({"x": x, "y": y})
+
+    road = {
+      "id": road_id,
+      "name": road_name,
+      "type": road_type,
+      "x": 0,
+      "y": 0,
+      "polyline": polyline,
+      "geometry": geometry
+    }
+
+    roads.append(road)
+    road_id += 1
+
+  return roads
+
+def island(data, start, roads, places=None):
+  if places is None:
+    places = defaultPlaces()
+
+  return {
     "compressionlevel":-1,
     "version":1.4,
     "type":"map",
@@ -122,36 +225,9 @@ def island(data, start, places=None):
       # imageLayer("image", 4, "..\/..\/Downloads\/Ruegen2.png", visible=False), 
       tileLayer("start", 1, start),
       tileLayer("tiles", 2, data),
-
       objectLayer("floorLayer", 4, []),
       objectLayer("places", 5, places),
- 
-      objectLayer("roads", 6, [
-        {
-          "id": 1,
-          "name": "Beispielweg 1",
-          "type": "road",
-          "x": 0,
-          "y": 0,
-          "polyline": [
-            {"x": 100, "y": 100},
-            {"x": 200, "y": 140},
-            {"x": 300, "y": 180}
-          ]
-        },
-        {
-          "id": 2,
-          "name": "Beispielweg 2",
-          "type": "path",
-          "x": 0,
-          "y": 0,
-          "polyline": [
-            {"x": 400, "y": 300},
-            {"x": 500, "y": 350},
-            {"x": 600, "y": 320}
-          ]
-        }
-      ]),
+      objectLayer("roads", 6, roads),
 
         objectLayer("roadLabels", 8, [
         {
@@ -197,6 +273,13 @@ def island(data, start, places=None):
 if __name__ == "__main__":
   import json
   import sys
+
+  bounds = get_bounds_from_geojson("osm-ruegen.geojson")
+  query = create_overpass_query(bounds)
+  osm_data = download_osm_roads(query)
+  roads = create_road_objects(osm_data, bounds)
+  print(len(roads))
+  
   dataFile = len(sys.argv)>1 and sys.argv[1] or "island-data-1434381.json"
   with open(dataFile) as dataJson:
     data = json.load(dataJson)
@@ -204,7 +287,7 @@ if __name__ == "__main__":
   mapWidth = data["width"]
   mapHeight = data["height"]
   start = [2 if d1==2 and d2>2  else 0 for (d1,d2) in zip(index[:-1],index[1:])] + [0]
-  tiled = island(index, start)
+  tiled = island(index, start, roads)
   with open(dataFile.replace('data', 'map'),'w') as f:
     json.dump(tiled, f, indent=4)
 
