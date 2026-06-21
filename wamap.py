@@ -183,9 +183,46 @@ def create_road_objects(osm_data, bounds):
 
   return roads
 
-def island(data, start, roads, places=None):
+def create_road_label_objects(roads):
+  labels = []
+  label_id = 1
+
+  for road in roads:
+    name = road.get("name", "")
+
+    if name == "" or name == "OSM road":
+      continue
+
+    polyline = road.get("polyline", [])
+
+    if len(polyline) == 0:
+      continue
+
+    middle_index = len(polyline) // 2
+    middle_point = polyline[middle_index]
+
+    labels.append({
+      "id": label_id,
+      "name": name + " Label",
+      "type": "text",
+      "x": middle_point["x"],
+      "y": middle_point["y"],
+      "text": name
+    })
+
+    label_id += 1
+
+  return labels
+
+def island(data, start, places=None, roads=None, roadLabels=None):
   if places is None:
-    places = defaultPlaces()
+    places = []
+  if roads is None:
+    roads = []
+  if roadLabels is None:
+    roadLabels = []
+  if roadLabels is None:
+    roadLabels = create_road_label_objects(roads)
 
   return {
     "compressionlevel":-1,
@@ -229,26 +266,8 @@ def island(data, start, roads, places=None):
       objectLayer("places", 5, places),
       objectLayer("roads", 6, roads),
 
-        objectLayer("roadLabels", 8, [
-        {
-          "id": 1,
-          "name": "Beispielweg 1 Label",
-          "type": "text",
-          "x": 200,
-          "y": 140,
-          "text": "Beispielweg 1"
-        },
-        {
+      objectLayer("roadLabels", 8, roadLabels),
 
-          "id": 2,
-          "name": "Beispielweg 2 Label",
-          "type": "text",
-          "x": 500,
-          "y": 350,
-          "text": "Beispielweg 2"
-        }
-
-]),
       objectLayer("placeLabels", 7, [
         {
     "id": 1,
@@ -277,7 +296,7 @@ if __name__ == "__main__":
   bounds = get_bounds_from_geojson("osm-ruegen.geojson")
   query = create_overpass_query(bounds)
   osm_data = download_osm_roads(query)
-  roads = create_road_objects(osm_data, bounds)
+  roadLabels = create_road_label_objects(roads)  
   print(len(roads))
   
   dataFile = len(sys.argv)>1 and sys.argv[1] or "island-data-1434381.json"
@@ -287,7 +306,7 @@ if __name__ == "__main__":
   mapWidth = data["width"]
   mapHeight = data["height"]
   start = [2 if d1==2 and d2>2  else 0 for (d1,d2) in zip(index[:-1],index[1:])] + [0]
-  tiled = island(index, start, roads)
+  tiled = island(index, start, roads=roads)
   with open(dataFile.replace('data', 'map'),'w') as f:
     json.dump(tiled, f, indent=4)
 

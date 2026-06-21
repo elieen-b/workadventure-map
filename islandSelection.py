@@ -190,9 +190,21 @@ def tileIndex(geoJson, shortIslandName, polygon):
       data["width"],
       data["height"]
 ) 
+  bounds = wamap.get_bounds_from_geojson("osm-ruegen.geojson")
+  query = wamap.create_overpass_query(bounds)
+  osm_data = wamap.download_osm_roads(query)
+  roads = wamap.create_road_objects(osm_data, bounds)
 
-  mapJson = wamap.island(index, start, places)
-  
+  roadLabels = wamap.create_road_label_objects(roads)
+
+  mapJson = wamap.island(
+
+    index,
+    start,
+    places,
+    roads,
+    roadLabels
+  )
   with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
       json.dump(mapJson, f, indent=4)
 
