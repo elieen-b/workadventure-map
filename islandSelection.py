@@ -10,50 +10,51 @@ class Island:
     self.polygon = polygon
 
 islands = [
+    Island("Sylt", 11, 1576925),
   # Island("New Guinea", 6, 3986076), # downloaded, but segmentation fails
   # Island("Borneo", 6, 3986083), # extent 0?
   # Island("Great Britain", 6, 6038068), # broken
-  Island("Sulawesi", 6, 3986124),
-  # Island("North Island NZ", 6, 6571744), # segmentation fails
-  Island("Ireland", 7, 7681896),
-  Island("Cuba", 7, 7117025), # segmentation fails
-  Island("Iceland", 7, 7681889),
-  Island("Hokkaido", 7, 6679920),
-  Island("Sardinia", 8, 6847723),
-  Island("Tasmania", 8, 4097659), # tile index range
-  Island("Taiwan", 8, 7219605), # tile index range
-  Island("Hainan", 9, 4094778), # tile index range
-  Island("Sicilia", 9, 6197225),
-  Island("Hawaii", 9, 3403603),
-  Island("Corsica", 9, 7112309),
-  Island("Sjaelland", 9, 5175856),
-  Island("Jamaica", 9, 7117041),
-  Island("West Falkland", 9, 3182529),
-  Island("Tenerife", 10, 2108882),
-  Island("Majorca", 10, 6803636),
-  Island("Falster", 10, 5178556),
-  Island("Ruegen", 10, 1434381),
-  Island("Bali", 10, 2130352),
-  Island("Long Island", 10, 3955977),
-  Island("Fischland", 11, 10650535),
-  Island("Usedom", 11, 3791269),
-  Island("Bornholm", 11, 5176019),
-  Island("Maui", 11, 3403431),
-  Island("Bintan", 11, 6561978),
-  Island("Moen", 11, 5175925), 
-  Island("Sylt", 11, 1576925),
-  Island("La Gomera", 12, 2214684),
-  Island("Elba", 12, 3259001),
-  Island("Singapore", 12, 1769123),
-  Island("Hiddensee", 12, 3790660),
-  Island("Amrum", 12, 3787117),
-  Island("Molokai", 12, 1082120),
-  # Island("Ummanz", 13, 3791309), # segmentation issue
-  Island("Poel", 13, 3790804),
-  Island("Borkum", 13, 3788971),
-  Island("Ubin", 14, 2243165),
-  Island("Vilm", 14, 12650582), 
-  Island("Helgoland", 15, 20407146)
+  # Island("Sulawesi", 6, 3986124),
+  # # Island("North Island NZ", 6, 6571744), # segmentation fails
+  # Island("Ireland", 7, 7681896),
+  # Island("Cuba", 7, 7117025), # segmentation fails
+  # Island("Iceland", 7, 7681889),
+  # Island("Hokkaido", 7, 6679920),
+  # Island("Sardinia", 8, 6847723),
+  # Island("Tasmania", 8, 4097659), # tile index range
+  # Island("Taiwan", 8, 7219605), # tile index range
+  # Island("Hainan", 9, 4094778), # tile index range
+  # Island("Sicilia", 9, 6197225),
+  # Island("Hawaii", 9, 3403603),
+  # Island("Corsica", 9, 7112309),
+  # Island("Sjaelland", 9, 5175856),
+  # Island("Jamaica", 9, 7117041),
+  # Island("West Falkland", 9, 3182529),
+  # Island("Tenerife", 10, 2108882),
+  # Island("Majorca", 10, 6803636),
+  # Island("Falster", 10, 5178556),
+  # Island("Ruegen", 10, 1434381),
+  # Island("Bali", 10, 2130352),
+  # Island("Long Island", 10, 3955977),
+  # Island("Fischland", 11, 10650535),
+  # Island("Usedom", 11, 3791269),
+  # Island("Bornholm", 11, 5176019),
+  # Island("Maui", 11, 3403431),
+  # Island("Bintan", 11, 6561978),
+  # Island("Moen", 11, 5175925), 
+  # Island("Sylt", 11, 1576925),
+  # Island("La Gomera", 12, 2214684),
+  # Island("Elba", 12, 3259001),
+  # Island("Singapore", 12, 1769123),
+  # Island("Hiddensee", 12, 3790660),
+  # Island("Amrum", 12, 3787117),
+  # Island("Molokai", 12, 1082120),
+  # # Island("Ummanz", 13, 3791309), # segmentation issue
+  # Island("Poel", 13, 3790804),
+  # Island("Borkum", 13, 3788971),
+  # Island("Ubin", 14, 2243165),
+  # Island("Vilm", 14, 12650582), 
+  # Island("Helgoland", 15, 20407146)
 ]
 
 def downloadList():
@@ -118,7 +119,14 @@ out;
     }).encode("utf-8")
 
     try:
-        response = urllib.request.urlopen(url, data=data, timeout=25)
+        request = urllib.request.Request(
+        url,
+        data=data,
+        headers={
+            "User-Agent": "team-9-workadventure-inselszenario"
+        }
+    )
+        response = urllib.request.urlopen(request, timeout=25)
         result = json.loads(response.read().decode("utf-8"))
     except Exception as error:
         print("OSM places could not be loaded:", error)
@@ -186,7 +194,7 @@ def tileIndex(geoJson, shortIslandName, polygon):
   mapJson = wamap.island(index, start, places)
   
   with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
-      json.dump(mapJson, f)
+      json.dump(mapJson, f, indent=4)
 
 def islandIndex():
   for island in islands:
