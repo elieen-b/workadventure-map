@@ -655,3 +655,127 @@ In der Datei `Ruegen-map.json` wurden insgesamt 1692 Straßen und Wege gespeiche
 Jede Straße besitzt eine Kategorie, einen Verlauf als Polyline sowie Darstellungsinformationen wie Farbe und Linienbreite.
 
 Die gespeicherten Straßendaten können anschließend in US-09 grafisch im Browser dargestellt werden.
+
+# US-09: Straßen im Browser anzeigen
+
+Für diese User Story wurde die Browseransicht erweitert.
+
+Die Anwendung liest den Layer `roads` aus der geladenen JSON-Datei aus und stellt die gespeicherten Straßen auf der Karte dar.
+
+Jede Straße enthält eine Polyline mit mehreren Punkten. Diese Punkte werden im Browser miteinander verbunden und ergeben den Verlauf der Straße.
+
+Zusätzlich werden die in der JSON-Datei gespeicherten Darstellungsinformationen verwendet:
+
+* Straßenkategorie
+* Linienfarbe
+* Linienbreite
+
+Zur besseren Sichtbarkeit werden die Straßen mit einem dunklen Rand und einer helleren Innenlinie dargestellt.
+
+Dadurch sind Straßen und Wege auf der Karte deutlich besser erkennbar.
+
+## Durchgeführter Test
+
+Lokalen Webserver starten:
+
+```bash
+python3 -m http.server 8080
+```
+
+Browser öffnen:
+
+```text
+http://localhost:8080/index.html
+```
+
+Anschließend die Datei auswählen:
+
+```text
+selectedIslands/Ruegen-map.json
+```
+
+## Ergebnis
+
+* Die Inselkarte wird erfolgreich geladen.
+* Die Orte aus dem Layer `places` werden angezeigt.
+* Die Straßen aus dem Layer `roads` werden dargestellt.
+* Die Polylines werden korrekt als Linien gezeichnet.
+* Die Straßen sind auf der Karte deutlich sichtbar.
+
+Die Darstellung der Straßen funktioniert damit erfolgreich.
+
+US-09 ist damit erfüllt.
+
+
+# US-10: Ortsnamen als Textlabel speichern
+
+Für diese User Story wurde die erzeugte Karten-Datei um einen zusätzlichen Object Layer erweitert.
+
+Der Layer heißt:
+
+```text
+placeLabels
+```
+
+In diesem Layer werden die Namen der Orte als Textobjekte gespeichert.
+
+Für jeden Ort aus dem Layer `places` wird automatisch ein passendes Textlabel erzeugt.
+
+Jedes Textlabel enthält unter anderem:
+
+* Namen des Labels
+* angezeigten Text
+* Position auf der Karte
+
+Beispiel aus der Datei:
+
+```text
+selectedIslands/Ruegen-map.json
+```
+
+```json
+{
+  "id": 1,
+  "name": "Bergen auf Rügen Label",
+  "type": "text",
+  "x": 1434,
+  "y": 2077,
+  "text": "Bergen auf Rügen"
+}
+```
+
+## Bedeutung der Attribute
+
+* name enthält den Namen des Label-Objekts.
+* type kennzeichnet das Objekt als Textobjekt.
+* x und y speichern die Position des Labels auf der Karte.
+* text enthält den anzuzeigenden Ortsnamen.
+
+## Durchgeführte Tests
+
+Prüfen, ob ein Ortslabel erzeugt wurde:
+
+```text
+Name: Bergen auf Rügen Label
+Text: Bergen auf Rügen
+X: 1434
+Y: 2077
+```
+
+Prüfen, wie viele Ortslabels gespeichert wurden:
+
+```text
+Anzahl Labels: 497
+```
+
+## Ergebnis
+
+Der Layer `placeLabels` wurde erfolgreich erzeugt.
+
+Für jeden gespeicherten Ort wurde automatisch ein Textlabel angelegt.
+
+In der Datei `Ruegen-map.json` wurden insgesamt 497 Ortslabels gespeichert.
+
+Die gespeicherten Ortsnamen können anschließend in US-12 im Browser dargestellt werden.
+
+US-10 ist damit erfüllt.
