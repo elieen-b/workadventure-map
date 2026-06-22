@@ -128,23 +128,42 @@ function drawMap(map) {
       ctx.strokeStyle = "black";
       ctx.lineWidth = 1;
       ctx.stroke();
-
-      ctx.fillStyle = "black";
-      ctx.font = "12px Arial";
-      ctx.fillText(place.name, placeX + 8, placeY - 8);
     });
   }
   // Straßenlabels zeichnen
   const roadLabelsLayer = map.layers
-    ? map.layers.find(l => l.name === "roadLabels")
+    ? map.layers.find(l => l.name === "roadLabels" && l.visible !== false)
     : null;
 
+// Straßenlabels erstmal nicht zeichnen, sonst wird die Karte zu voll
+/*
   if (roadLabelsLayer && roadLabelsLayer.objects) {
     roadLabelsLayer.objects.forEach(label => {
       ctx.fillStyle = "black";
       ctx.font = "14px Arial";
       ctx.fillText(label.text, label.x, label.y);
     });
+  }
+  */
+  // Ortslabels zeichnen
+  const placeLabelsLayer = map.layers
+    ? map.layers.find(l => l.name === "placeLabels" && l.visible !== false)
+    : null;
+
+    if (placeLabelsLayer && placeLabelsLayer.objects) {
+      const scale = tileSize / 32;
+
+     placeLabelsLayer.objects.forEach(label => {
+
+     if (label.text.length > 18) {
+     return;
+     }
+
+     ctx.fillStyle = "black";
+     ctx.font = "10px Arial";
+     ctx.fillText(label.text, label.x * scale, label.y * scale);
+    });
+
   }
 }
 

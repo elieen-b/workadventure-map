@@ -220,8 +220,8 @@ def tileIndex(geoJson, shortIslandName, polygon):
   mapJson = wamap.island(
     index,
     start,
-    roads,
     places,
+    roads,
     roadLabels
   )
   with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
