@@ -779,3 +779,153 @@ In der Datei `Ruegen-map.json` wurden insgesamt 497 Ortslabels gespeichert.
 Die gespeicherten Ortsnamen können anschließend in US-12 im Browser dargestellt werden.
 
 US-10 ist damit erfüllt.
+
+# US-11: Straßennamen als Textlabel speichern
+
+Für diese User Story wurde die erzeugte Karten-Datei um einen zusätzlichen Object Layer erweitert.
+
+Der Layer heißt:
+
+```text
+roadLabels
+```
+
+In diesem Layer werden Straßennamen als Textobjekte gespeichert.
+
+Dabei werden nur Straßen berücksichtigt, für die in OpenStreetMap ein Name vorhanden ist.
+
+Jedes Textlabel enthält unter anderem:
+
+* Namen des Label-Objekts
+* anzuzeigenden Text
+* Position auf der Karte
+
+Beispiel aus der Datei:
+
+```text
+selectedIslands/Ruegen-map.json
+```
+
+```json
+{
+  "id": 1,
+  "name": "Circus Label",
+  "type": "text",
+  "x": 458,
+  "y": 673,
+  "text": "Circus"
+}
+```
+
+## Bedeutung der Attribute
+
+* name enthält den Namen des Label-Objekts.
+* type kennzeichnet das Objekt als Textobjekt.
+* x und y speichern die Position des Labels.
+* text enthält den anzuzeigenden Straßennamen.
+
+## Durchgeführte Tests
+
+Prüfen, ob der Layer vorhanden ist:
+
+```text
+roadLabels Layer existiert: True
+```
+
+Prüfen, wie viele Straßennamen gespeichert wurden:
+
+```text
+Anzahl roadLabels: 702
+```
+
+Prüfen eines einzelnen Labels:
+
+```text
+Name: Circus Label
+Type: text
+Text: Circus
+X: 458
+Y: 673
+```
+
+Prüfen mehrerer verschiedener Straßennamen:
+
+```text
+Circus
+Alleestraße
+Bahnhofstraße
+Dorfstraße
+Bergerlandstraße
+Putbuser Chaussee
+Lauterbacher Straße
+Putbuser Straße
+Bergener Straße
+```
+
+## Ergebnis
+
+Der Layer `roadLabels` wurde erfolgreich erzeugt.
+
+In der Datei `Ruegen-map.json` wurden insgesamt 702 Straßennamen gespeichert.
+
+Für alle Straßen mit vorhandenem Namen wurde automatisch ein Textlabel angelegt.
+
+Die gespeicherten Straßennamen können anschließend in US-12 im Browser dargestellt werden.
+
+US-11 ist damit erfüllt.
+
+# US-12: Namen im Viewer anzeigen
+
+Für diese User Story wurde die Browseransicht erweitert.
+
+Der Viewer liest nun zusätzlich die Textobjekte aus den Layern
+
+```text
+placeLabels
+roadLabels
+```
+
+aus und stellt diese auf der Karte dar.
+
+Dadurch werden sowohl Ortsnamen als auch Straßennamen direkt im Browser angezeigt.
+
+Um die Lesbarkeit der Karte zu verbessern, werden sehr lange Namen sowie übermäßig viele Straßennamen gefiltert. Dadurch bleibt die Darstellung auch bei größeren Karten übersichtlich.
+
+Zusätzlich wird geprüft, ob ein Textobjekt tatsächlich einen Inhalt besitzt. Leere Texte werden übersprungen und verursachen keine Fehler.
+
+## Durchgeführter Test
+
+Lokalen Webserver starten:
+
+```bash
+python3 -m http.server 8080
+```
+
+Browser öffnen:
+
+```text
+http://localhost:8080/index.html
+```
+
+Anschließend die Datei auswählen:
+
+```text
+selectedIslands/Ruegen-map.json
+```
+
+## Geprüfte Funktionen
+
+* Ortsnamen werden angezeigt.
+* Straßennamen werden angezeigt.
+* Leere Textobjekte verursachen keine Fehler.
+* Die Karte bleibt trotz vieler Namen lesbar.
+
+## Ergebnis
+
+Die Textobjekte aus den Layern `placeLabels` und `roadLabels` werden erfolgreich geladen und dargestellt.
+
+Ortsnamen und Straßennamen sind direkt auf der Karte sichtbar.
+
+Die Filterung sorgt dafür, dass die Karte trotz vieler Beschriftungen übersichtlich bleibt.
+
+US-12 ist damit erfüllt.
