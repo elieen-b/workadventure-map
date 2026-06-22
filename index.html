@@ -132,19 +132,45 @@ function drawMap(map) {
   }
   // Straßenlabels zeichnen
   const roadLabelsLayer = map.layers
-    ? map.layers.find(l => l.name === "roadLabels" && l.visible !== false)
+    ? map.layers.find(l => l.name === "roadLabels")
     : null;
 
 // Straßenlabels erstmal nicht zeichnen, sonst wird die Karte zu voll
-/*
-  if (roadLabelsLayer && roadLabelsLayer.objects) {
-    roadLabelsLayer.objects.forEach(label => {
-      ctx.fillStyle = "black";
-      ctx.font = "14px Arial";
-      ctx.fillText(label.text, label.x, label.y);
-    });
+
+if (roadLabelsLayer && roadLabelsLayer.objects) {
+
+const scale = tileSize / 32;
+
+const usedPositions = [];
+
+roadLabelsLayer.objects.forEach(label => {
+
+  if (!label.text) {
+    return;
   }
-  */
+
+  if (label.text.length > 16) {
+    return;
+  }
+
+  const x = label.x * scale;
+  const y = label.y * scale;
+
+  const tooClose = usedPositions.some(pos => {
+    const dx = pos.x - x;
+    const dy = pos.y - y;
+    return Math.sqrt(dx * dx + dy * dy) < 45;
+  });
+  if (tooClose) {
+    return;
+  }
+  usedPositions.push({ x, y });
+  ctx.fillStyle = "#333333";
+  ctx.font = "8px Arial";
+  ctx.fillText(label.text, x, y);
+});
+}
+  
   // Ortslabels zeichnen
   const placeLabelsLayer = map.layers
     ? map.layers.find(l => l.name === "placeLabels" && l.visible !== false)
@@ -155,7 +181,7 @@ function drawMap(map) {
 
      placeLabelsLayer.objects.forEach(label => {
 
-     if (label.text.length > 18) {
+     if (label.text.length > 12) {
      return;
      }
 
