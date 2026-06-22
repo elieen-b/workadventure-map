@@ -477,3 +477,181 @@ Die Positionen stimmen mit den gespeicherten Koordinaten überein.
 Ortsnamen werden sichtbar angezeigt.
 
 US-07 ist damit erfüllt.
+
+# US-08: Straßen / Wege als Linien speichern
+
+Die Grundfunktion für Straßen und Wege wurde bereits in Sprint 1 vorbereitet.
+
+In Sprint 2 wurde die Funktion erweitert. Statt manuell eingetragener Beispielwege werden nun echte Straßen und Wege aus OpenStreetMap übernommen und in der erzeugten WorkAdventure-/Tiled-JSON-Datei gespeichert.
+
+Für diese User Story wurde die Karten-Datei um einen zusätzlichen Object Layer erweitert.
+
+Der Layer heißt:
+
+```text
+roads
+```
+
+In diesem Layer werden Straßen und Wege als Linienobjekte gespeichert.
+
+Jede Straße besteht aus mehreren Punkten, die gemeinsam eine sogenannte Polyline bilden. Beim späteren Darstellen im Browser werden diese Punkte miteinander verbunden und ergeben den Verlauf der Straße.
+
+Die Straßeninformationen stammen direkt aus OpenStreetMap.
+
+Jede Straße enthält unter anderem:
+
+* Straßenname
+* Straßenkategorie
+* Linienfarbe
+* Linienbreite
+* Verlauf der Straße als Polyline
+
+Beispiel aus der Datei:
+
+```text
+selectedIslands/Ruegen-map.json
+```
+
+```json
+{
+  "id": 1,
+  "name": "OSM road",
+  "type": "secondary",
+  "x": 0,
+  "y": 0,
+  "lineWidth": 4,
+  "color": "#7570b3",
+  "polyline": [
+    { "x": 71, "y": 743 },
+    { "x": 72, "y": 742 },
+    { "x": 73, "y": 740 }
+  ]
+}
+```
+
+## Bedeutung der Attribute
+
+* name enthält den Straßennamen aus OpenStreetMap.
+* type enthält die Straßenkategorie.
+* lineWidth bestimmt die Breite der Linie.
+* color bestimmt die Farbe der Linie.
+* polyline enthält die Punkte des Straßenverlaufs.
+
+## Verwendete Straßenkategorien
+
+* primary
+* secondary
+* tertiary
+* road
+
+Für die verschiedenen Kategorien werden unterschiedliche Farben und Linienbreiten gespeichert.
+
+Beispiele:
+
+* primary → lineWidth 6
+* secondary → lineWidth 4
+* tertiary → lineWidth 4
+
+## Durchgeführte Tests
+
+Prüfen, ob der Layer roads vorhanden ist:
+
+```bash
+python3 - <<'PY'
+import json
+
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+
+layer = next((l for l in m["layers"] if l["name"] == "roads"), None)
+
+print("roads Layer existiert:", layer is not None)
+PY
+```
+
+Ergebnis:
+
+```text
+roads Layer existiert: True
+```
+
+Prüfen, wie viele Straßen gespeichert wurden:
+
+```bash
+python3 - <<'PY'
+import json
+
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+
+roads = next(l for l in m["layers"] if l["name"] == "roads")
+
+print("Anzahl Straßen:", len(roads["objects"]))
+PY
+```
+
+Ergebnis:
+
+```text
+Anzahl Straßen: 1692
+```
+
+Prüfen, ob eine Polyline vorhanden ist:
+
+```bash
+python3 - <<'PY'
+import json
+
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+
+roads = next(l for l in m["layers"] if l["name"] == "roads")
+
+road = roads["objects"][0]
+
+print("Polyline vorhanden:", "polyline" in road)
+print("Punkte:", len(road["polyline"]))
+PY
+```
+
+Ergebnis:
+
+```text
+Polyline vorhanden: True
+Punkte: 13
+```
+
+Prüfen, ob Straßenname und Kategorie gespeichert wurden:
+
+```bash
+python3 - <<'PY'
+import json
+
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+
+roads = next(l for l in m["layers"] if l["name"] == "roads")
+
+road = roads["objects"][0]
+
+print("Name:", road.get("name"))
+print("Type:", road.get("type"))
+PY
+```
+
+Ergebnis:
+
+```text
+Name: OSM road
+Type: secondary
+```
+
+## Ergebnis
+
+Der Layer `roads` wurde erfolgreich erzeugt.
+
+In der Datei `Ruegen-map.json` wurden insgesamt 1692 Straßen und Wege gespeichert.
+
+Jede Straße besitzt eine Kategorie, einen Verlauf als Polyline sowie Darstellungsinformationen wie Farbe und Linienbreite.
+
+Die gespeicherten Straßendaten können anschließend in US-09 grafisch im Browser dargestellt werden.
