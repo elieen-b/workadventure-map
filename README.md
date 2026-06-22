@@ -342,3 +342,18 @@ Erwartetes Ergebnis
 * Die Karte wird angezeigt.
 * Die Orte aus dem Layer places werden angezeigt.
 * Die Straßen aus dem Layer roads werden als schwarze Linien angezeigt.
+
+
+
+Sprint 2 – Umgesetzte Funktionen
+
+In Sprint 2 wurde die erzeugte Inselkarte erweitert.
+Neben Land, Wasser und Küste werden jetzt auch Orte, Straßen, Ortsnamen, Straßennamen und Kategorien aus OpenStreetMap verarbeitet.
+
+Getestet wurde hauptsächlich mit der Datei:
+
+selectedIslands/Ruegen-map.json
+
+Die Daten stammen aus OpenStreetMap und werden beim Erzeugen der Karte automatisch in die JSON-Datei geschrieben.
+
+
