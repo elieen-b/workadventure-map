@@ -345,15 +345,15 @@ Erwartetes Ergebnis
 
 
 
-Sprint 2 – Umgesetzte Funktionen
+## Sprint 2 – Umgesetzte Funktionen
 
 In Sprint 2 wurde die erzeugte Inselkarte erweitert.
 Neben Land, Wasser und Küste werden jetzt auch Orte, Straßen, Ortsnamen, Straßennamen und Kategorien aus OpenStreetMap verarbeitet.
 
 Getestet wurde hauptsächlich mit der Datei:
-
+```json
 selectedIslands/Ruegen-map.json
-
+```
 Die Daten stammen aus OpenStreetMap und werden beim Erzeugen der Karte automatisch in die JSON-Datei geschrieben.
 
 
