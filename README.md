@@ -441,3 +441,39 @@ Jeder Ort besitzt einen Namen, eine Ortskategorie sowie eine Position auf der Ka
 
 Die gespeicherten Ortsdaten können anschließend in US-07 grafisch dargestellt werden.
 
+## US-07: Punkte im Browser anzeigen
+
+Für US-07 wurde die Browseransicht in index.html erweitert.
+
+Der Browser liest den Layer places aus der geladenen JSON-Datei aus und stellt die gespeicherten Orte auf der Karte dar.
+
+Für die Darstellung werden folgende Informationen verwendet:
+
+* x und y bestimmen die Position des Ortes auf der Karte.
+* size bestimmt die Größe des dargestellten Punktes.
+* color bestimmt die Farbe des Punktes.
+* name wird als Ortsname neben dem Punkt angezeigt.
+
+Die Ortsdaten stammen aus OpenStreetMap und werden aus dem Layer places der Datei selectedIslands/Ruegen-map.json gelesen.
+
+Durchgeführter Test
+
+Lokalen Webserver starten:
+
+python3 -m http.server 8080
+
+Browser öffnen:
+
+http://localhost:8080/index.html
+
+Anschließend die Datei auswählen:
+
+selectedIslands/Ruegen-map.json
+
+Ergebnis
+
+Die Orte wurden erfolgreich aus dem Layer places geladen und auf der Karte dargestellt.
+Die Positionen stimmen mit den gespeicherten Koordinaten überein.
+Ortsnamen werden sichtbar angezeigt.
+
+US-07 ist damit erfüllt.
