@@ -357,3 +357,87 @@ selectedIslands/Ruegen-map.json
 Die Daten stammen aus OpenStreetMap und werden beim Erzeugen der Karte automatisch in die JSON-Datei geschrieben.
 
 
+## US-06: Punktförmige Orte als Object Layer speichern
+
+Die Grundfunktion für punktförmige Orte wurde bereits in Sprint 1 umgesetzt.
+
+In Sprint 2 wurde die Funktion erweitert. Statt Beispielwerten werden nun echte Ortsdaten aus OpenStreetMap übernommen und als Punktobjekte in der erzeugten WorkAdventure-/Tiled-JSON-Datei gespeichert.
+
+# Layer
+
+Der Layer heißt:
+```json
+places
+```
+In diesem Layer werden Orte aus OpenStreetMap als Punktobjekte gespeichert.
+
+Beispiel aus der Datei
+
+Datei:
+```json
+selectedIslands/Ruegen-map.json
+```
+```json
+{
+  "id": 1,
+  "name": "Bergen auf Rügen",
+  "type": "town",
+  "x": 1426,
+  "y": 2085,
+  "width": 22,
+  "height": 22,
+  "size": 22,
+  "color": "red",
+  "point": true
+}
+```
+Durchgeführte Tests
+
+Test 1: Prüfen, ob der Layer vorhanden ist
+
+```json
+python3 - <<'PY'
+import json
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+layer = next((l for l in m["layers"] if l["name"] == "places"), None)
+print("places Layer vorhanden:", layer is not None)
+print("Anzahl Orte:", len(layer["objects"]))
+PY
+```
+Ergebnis:
+```json
+places Layer vorhanden: True
+Anzahl Orte: 497
+```
+
+Test 2: Prüfen, ob Ortsdaten gespeichert wurden
+```json
+python3 - <<'PY'
+import json
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+places = next(l for l in m["layers"] if l["name"] == "places")["objects"]
+print("Name:", places[0]["name"])
+print("Typ:", places[0]["type"])
+print("Point:", places[0]["point"])
+PY
+```
+
+Ergebnis:
+```json
+Name: Bergen auf Rügen
+Typ: town
+Point: True
+```
+
+# Ergebnis
+
+Der Layer places wurde erfolgreich erzeugt.
+
+In der Datei Ruegen-map.json wurden insgesamt 497 Orte gespeichert.
+
+Jeder Ort besitzt einen Namen, eine Ortskategorie sowie eine Position auf der Karte.
+
+Die gespeicherten Ortsdaten können anschließend in US-07 grafisch dargestellt werden.
+
