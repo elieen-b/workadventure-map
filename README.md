@@ -350,9 +350,9 @@ Erwartetes Ergebnis
 In Sprint 2 wurde die erzeugte Inselkarte erweitert.
 Neben Land, Wasser und Küste werden jetzt auch Orte, Straßen, Ortsnamen, Straßennamen und Kategorien aus OpenStreetMap verarbeitet.
 
+```md
 Getestet wurde hauptsächlich mit der Datei:
-```json
-selectedIslands/Ruegen-map.json
+`selectedIslands/Ruegen-map.json`.
 ```
 Die Daten stammen aus OpenStreetMap und werden beim Erzeugen der Karte automatisch in die JSON-Datei geschrieben.
 
@@ -365,9 +365,7 @@ In Sprint 2 wurde die Funktion erweitert. Statt Beispielwerten werden nun echte 
 
 # Layer
 
-Der Layer heißt:
-```json
-places
+Der Layer heißt: `places`
 ```
 In diesem Layer werden Orte aus OpenStreetMap als Punktobjekte gespeichert.
 
@@ -393,9 +391,10 @@ selectedIslands/Ruegen-map.json
 ```
 Durchgeführte Tests
 
-Test 1: Prüfen, ob der Layer vorhanden ist
 
-```json
+### Test 1: Prüfen, ob der Layer vorhanden ist
+
+```python
 python3 - <<'PY'
 import json
 with open("selectedIslands/Ruegen-map.json") as f:
@@ -406,7 +405,7 @@ print("Anzahl Orte:", len(layer["objects"]))
 PY
 ```
 Ergebnis:
-```json
+```python
 places Layer vorhanden: True
 Anzahl Orte: 497
 ```
