@@ -1081,3 +1081,155 @@ Größere Orte erhalten größere Symbole und kleinere Orte kleinere Symbole. Zu
 Dadurch können wichtige Orte auf der Karte schneller erkannt werden.
 
 US-13 ist damit erfüllt.
+
+## US-14: Straßenkategorien unterschiedlich darstellen
+
+Für US-14 werden Straßen je nach OpenStreetMap-Kategorie unterschiedlich dargestellt.
+
+Die Straßenkategorie steht im JSON im Feld `type`.
+
+Beispiele für Straßenkategorien sind:
+
+- `primary`
+- `secondary`
+- `tertiary`
+- `trunk`
+
+Für die Darstellung werden zusätzlich folgende Informationen gespeichert:
+
+- `lineWidth`
+- `color`
+
+Für die verschiedenen Straßenkategorien wurde folgende Regel festgelegt:
+
+| Kategorie | Linienbreite | Farbe |
+|----------|-------------|---------|
+| primary / trunk | 6 | #d95f02 |
+| secondary / tertiary | 4 | #7570b3 |
+| andere / unbekannt | 2 | #666666 |
+
+Diese Werte werden direkt im JSON-Objekt gespeichert.
+
+Beispiel aus `selectedIslands/Ruegen-map.json`:
+
+```json
+{
+  "id": 1,
+  "name": "OSM road",
+  "type": "secondary",
+  "x": 0,
+  "y": 0,
+  "lineWidth": 4,
+  "color": "#7570b3",
+  "polyline": [
+    { "x": 71, "y": 743 },
+    { "x": 72, "y": 742 },
+    { "x": 73, "y": 740 }
+  ]
+}
+```
+
+## Durchgeführte Tests
+
+### Test 1: Prüfen, welche Straßenkategorien gespeichert wurden
+
+```bash
+python3 - <<'PY'
+import json
+from collections import Counter
+
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+
+roads = next(l for l in m["layers"] if l["name"] == "roads")["objects"]
+
+types = Counter(r.get("type", "KEIN_TYPE") for r in roads)
+
+print("Straßenkategorien:")
+for t, c in types.most_common():
+    print(t, c)
+PY
+```
+
+Ergebnis:
+
+```text
+Straßenkategorien:
+secondary 867
+tertiary 358
+primary 298
+trunk 98
+trunk_link 60
+secondary_link 8
+tertiary_link 3
+```
+
+Damit wurde geprüft, welche Straßenkategorien in den OpenStreetMap-Daten von Rügen vorhanden sind.
+
+### Test 2: Prüfen, ob für verschiedene Straßenkategorien die richtige Linienbreite und Farbe gespeichert wurden
+
+```bash
+python3 - <<'PY'
+import json
+
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+
+roads = next(l for l in m["layers"] if l["name"] == "roads")["objects"]
+
+wanted = ["primary", "secondary", "tertiary"]
+
+for w in wanted:
+    print("\nKategorie:", w)
+    count = 0
+    for r in roads:
+        if r.get("type") == w:
+            print(r.get("name"), "lineWidth=", r.get("lineWidth"), "color=", r.get("color"))
+            count += 1
+            if count == 5:
+                break
+PY
+```
+
+Ergebnis:
+
+```text
+Kategorie: primary
+OSM road lineWidth=6 color=#d95f02
+Göhrener Chaussee lineWidth=6 color=#d95f02
+OSM road lineWidth=6 color=#d95f02
+OSM road lineWidth=6 color=#d95f02
+Nordstraße lineWidth=6 color=#d95f02
+
+Kategorie: secondary
+OSM road lineWidth=4 color=#7570b3
+Circus lineWidth=4 color=#7570b3
+OSM road lineWidth=4 color=#7570b3
+Alleestraße lineWidth=4 color=#7570b3
+Bahnhofstraße lineWidth=4 color=#7570b3
+
+Kategorie: tertiary
+Lauterbacher Straße lineWidth=4 color=#7570b3
+OSM road lineWidth=4 color=#7570b3
+Boddenstraße lineWidth=4 color=#7570b3
+OSM road lineWidth=4 color=#7570b3
+Tilzower Weg lineWidth=4 color=#7570b3
+```
+
+Dabei wurde geprüft:
+
+- ob verschiedene Straßenkategorien vorhanden sind,
+- ob für jede Kategorie die richtige Linienbreite gespeichert wurde,
+- ob für jede Kategorie die richtige Farbe gespeichert wurde.
+
+Alle Straßen besitzen eine Straßenkategorie. Die Standardregel für unbekannte Kategorien ist trotzdem im Code vorhanden und kann bei anderen Karten verwendet werden.
+
+## Ergebnis
+
+Die Straßen werden abhängig von ihrer OpenStreetMap-Kategorie unterschiedlich dargestellt.
+
+Hauptstraßen erhalten eine größere Linienbreite als kleinere Straßen. Zusätzlich wird für jede Straßenkategorie eine passende Farbe gespeichert.
+
+Dadurch können verschiedene Straßentypen auf der Karte leichter unterschieden werden.
+
+US-14 ist damit erfüllt.
