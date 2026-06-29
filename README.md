@@ -928,3 +928,43 @@ Ortsnamen und Straßennamen sind direkt auf der Karte sichtbar.
 Die Filterung sorgt dafür, dass die Karte trotz vieler Beschriftungen übersichtlich bleibt.
 
 US-12 ist damit erfüllt.
+
+## US-13: Ortsgrößen unterschiedlich darstellen
+
+Für US-13 werden Orte je nach OpenStreetMap-Kategorie unterschiedlich dargestellt.
+
+Die Kategorie eines Ortes steht im JSON im Feld `type`.
+
+Beispiele für Ortskategorien sind:
+
+- `town`
+- `village`
+- `hamlet`
+- `locality`
+
+Für die Darstellung wurde eine einfache Regel festgelegt:
+
+| Kategorie | Größe | Farbe |
+|----------|-------|-------|
+| town | 22 | red |
+| village | 16 | orange |
+| hamlet | 10 | yellow |
+| andere / unbekannt | 14 | orange |
+
+Diese Werte werden direkt im JSON-Objekt gespeichert.
+
+Beispiel aus `selectedIslands/Ruegen-map.json`:
+
+```json
+{
+  "id": 1,
+  "name": "Bergen auf R\u00fcgen",
+  "type": "town",
+  "x": 1426,
+  "y": 2085,
+  "width": 22,
+  "height": 22,
+  "size": 22,
+  "color": "red",
+  "point": true
+}
