@@ -968,3 +968,116 @@ Beispiel aus `selectedIslands/Ruegen-map.json`:
   "color": "red",
   "point": true
 }
+```
+
+## Durchgeführte Tests
+
+### Test 1: Prüfen, welche Ortskategorien gespeichert wurden
+
+```bash
+
+python3 - <<'PY'
+import json
+from collections import Counter
+
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+
+places = next(l for l in m["layers"] if l["name"] == "places")["objects"]
+
+types = Counter(p.get("type", "KEIN_TYPE") for p in places)
+
+print("Ortskategorien:")
+for t, c in types.most_common():
+    print(t, c)
+PY
+
+```
+
+Ergebnis:
+
+```text
+
+Ortskategorien:
+hamlet 308
+locality 60
+village 56
+isolated_dwelling 39
+neighbourhood 25
+town 4
+suburb 4
+region 1
+
+```
+Damit wurde geprüft, welche Ortskategorien in den OpenStreetMap-Daten von Rügen vorhanden sind.
+
+### Test 2: Prüfen, ob die Ortsgrößen und Farben je nach Kategorie richtig gespeichert werden
+
+Folgender Test wurde ausgeführt:
+
+```bash
+
+python3 - <<'PY'
+
+import json
+with open("selectedIslands/Ruegen-map.json") as f:
+    m = json.load(f)
+places = next(l for l in m["layers"] if l["name"] == "places")["objects"]
+wanted = ["village", "town", "city", "hamlet"]
+for w in wanted:
+    print("\nKategorie:", w)
+    count = 0
+    for p in places:
+        if p.get("type") == w:
+            print(p.get("name"), "size=", p.get("size"), "color=", p.get("color"))
+            count += 1
+            if count == 5:
+                break
+
+PY
+
+```
+
+Ergebnis:
+
+```text
+
+Kategorie: village
+Samtens size=16 color=orange
+Kasnevitz size=16 color=orange
+Dreschvitz size=16 color=orange
+Putgarten size=16 color=orange
+Lancken size=16 color=orange
+
+Kategorie: town
+Bergen auf Rügen size=22 color=red
+Putbus size=22 color=red
+Garz/Rügen size=22 color=red
+Sassnitz size=22 color=red
+
+Kategorie: city
+
+Kategorie: hamlet
+Neukamp size=10 color=yellow
+Ketelshagen size=10 color=yellow
+Dumsevitz size=10 color=yellow
+Posewald size=10 color=yellow
+Wreechen size=10 color=yellow
+
+```
+
+Dabei wurde geprüft,
+
+- ob verschiedene Ortskategorien vorhanden sind,
+- ob für jede Kategorie die richtige Größe gespeichert wurde,
+- ob für jede Kategorie die richtige Farbe gespeichert wurde.
+
+Auf Rügen wurde keine Ortskategorie **city** gefunden. Die Regel für diese Kategorie ist trotzdem im Code vorhanden und kann bei anderen Karten verwendet werden.
+
+## Ergebnis
+
+Die Orte werden abhängig von ihrer OpenStreetMap-Kategorie unterschiedlich dargestellt.
+Größere Orte erhalten größere Symbole und kleinere Orte kleinere Symbole. Zusätzlich wird für jede Kategorie eine passende Farbe gespeichert.
+Dadurch können wichtige Orte auf der Karte schneller erkannt werden.
+
+US-13 ist damit erfüllt.
