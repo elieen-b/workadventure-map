@@ -192,10 +192,10 @@ Getestet mit:
 In Sprint 2 wurde die erzeugte Inselkarte erweitert.
 Neben Land, Wasser und Küste werden jetzt auch Orte, Straßen, Ortsnamen, Straßennamen und Kategorien aus OpenStreetMap verarbeitet.
 
-```md
 Getestet wurde hauptsächlich mit der Datei:
-`selectedIslands/Ruegen-map.json`.
-```
+
+`selectedIslands/Ruegen-map.json`
+
 Die Daten stammen aus OpenStreetMap und werden beim Erzeugen der Karte automatisch in die JSON-Datei geschrieben.
 
 
@@ -205,18 +205,18 @@ Die Grundfunktion für punktförmige Orte wurde bereits in Sprint 1 umgesetzt.
 
 In Sprint 2 wurde die Funktion erweitert. Statt Beispielwerten werden nun echte Ortsdaten aus OpenStreetMap übernommen und als Punktobjekte in der erzeugten WorkAdventure-/Tiled-JSON-Datei gespeichert.
 
-# Layer
+### Layer
 
 Der Layer heißt: `places`
-```
+
 In diesem Layer werden Orte aus OpenStreetMap als Punktobjekte gespeichert.
 
 Beispiel aus der Datei
 
 Datei:
-```json
-selectedIslands/Ruegen-map.json
-```
+
+`selectedIslands/Ruegen-map.json`
+
 ```json
 {
   "id": 1,
@@ -247,7 +247,7 @@ print("Anzahl Orte:", len(layer["objects"]))
 PY
 ```
 Ergebnis:
-```python
+```text
 places Layer vorhanden: True
 Anzahl Orte: 497
 ```
@@ -301,12 +301,14 @@ Durchgeführter Test
 
 Lokalen Webserver starten:
 
+```bash
 python3 -m http.server 8080
+```
 
 Browser öffnen:
-
+```text
 http://localhost:8080/index.html
-
+```
 Anschließend die Datei auswählen:
 
 selectedIslands/Ruegen-map.json
@@ -314,12 +316,12 @@ selectedIslands/Ruegen-map.json
 Ergebnis
 
 Die Orte wurden erfolgreich aus dem Layer places geladen und auf der Karte dargestellt.
-Die Positionen stimmen mit den gespeicherten Koordinaten überein.
+Die Orte werden an den gespeicherten Koordinaten dargestellt.
 Ortsnamen werden sichtbar angezeigt.
 
 US-07 ist damit erfüllt.
 
-# US-08: Straßen / Wege als Linien speichern
+## US-08: Straßen / Wege als Linien speichern
 
 Die Grundfunktion für Straßen und Wege wurde bereits in Sprint 1 vorbereitet.
 
@@ -497,7 +499,7 @@ Jede Straße besitzt eine Kategorie, einen Verlauf als Polyline sowie Darstellun
 
 Die gespeicherten Straßendaten können anschließend in US-09 grafisch im Browser dargestellt werden.
 
-# US-09: Straßen im Browser anzeigen
+## US-09: Straßen im Browser anzeigen
 
 Für diese User Story wurde die Browseransicht erweitert.
 
@@ -548,7 +550,7 @@ Die Darstellung der Straßen funktioniert damit erfolgreich.
 US-09 ist damit erfüllt.
 
 
-# US-10: Ortsnamen als Textlabel speichern
+## US-10: Ortsnamen als Textlabel speichern
 
 Für diese User Story wurde die erzeugte Karten-Datei um einen zusätzlichen Object Layer erweitert.
 
@@ -621,7 +623,7 @@ Die gespeicherten Ortsnamen können anschließend in US-12 im Browser dargestell
 
 US-10 ist damit erfüllt.
 
-# US-11: Straßennamen als Textlabel speichern
+## US-11: Straßennamen als Textlabel speichern
 
 Für diese User Story wurde die erzeugte Karten-Datei um einen zusätzlichen Object Layer erweitert.
 
@@ -715,7 +717,7 @@ Die gespeicherten Straßennamen können anschließend in US-12 im Browser darges
 
 US-11 ist damit erfüllt.
 
-# US-12: Namen im Viewer anzeigen
+## US-12: Namen im Viewer anzeigen
 
 Für diese User Story wurde die Browseransicht erweitert.
 
@@ -945,7 +947,7 @@ Für die Darstellung werden zusätzlich folgende Informationen gespeichert:
 Für die verschiedenen Straßenkategorien wurde folgende Regel festgelegt:
 
 | Kategorie | Linienbreite | Farbe |
-|----------|-------------|---------|
+|----------|--------------|---------|
 | primary / trunk | 6 | #d95f02 |
 | secondary / tertiary | 4 | #7570b3 |
 | andere / unbekannt | 2 | #666666 |
@@ -1075,3 +1077,28 @@ Hauptstraßen erhalten eine größere Linienbreite als kleinere Straßen. Zusät
 Dadurch können verschiedene Straßentypen auf der Karte leichter unterschieden werden.
 
 US-14 ist damit erfüllt.
+
+## Zusammenfassung Sprint 2
+
+In Sprint 2 wurde die Karte um zusätzliche OpenStreetMap-Daten erweitert.
+Die JSON-Datei enthält jetzt:
+
+- Orte als Punktobjekte
+- Straßen als Linienobjekte
+- Ortsnamen als Textobjekte
+- Straßennamen als Textobjekte
+- unterschiedliche Ortsgrößen
+- unterschiedliche Straßenkategorien
+
+Getestet wurde hauptsächlich mit:
+
+`selectedIslands/Ruegen-map.json`
+
+Wichtige Testergebnisse:
+
+```text
+places objects: 497
+roads objects: 1692
+placeLabels objects: 497
+roadLabels objects: 702
+```
