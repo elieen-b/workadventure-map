@@ -236,7 +236,7 @@ Durchgeführte Tests
 
 ### Test 1: Prüfen, ob der Layer vorhanden ist
 
-```python
+```bash
 python3 - <<'PY'
 import json
 with open("selectedIslands/Ruegen-map.json") as f:
@@ -247,13 +247,15 @@ print("Anzahl Orte:", len(layer["objects"]))
 PY
 ```
 Ergebnis:
+
 ```text
 places Layer vorhanden: True
 Anzahl Orte: 497
 ```
 
-Test 2: Prüfen, ob Ortsdaten gespeichert wurden
-```json
+### Test 2: Prüfen, ob Ortsdaten gespeichert wurden
+
+```bash
 python3 - <<'PY'
 import json
 with open("selectedIslands/Ruegen-map.json") as f:
@@ -265,14 +267,15 @@ print("Point:", places[0]["point"])
 PY
 ```
 
-Ergebnis:
-```json
+#### Ergebnis:
+
+```text
 Name: Bergen auf Rügen
 Typ: town
 Point: True
 ```
 
-# Ergebnis
+#### Ergebnis
 
 Der Layer places wurde erfolgreich erzeugt.
 
