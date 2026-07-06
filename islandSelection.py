@@ -2,6 +2,7 @@ from tile import jsonFromPolygon, jsonFromFile, multiPolyCoords, createMap, scal
 import os, math, json, wamap, errno
 import urllib.request
 import urllib.parse
+import roads
 
 class Island:
   def __init__(self, name, zoom, polygon):
@@ -200,6 +201,8 @@ def tileIndex(geoJson, shortIslandName, polygon):
   data = createTileIndex(geoJson)
   wamap.mapWidth = data["width"]
   wamap.mapHeight = data["height"]
+  roads.mapWidth = data["width"]
+  roads.mapHeight = data["height"]
 
   index = [d+1 for d in data["index"]]
   start = [2 if d1==2 and d2>2  else 0 for (d1,d2) in zip(index[:-1],index[1:])] + [0]
@@ -210,18 +213,18 @@ def tileIndex(geoJson, shortIslandName, polygon):
       data["width"],
       data["height"]
 ) 
-  bounds = wamap.get_bounds_from_geojson("osm-ruegen.geojson")
-  query = wamap.create_overpass_query(bounds)
-  osm_data = wamap.download_osm_roads(query)
-  roads = wamap.create_road_objects(osm_data, bounds)
+  bounds = roads.get_bounds_from_geojson("osm-ruegen.geojson")
+  query = roads.create_overpass_query(bounds)
+  osm_data = roads.download_osm_roads(query)
+  roadsData = roads.create_road_objects(osm_data, bounds)
 
-  roadLabels = wamap.create_road_label_objects(roads)
+  roadLabels = roads.create_road_label_objects(roadsData)
 
   mapJson = wamap.island(
     index,
     start,
     places,
-    roads,
+    roadsData,
     roadLabels
   )
   with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
