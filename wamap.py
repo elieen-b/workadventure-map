@@ -5,6 +5,7 @@ exit="map.json"
 
 import json
 import roads
+import places
 
 osmRoads = []
 
@@ -59,61 +60,16 @@ def baseLayer(name, layerId, layerType, visible=True):
     "opacity":1,
     "type": layerType
   }
-def defaultPlaces():
 
-  return [
-    {
-      "id": 1,
-      "name": "Bergen",
-      "type": "village",
-      "x": 500,
-      "y": 500,
-      "width": 16,
-      "height": 16,
-      "point": True
-
-    },
-    {
-      "id": 2,
-      "name": "Sassnitz",
-      "type": "town",
-      "x": 60,
-      "y": 40,
-      "width": 20,
-      "height": 20,
-      "point": True
-    }
-  ]
-
-def createPlaceLabels(places):
-  labels = []
-  label_id = 1
-
-  for place in places:
-    if not place.get("name"):
-      continue
-
-    labels.append({
-      "id": label_id,
-      "name": place["name"] + " Label",
-      "type": "text",
-      "x": place["x"] + 8,
-      "y": place["y"] - 8,
-      "text": place["name"]
-    })
-
-    label_id += 1
-
-  return labels
 
 def create_osm_roads():
   print("OSM roads loader started")
   return []
 
 
-def island(data, start, places=None, roads=None, roadLabels=None):
-  if places is None:
-    places = []
+def island(data, start, placesData=None, roads=None, roadLabels=None):
+  if placesData is None:
+    placesData = []
   if roads is None:
     roads = []
   if roadLabels is None:
@@ -158,12 +114,12 @@ def island(data, start, places=None, roads=None, roadLabels=None):
       tileLayer("start", 1, start),
       tileLayer("tiles", 2, data),
       objectLayer("floorLayer", 4, []),
-      objectLayer("places", 5, places),
+      objectLayer("places", 5, placesData),
       objectLayer("roads", 6, roads),
 
       objectLayer("roadLabels", 8, roadLabels, visible=False),
 
-      objectLayer("placeLabels", 7, createPlaceLabels(places))
+      objectLayer("placeLabels", 7, places.createPlaceLabels(placesData))
     ]
   }
 
