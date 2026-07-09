@@ -34,7 +34,7 @@ def create_overpass_query(bounds):
   east = bounds[2]
 
   return f"""
-[out:json];
+[out:json][timeout:120];
 (
   way["highway"~"motorway|trunk|primary|secondary|tertiary"]({south},{west},{north},{east});
 );
