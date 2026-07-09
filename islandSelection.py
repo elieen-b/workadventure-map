@@ -213,7 +213,7 @@ def tileIndex(geoJson, shortIslandName, polygon):
       data["width"],
       data["height"]
 ) 
-  bounds = roads.get_bounds_from_geojson("osm-ruegen.geojson")
+  bounds = geoJsonBounds(geoJson)
   query = roads.create_overpass_query(bounds)
   osm_data = roads.download_osm_roads(query)
   roadsData = roads.create_road_objects(osm_data, bounds)
