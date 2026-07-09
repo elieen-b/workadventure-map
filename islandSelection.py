@@ -105,6 +105,14 @@ def geoJsonBounds(geoJson):
     lats = [point[1] for point in outline]
     return min(lons), min(lats), max(lons), max(lats)
 
+def convertCoordinates(lon, lat, bounds, width, height):
+    minLon, minLat, maxLon, maxLat = bounds
+
+    x= int((lon - minLon) / (maxLon - minLon) * width * wamap.tileSize)
+    y = int((maxLat - lat) / (maxLat - minLat) * height * wamap.tileSize)
+    
+    return x, y
+
 def placesFromOSM(polygon, geoJson, width, height):
 
     areaId = 3600000000 + int(polygon)
@@ -144,9 +152,14 @@ out;
         lon = element["lon"]
         lat = element["lat"]
 
-        x = int((lon - minLon) / (maxLon - minLon) * width * wamap.tileSize)
-        y = int((maxLat - lat) / (maxLat - minLat) * height * wamap.tileSize)
-
+        x, y = convertCoordinates(
+           lon,
+           lat,
+           (minLon, minLat, maxLon, maxLat),
+            width,
+            height
+        )
+        
         placeType = tags.get("place", "place")
 
         if placeType == "city":
