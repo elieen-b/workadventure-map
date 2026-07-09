@@ -228,10 +228,17 @@ def tileIndex(geoJson, shortIslandName, polygon):
 ) 
   bounds = geoJsonBounds(geoJson)
   query = roads.create_overpass_query(bounds)
-  osm_data = roads.download_osm_roads(query)
-  roadsData = roads.create_road_objects(osm_data, bounds)
+  try :
+   osm_data = roads.download_osm_roads(query)
+   roadsData = roads.create_road_objects(osm_data, bounds)
+   roadLabels = roads.create_road_label_objects(roadsData)
 
-  roadLabels = roads.create_road_label_objects(roadsData)
+  except Exception as e:
+     print("OSM roads could not be loaded:", e)
+     roadsData = None
+     roadLabels = None
+     
+  
 
   mapJson = wamap.island(
     index,
