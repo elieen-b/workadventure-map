@@ -35,10 +35,20 @@ def createPlaceLabels(places):
     labels.append({
       "id": label_id,
       "name": place["name"] + " Label",
-      "type": "text",
+      "type": "",
       "x": place["x"] + 8,
       "y": place["y"] - 8,
-      "text": place["name"]
+      "width": 200,
+      "height": 20,
+      "rotation": 0,
+      "visible": True,
+      "text": {
+        "text": place["name"],
+        "pixelsize": 16,
+        "color": "#000000",
+        "wrap": False
+
+      }
     })
 
     label_id += 1
