@@ -1,6 +1,7 @@
 import json
 import urllib.request
 import urllib.parse
+import mapper
 
 mapWidth = 73
 mapHeight = 89
@@ -53,15 +54,7 @@ def download_osm_roads(query):
   with urllib.request.urlopen(request) as response:
     return json.load(response)
 
-def lonlat_to_pixel(lon, lat, bounds):
-  min_lon, min_lat, max_lon, max_lat = bounds
-  canvas_width = mapWidth * 8
-  canvas_height = mapHeight * 8
-  x = int((lon - min_lon) / (max_lon - min_lon) * canvas_width)
-  y = int((max_lat - lat) / (max_lat - min_lat) * canvas_height)
-  x += 50
-  y += 30
-  return x, y
+
 
 def roadStyle(road_type):
   if road_type in ["motorway", "trunk", "primary"]:
@@ -90,8 +83,18 @@ def create_road_objects(osm_data, bounds):
 
     polyline = []
     for point in geometry:
-      x, y = lonlat_to_pixel(point["lon"], point["lat"], bounds)
-      polyline.append({"x": x, "y": y})
+      x, y = mapper.lonlat_to_pixel(
+         point["lon"],
+         point["lat"],
+         bounds,
+         mapWidth,
+         mapHeight,
+          8
+      )
+      polyline.append({
+        "x": x, "y": y
+        })
+
 
     road = {
       "id": road_id,
@@ -140,4 +143,3 @@ def create_road_label_objects(roads):
     label_id += 1
 
   return labels
-
