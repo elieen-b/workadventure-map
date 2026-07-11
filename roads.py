@@ -116,11 +116,15 @@ def create_road_objects(osm_data, bounds):
 def create_road_label_objects(roads):
   labels = []
   label_id = 1
+  used_names = set()
 
   for road in roads:
     name = road.get("name", "")
 
     if name == "" or name == "OSM road":
+      continue
+
+    if name in used_names:
       continue
 
     polyline = road.get("polyline", [])
@@ -134,12 +138,22 @@ def create_road_label_objects(roads):
     labels.append({
       "id": label_id,
       "name": name + " Label",
-      "type": "text",
+      "type": "",
       "x": middle_point["x"],
       "y": middle_point["y"],
-      "text": name
+      "width": 200,
+      "height": 20,
+      "rotation": 0,
+      "visible": True,
+      "text": {
+          "text": name,
+          "pixelsize": 12,
+          "color": "#000000",
+          "wrap": False
+      }
     })
 
+    used_names.add(name)
     label_id += 1
 
   return labels
