@@ -145,11 +145,13 @@ const usedPositions = [];
 
 roadLabelsLayer.objects.forEach(label => {
 
-  if (!label.text) {
+  if (!label.text || !label.text.text) {
     return;
   }
 
-  if (label.text.length > 16) {
+  const text = label.text.text;
+  
+  if (text.length > 16) {
     return;
   }
 
@@ -166,8 +168,8 @@ roadLabelsLayer.objects.forEach(label => {
   }
   usedPositions.push({ x, y });
   ctx.fillStyle = "#333333";
-  ctx.font = "8px Arial";
-  ctx.fillText(label.text, x, y);
+  ctx.font = "7px Arial";
+  ctx.fillText(text, x +3 , y - 3);
 });
 }
   
@@ -181,13 +183,18 @@ roadLabelsLayer.objects.forEach(label => {
 
      placeLabelsLayer.objects.forEach(label => {
 
-     if (label.text.length > 12) {
+      if (!label.text || !label.text.text) {
+        return;
+      }
+      const text = label.text.text;
+
+     if (text.length > 12) {
      return;
      }
 
      ctx.fillStyle = "black";
-     ctx.font = "10px Arial";
-     ctx.fillText(label.text, label.x * scale, label.y * scale);
+     ctx.font = "8px Arial";
+     ctx.fillText(text, label.x * scale + 4 , label.y * scale - 4);
     });
 
   }

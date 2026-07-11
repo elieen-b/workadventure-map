@@ -28,17 +28,13 @@ def get_bounds_from_geojson(filename):
 
   return (min(lons), min(lats), max(lons), max(lats))
 
-def create_overpass_query(bounds):
-  south = bounds[1]
-  west = bounds[0]
-  north = bounds[3]
-  east = bounds[2]
+def create_overpass_query(polygon):
+  area_id = 3600000000 + int(polygon)
 
   return f"""
 [out:json][timeout:120];
-(
-  way["highway"~"motorway|trunk|primary|secondary|tertiary"]({south},{west},{north},{east});
-);
+area({area_id})->.searchArea;
+way["highway"~"motorway|trunk|primary|secondary|tertiary"](area.searchArea);
 out geom;
 """
 

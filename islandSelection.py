@@ -128,7 +128,7 @@ out;
             "User-Agent": "team-9-workadventure-inselszenario"
         }
     )
-        response = urllib.request.urlopen(request, timeout=25)
+        response = urllib.request.urlopen(request, timeout=120)
         result = json.loads(response.read().decode("utf-8"))
     except Exception as error:
         print("OSM places could not be loaded:", error)
@@ -155,6 +155,9 @@ out;
         )
         
         placeType = tags.get("place", "place")
+
+        if placeType not in ["city", "town", "village"]:
+           continue
 
         if placeType == "city":
             placeSize = 28
@@ -221,7 +224,7 @@ def tileIndex(geoJson, shortIslandName, polygon):
       data["height"]
 ) 
   bounds = geoJsonBounds(geoJson)
-  query = roads.create_overpass_query(bounds)
+  query = roads.create_overpass_query(polygon)
   try :
    osm_data = roads.download_osm_roads(query)
    roadsData = roads.create_road_objects(osm_data, bounds)
@@ -229,8 +232,8 @@ def tileIndex(geoJson, shortIslandName, polygon):
 
   except Exception as e:
      print("OSM roads could not be loaded:", e)
-     roadsData = None
-     roadLabels = None
+     roadsData =  []
+     roadLabels =  []
      
   
 
