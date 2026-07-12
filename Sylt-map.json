@@ -32043,478 +32043,6 @@
             ]
         },
         {
-            "name": "roadLabels",
-            "id": 8,
-            "x": 0,
-            "y": 0,
-            "width": 42,
-            "height": 107,
-            "visible": false,
-            "opacity": 1,
-            "type": "objectgroup",
-            "objects": [
-                {
-                    "id": 1,
-                    "name": "Rantumer Stra\u00dfe Label",
-                    "type": "",
-                    "x": 60,
-                    "y": 2880,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Rantumer Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 2,
-                    "name": "Bahnweg Label",
-                    "type": "",
-                    "x": 184,
-                    "y": 1632,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Bahnweg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 3,
-                    "name": "Keitumer Landstra\u00dfe Label",
-                    "type": "",
-                    "x": 520,
-                    "y": 1780,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Keitumer Landstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 4,
-                    "name": "M.-T.-Buchholz-Stich Label",
-                    "type": "",
-                    "x": 456,
-                    "y": 1380,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "M.-T.-Buchholz-Stich",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 5,
-                    "name": "Am F\u00e4hranleger Label",
-                    "type": "",
-                    "x": 1008,
-                    "y": 452,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Am F\u00e4hranleger",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 6,
-                    "name": "Hafenstra\u00dfe Label",
-                    "type": "",
-                    "x": 968,
-                    "y": 472,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Hafenstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 7,
-                    "name": "Trift Label",
-                    "type": "",
-                    "x": 192,
-                    "y": 1700,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Trift",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 8,
-                    "name": "Lorens-de-Hahn-Stra\u00dfe Label",
-                    "type": "",
-                    "x": 184,
-                    "y": 1796,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Lorens-de-Hahn-Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 9,
-                    "name": "Keitumer Chaussee Label",
-                    "type": "",
-                    "x": 216,
-                    "y": 1660,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Keitumer Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 10,
-                    "name": "Terp Wai Label",
-                    "type": "",
-                    "x": 448,
-                    "y": 1388,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Terp Wai",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 11,
-                    "name": "Munkhoog Label",
-                    "type": "",
-                    "x": 512,
-                    "y": 1532,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Munkhoog",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 12,
-                    "name": "Munkmarscher Chaussee Label",
-                    "type": "",
-                    "x": 544,
-                    "y": 1772,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Munkmarscher Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 13,
-                    "name": "Culemeyerstra\u00dfe Label",
-                    "type": "",
-                    "x": 276,
-                    "y": 1668,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Culemeyerstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 14,
-                    "name": "H\u00f6rnumer Stra\u00dfe Label",
-                    "type": "",
-                    "x": 96,
-                    "y": 2180,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "H\u00f6rnumer Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 15,
-                    "name": "Listlandstra\u00dfe Label",
-                    "type": "",
-                    "x": 632,
-                    "y": 676,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Listlandstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 16,
-                    "name": "Lister Stra\u00dfe Label",
-                    "type": "",
-                    "x": 400,
-                    "y": 1040,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Lister Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 17,
-                    "name": "Hauptstra\u00dfe Label",
-                    "type": "",
-                    "x": 400,
-                    "y": 1052,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Hauptstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 18,
-                    "name": "Dorfstra\u00dfe Label",
-                    "type": "",
-                    "x": 752,
-                    "y": 2032,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Dorfstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 19,
-                    "name": "Kirchenweg Label",
-                    "type": "",
-                    "x": 212,
-                    "y": 1652,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Kirchenweg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 20,
-                    "name": "Wenningstedter Weg Label",
-                    "type": "",
-                    "x": 380,
-                    "y": 1200,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Wenningstedter Weg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 21,
-                    "name": "Braderuper Weg Label",
-                    "type": "",
-                    "x": 412,
-                    "y": 1148,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Braderuper Weg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 22,
-                    "name": "Terpstig Label",
-                    "type": "",
-                    "x": 1004,
-                    "y": 2064,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Terpstig",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 23,
-                    "name": "D\u00fcnenstra\u00dfe Label",
-                    "type": "",
-                    "x": 928,
-                    "y": 472,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "D\u00fcnenstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 24,
-                    "name": "M\u00f6venbergstra\u00dfe Label",
-                    "type": "",
-                    "x": 904,
-                    "y": 416,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "M\u00f6venbergstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 25,
-                    "name": "Braderuper Stra\u00dfe Label",
-                    "type": "",
-                    "x": 360,
-                    "y": 1356,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Braderuper Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 26,
-                    "name": "Johann-M\u00f6ller-Stra\u00dfe Label",
-                    "type": "",
-                    "x": 196,
-                    "y": 1608,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Johann-M\u00f6ller-Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 27,
-                    "name": "Kjeirstra\u00dfe Label",
-                    "type": "",
-                    "x": 200,
-                    "y": 1616,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Kjeirstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                }
-            ]
-        },
-        {
             "name": "placeLabels",
             "id": 7,
             "x": 0,
@@ -32529,16 +32057,16 @@
                     "id": 1,
                     "name": "Westerland Label",
                     "type": "",
-                    "x": 191,
-                    "y": 1659,
-                    "width": 200,
-                    "height": 20,
+                    "x": 199,
+                    "y": 1651,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Westerland",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 18,
+                        "color": "#b34700",
                         "wrap": false
                     }
                 },
@@ -32546,16 +32074,16 @@
                     "id": 2,
                     "name": "List auf Sylt Label",
                     "type": "",
-                    "x": 1006,
-                    "y": 447,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1012,
+                    "y": 441,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "List auf Sylt",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -32563,16 +32091,16 @@
                     "id": 3,
                     "name": "Wenningstedt Label",
                     "type": "",
-                    "x": 280,
-                    "y": 1337,
-                    "width": 200,
-                    "height": 20,
+                    "x": 286,
+                    "y": 1331,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Wenningstedt",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -32580,16 +32108,16 @@
                     "id": 4,
                     "name": "Rantum Label",
                     "type": "",
-                    "x": 101,
-                    "y": 2301,
-                    "width": 200,
-                    "height": 20,
+                    "x": 107,
+                    "y": 2295,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Rantum",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -32597,16 +32125,16 @@
                     "id": 5,
                     "name": "Kampen (Sylt) Label",
                     "type": "",
-                    "x": 425,
-                    "y": 1141,
-                    "width": 200,
-                    "height": 20,
+                    "x": 431,
+                    "y": 1135,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Kampen (Sylt)",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -32614,16 +32142,16 @@
                     "id": 6,
                     "name": "H\u00f6rnum (Sylt) Label",
                     "type": "",
-                    "x": 73,
-                    "y": 3281,
-                    "width": 200,
-                    "height": 20,
+                    "x": 79,
+                    "y": 3275,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "H\u00f6rnum (Sylt)",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -32631,16 +32159,16 @@
                     "id": 7,
                     "name": "Archsum Label",
                     "type": "",
-                    "x": 753,
-                    "y": 2019,
-                    "width": 200,
-                    "height": 20,
+                    "x": 759,
+                    "y": 2013,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Archsum",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -32648,16 +32176,16 @@
                     "id": 8,
                     "name": "Morsum Label",
                     "type": "",
-                    "x": 968,
-                    "y": 2027,
-                    "width": 200,
-                    "height": 20,
+                    "x": 974,
+                    "y": 2021,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Morsum",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -32665,16 +32193,16 @@
                     "id": 9,
                     "name": "Keitum Label",
                     "type": "",
-                    "x": 587,
-                    "y": 1784,
-                    "width": 200,
-                    "height": 20,
+                    "x": 593,
+                    "y": 1778,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Keitum",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -32682,50 +32210,16 @@
                     "id": 10,
                     "name": "Braderup Label",
                     "type": "",
-                    "x": 471,
-                    "y": 1381,
-                    "width": 200,
-                    "height": 20,
+                    "x": 477,
+                    "y": 1375,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Braderup",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 11,
-                    "name": "Tinnum Label",
-                    "type": "",
-                    "x": 347,
-                    "y": 1740,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Tinnum",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 12,
-                    "name": "Osterende Label",
-                    "type": "",
-                    "x": 984,
-                    "y": 2165,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Osterende",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 }

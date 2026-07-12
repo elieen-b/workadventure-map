@@ -129012,2059 +129012,6 @@
             ]
         },
         {
-            "name": "roadLabels",
-            "id": 8,
-            "x": 0,
-            "y": 0,
-            "width": 92,
-            "height": 113,
-            "visible": false,
-            "opacity": 1,
-            "type": "objectgroup",
-            "objects": [
-                {
-                    "id": 1,
-                    "name": "Circus Label",
-                    "type": "",
-                    "x": 1632,
-                    "y": 2572,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Circus",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 2,
-                    "name": "Alleestra\u00dfe Label",
-                    "type": "",
-                    "x": 1564,
-                    "y": 2604,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Alleestra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 3,
-                    "name": "Bahnhofstra\u00dfe Label",
-                    "type": "",
-                    "x": 1628,
-                    "y": 2584,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Bahnhofstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 4,
-                    "name": "Dorfstra\u00dfe Label",
-                    "type": "",
-                    "x": 1428,
-                    "y": 2632,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Dorfstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 5,
-                    "name": "Bergerlandstra\u00dfe Label",
-                    "type": "",
-                    "x": 1628,
-                    "y": 2560,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Bergerlandstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 6,
-                    "name": "Putbuser Chaussee Label",
-                    "type": "",
-                    "x": 1488,
-                    "y": 2156,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Putbuser Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 7,
-                    "name": "Lonvitz Label",
-                    "type": "",
-                    "x": 1740,
-                    "y": 2544,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Lonvitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 8,
-                    "name": "Lauterbacher Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1636,
-                    "y": 2588,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Lauterbacher Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 9,
-                    "name": "Putbuser Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1072,
-                    "y": 2844,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Putbuser Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 10,
-                    "name": "Bergener Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1068,
-                    "y": 2844,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Bergener Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 11,
-                    "name": "Wendorfer Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1072,
-                    "y": 2876,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Wendorfer Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 12,
-                    "name": "Lange Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1068,
-                    "y": 2868,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Lange Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 13,
-                    "name": "Boddenstra\u00dfe Label",
-                    "type": "",
-                    "x": 2700,
-                    "y": 2976,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Boddenstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 14,
-                    "name": "G\u00f6hrener Chaussee Label",
-                    "type": "",
-                    "x": 2664,
-                    "y": 2504,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "G\u00f6hrener Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 15,
-                    "name": "Karow Label",
-                    "type": "",
-                    "x": 1752,
-                    "y": 2200,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Karow",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 16,
-                    "name": "Forstverwaltung Label",
-                    "type": "",
-                    "x": 2036,
-                    "y": 1900,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Forstverwaltung",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 17,
-                    "name": "Am Bahnhof Label",
-                    "type": "",
-                    "x": 112,
-                    "y": 2820,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Am Bahnhof",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 18,
-                    "name": "Tilzower Weg Label",
-                    "type": "",
-                    "x": 1420,
-                    "y": 2136,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Tilzower Weg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 19,
-                    "name": "Nordstra\u00dfe Label",
-                    "type": "",
-                    "x": 2088,
-                    "y": 1496,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Nordstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 20,
-                    "name": "Sehlen-Dorfstra\u00dfe Label",
-                    "type": "",
-                    "x": 1220,
-                    "y": 2376,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Sehlen-Dorfstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 21,
-                    "name": "Hauptstra\u00dfe Label",
-                    "type": "",
-                    "x": 808,
-                    "y": 476,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Hauptstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 22,
-                    "name": "Stra\u00dfe der DSF Label",
-                    "type": "",
-                    "x": 776,
-                    "y": 520,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Stra\u00dfe der DSF",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 23,
-                    "name": "K.-Schumacher-Stra\u00dfe Label",
-                    "type": "",
-                    "x": 796,
-                    "y": 488,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "K.-Schumacher-Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 24,
-                    "name": "Markt Label",
-                    "type": "",
-                    "x": 784,
-                    "y": 492,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Markt",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 25,
-                    "name": "Karl-Liebknecht-Stra\u00dfe Label",
-                    "type": "",
-                    "x": 544,
-                    "y": 420,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Karl-Liebknecht-Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 26,
-                    "name": "Neue Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1048,
-                    "y": 388,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Neue Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 27,
-                    "name": "Glower Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1940,
-                    "y": 1172,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Glower Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 28,
-                    "name": "Zum F\u00f6rsterberg Label",
-                    "type": "",
-                    "x": 2308,
-                    "y": 964,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Zum F\u00f6rsterberg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 29,
-                    "name": "Stubbenkammerstra\u00dfe Label",
-                    "type": "",
-                    "x": 2408,
-                    "y": 1292,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Stubbenkammerstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 30,
-                    "name": "Ummanzer Chaussee Label",
-                    "type": "",
-                    "x": 640,
-                    "y": 1792,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Ummanzer Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 31,
-                    "name": "Th\u00e4lmannstra\u00dfe Label",
-                    "type": "",
-                    "x": 660,
-                    "y": 1756,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Th\u00e4lmannstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 32,
-                    "name": "Karl-Marx-Stra\u00dfe Label",
-                    "type": "",
-                    "x": 644,
-                    "y": 1792,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Karl-Marx-Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 33,
-                    "name": "Gingster Stra\u00dfe Label",
-                    "type": "",
-                    "x": 796,
-                    "y": 2528,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Gingster Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 34,
-                    "name": "Gro\u00df Kubitz Label",
-                    "type": "",
-                    "x": 488,
-                    "y": 1920,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Gro\u00df Kubitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 35,
-                    "name": "R\u00fcgendamm Label",
-                    "type": "",
-                    "x": 76,
-                    "y": 2856,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "R\u00fcgendamm",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 36,
-                    "name": "Poseritz Hof Label",
-                    "type": "",
-                    "x": 720,
-                    "y": 2948,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Poseritz Hof",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 37,
-                    "name": "Poseritzer Stra\u00dfe Label",
-                    "type": "",
-                    "x": 724,
-                    "y": 2944,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Poseritzer Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 38,
-                    "name": "Lindenstra\u00dfe Label",
-                    "type": "",
-                    "x": 728,
-                    "y": 3012,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Lindenstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 39,
-                    "name": "Stralsunder Stra\u00dfe Label",
-                    "type": "",
-                    "x": 720,
-                    "y": 3012,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Stralsunder Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 40,
-                    "name": "Feldstra\u00dfe Label",
-                    "type": "",
-                    "x": 1116,
-                    "y": 1444,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Feldstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 41,
-                    "name": "Vieregge Label",
-                    "type": "",
-                    "x": 964,
-                    "y": 912,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Vieregge",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 42,
-                    "name": "Silenz Label",
-                    "type": "",
-                    "x": 796,
-                    "y": 1572,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Silenz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 43,
-                    "name": "Unter den Linden Label",
-                    "type": "",
-                    "x": 1508,
-                    "y": 1688,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Unter den Linden",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 44,
-                    "name": "Binzer Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1656,
-                    "y": 2568,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Binzer Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 45,
-                    "name": "Tetel Label",
-                    "type": "",
-                    "x": 1576,
-                    "y": 2080,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Tetel",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 46,
-                    "name": "Rugardstra\u00dfe Label",
-                    "type": "",
-                    "x": 1600,
-                    "y": 1976,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Rugardstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 47,
-                    "name": "Zittvitz Label",
-                    "type": "",
-                    "x": 1608,
-                    "y": 2040,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Zittvitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 48,
-                    "name": "Pulitzer Weg Label",
-                    "type": "",
-                    "x": 1584,
-                    "y": 1940,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Pulitzer Weg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 49,
-                    "name": "Heidbergstra\u00dfe Label",
-                    "type": "",
-                    "x": 1852,
-                    "y": 1040,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Heidbergstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 50,
-                    "name": "Bobbin Label",
-                    "type": "",
-                    "x": 1848,
-                    "y": 1012,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Bobbin",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 51,
-                    "name": "Ganschvitz Label",
-                    "type": "",
-                    "x": 700,
-                    "y": 1332,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Ganschvitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 52,
-                    "name": "Malkvitz Label",
-                    "type": "",
-                    "x": 684,
-                    "y": 1748,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Malkvitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 53,
-                    "name": "Gingster Chaussee Label",
-                    "type": "",
-                    "x": 800,
-                    "y": 2200,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Gingster Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 54,
-                    "name": "Im F\u00e4hrhafen Label",
-                    "type": "",
-                    "x": 2096,
-                    "y": 1496,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Im F\u00e4hrhafen",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 55,
-                    "name": "Starrvitz Label",
-                    "type": "",
-                    "x": 760,
-                    "y": 288,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Starrvitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 56,
-                    "name": "F\u00fcrst-Malte-Allee Label",
-                    "type": "",
-                    "x": 1740,
-                    "y": 2640,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "F\u00fcrst-Malte-Allee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 57,
-                    "name": "Chausseestra\u00dfe Label",
-                    "type": "",
-                    "x": 1716,
-                    "y": 2632,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Chausseestra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 58,
-                    "name": "Am Windberg Label",
-                    "type": "",
-                    "x": 348,
-                    "y": 2964,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Am Windberg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 59,
-                    "name": "Alte B\u00e4derstra\u00dfe Label",
-                    "type": "",
-                    "x": 468,
-                    "y": 2976,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Alte B\u00e4derstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 60,
-                    "name": "Puddemin Label",
-                    "type": "",
-                    "x": 996,
-                    "y": 3148,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Puddemin",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 61,
-                    "name": "Nadelitz Label",
-                    "type": "",
-                    "x": 1940,
-                    "y": 2560,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Nadelitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 62,
-                    "name": "Zum H\u00f6ft Label",
-                    "type": "",
-                    "x": 2568,
-                    "y": 2928,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Zum H\u00f6ft",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 63,
-                    "name": "Moordorf Label",
-                    "type": "",
-                    "x": 700,
-                    "y": 2088,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Moordorf",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 64,
-                    "name": "L\u00fc\u00dfvitz Label",
-                    "type": "",
-                    "x": 492,
-                    "y": 2032,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "L\u00fc\u00dfvitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 65,
-                    "name": "Hafenweg Label",
-                    "type": "",
-                    "x": 224,
-                    "y": 1336,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Hafenweg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 66,
-                    "name": "Vaschvitz Label",
-                    "type": "",
-                    "x": 596,
-                    "y": 1068,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Vaschvitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 67,
-                    "name": "Wittower F\u00e4hre Label",
-                    "type": "",
-                    "x": 600,
-                    "y": 984,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Wittower F\u00e4hre",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 68,
-                    "name": "F\u00e4hrhof Label",
-                    "type": "",
-                    "x": 648,
-                    "y": 904,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "F\u00e4hrhof",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 69,
-                    "name": "Bischofsdorf Label",
-                    "type": "",
-                    "x": 720,
-                    "y": 792,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Bischofsdorf",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 70,
-                    "name": "Z\u00fcrkvitzer Stra\u00dfe Label",
-                    "type": "",
-                    "x": 768,
-                    "y": 540,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Z\u00fcrkvitzer Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 71,
-                    "name": "Max-Reimann-Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1048,
-                    "y": 360,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Max-Reimann-Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 72,
-                    "name": "Wittower Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1188,
-                    "y": 532,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Wittower Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 73,
-                    "name": "Stralsunder Chaussee Label",
-                    "type": "",
-                    "x": 1364,
-                    "y": 2160,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Stralsunder Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 74,
-                    "name": "Am Bodden Label",
-                    "type": "",
-                    "x": 1616,
-                    "y": 1988,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Am Bodden",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 75,
-                    "name": "Neu Mukran Label",
-                    "type": "",
-                    "x": 2084,
-                    "y": 1592,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Neu Mukran",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 76,
-                    "name": "Jasmunder Stra\u00dfe Label",
-                    "type": "",
-                    "x": 2228,
-                    "y": 900,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Jasmunder Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 77,
-                    "name": "Jasmunder Landstra\u00dfe Label",
-                    "type": "",
-                    "x": 2100,
-                    "y": 1508,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Jasmunder Landstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 78,
-                    "name": "Seestra\u00dfe Label",
-                    "type": "",
-                    "x": 2556,
-                    "y": 2416,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Seestra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 79,
-                    "name": "Gnieser Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1352,
-                    "y": 1608,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Gnieser Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 80,
-                    "name": "G\u00fcttin Label",
-                    "type": "",
-                    "x": 872,
-                    "y": 2340,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "G\u00fcttin",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 81,
-                    "name": "Quellgrund Label",
-                    "type": "",
-                    "x": 1332,
-                    "y": 1540,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Quellgrund",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 82,
-                    "name": "Kastanienallee Label",
-                    "type": "",
-                    "x": 2044,
-                    "y": 852,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Kastanienallee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 83,
-                    "name": "Pantow Label",
-                    "type": "",
-                    "x": 2076,
-                    "y": 2368,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Pantow",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 84,
-                    "name": "Proraer Chaussee Label",
-                    "type": "",
-                    "x": 2216,
-                    "y": 2204,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Proraer Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 85,
-                    "name": "Skandinavien-Tor Label",
-                    "type": "",
-                    "x": 2120,
-                    "y": 1536,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Skandinavien-Tor",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 86,
-                    "name": "Kiekut Label",
-                    "type": "",
-                    "x": 1924,
-                    "y": 2088,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Kiekut",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 87,
-                    "name": "Losentitz Label",
-                    "type": "",
-                    "x": 1012,
-                    "y": 3416,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Losentitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 88,
-                    "name": "Schleuse Label",
-                    "type": "",
-                    "x": 1028,
-                    "y": 2864,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Schleuse",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 89,
-                    "name": "Zeiten Label",
-                    "type": "",
-                    "x": 888,
-                    "y": 2956,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Zeiten",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 90,
-                    "name": "Alte Marktst\u00e4tte Label",
-                    "type": "",
-                    "x": 1012,
-                    "y": 2864,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Alte Marktst\u00e4tte",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 91,
-                    "name": "Teschenhagen Label",
-                    "type": "",
-                    "x": 1164,
-                    "y": 2308,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Teschenhagen",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 92,
-                    "name": "Streuer Weg Label",
-                    "type": "",
-                    "x": 232,
-                    "y": 1332,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Streuer Weg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 93,
-                    "name": "Landstra\u00dfe Label",
-                    "type": "",
-                    "x": 1392,
-                    "y": 2300,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Landstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 94,
-                    "name": "R\u00fcgen Radio Label",
-                    "type": "",
-                    "x": 1664,
-                    "y": 896,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "R\u00fcgen Radio",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 95,
-                    "name": "Altenkirchener Chaussee Label",
-                    "type": "",
-                    "x": 1168,
-                    "y": 464,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Altenkirchener Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 96,
-                    "name": "Z\u00fchlitz Label",
-                    "type": "",
-                    "x": 1136,
-                    "y": 272,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Z\u00fchlitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 97,
-                    "name": "Poltenbusch Label",
-                    "type": "",
-                    "x": 1056,
-                    "y": 3096,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Poltenbusch",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 98,
-                    "name": "Wendorf Label",
-                    "type": "",
-                    "x": 1068,
-                    "y": 2944,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Wendorf",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 99,
-                    "name": "Ramitz Label",
-                    "type": "",
-                    "x": 1040,
-                    "y": 1776,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Ramitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 100,
-                    "name": "Posewald Label",
-                    "type": "",
-                    "x": 1860,
-                    "y": 2468,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Posewald",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 101,
-                    "name": "G\u00fcstelitz Label",
-                    "type": "",
-                    "x": 1504,
-                    "y": 2544,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "G\u00fcstelitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 102,
-                    "name": "G\u00fcstelitzer Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1556,
-                    "y": 2580,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "G\u00fcstelitzer Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 103,
-                    "name": "Am M\u00fchlenberg Label",
-                    "type": "",
-                    "x": 1576,
-                    "y": 2592,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Am M\u00fchlenberg",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 104,
-                    "name": "Alt Lanschvitz Label",
-                    "type": "",
-                    "x": 1316,
-                    "y": 2716,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Alt Lanschvitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 105,
-                    "name": "Alt Pastitz Label",
-                    "type": "",
-                    "x": 1652,
-                    "y": 2404,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Alt Pastitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 106,
-                    "name": "Ketelshagen Label",
-                    "type": "",
-                    "x": 1396,
-                    "y": 2508,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Ketelshagen",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 107,
-                    "name": "Forsthaus Werder Label",
-                    "type": "",
-                    "x": 2388,
-                    "y": 1152,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Forsthaus Werder",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 108,
-                    "name": "An der Chaussee Label",
-                    "type": "",
-                    "x": 1184,
-                    "y": 2352,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "An der Chaussee",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 109,
-                    "name": "Buhrkow Label",
-                    "type": "",
-                    "x": 812,
-                    "y": 312,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Buhrkow",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 110,
-                    "name": "Lobkevitz Label",
-                    "type": "",
-                    "x": 932,
-                    "y": 648,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Lobkevitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 111,
-                    "name": "Haidhof Label",
-                    "type": "",
-                    "x": 696,
-                    "y": 1924,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Haidhof",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 112,
-                    "name": "Kampe Label",
-                    "type": "",
-                    "x": 1904,
-                    "y": 912,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Kampe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 113,
-                    "name": "Baldereck Label",
-                    "type": "",
-                    "x": 1824,
-                    "y": 924,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Baldereck",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 114,
-                    "name": "Berliner Stra\u00dfe Label",
-                    "type": "",
-                    "x": 2788,
-                    "y": 2668,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Berliner Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 115,
-                    "name": "Garzer Stra\u00dfe Label",
-                    "type": "",
-                    "x": 1132,
-                    "y": 2608,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Garzer Stra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 116,
-                    "name": "Kowall Label",
-                    "type": "",
-                    "x": 1100,
-                    "y": 2704,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Kowall",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 117,
-                    "name": "Umgehungsstra\u00dfe Label",
-                    "type": "",
-                    "x": 1048,
-                    "y": 412,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Umgehungsstra\u00dfe",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 118,
-                    "name": "Klementelvitz Label",
-                    "type": "",
-                    "x": 2128,
-                    "y": 1268,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Klementelvitz",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 119,
-                    "name": "Prora, Naturerbezentrum/Baumwipfelpfad Label",
-                    "type": "",
-                    "x": 1996,
-                    "y": 1944,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Prora, Naturerbezentrum/Baumwipfelpfad",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 120,
-                    "name": "An der B 196 Label",
-                    "type": "",
-                    "x": 2636,
-                    "y": 2440,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "An der B 196",
-                        "pixelsize": 12,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                }
-            ]
-        },
-        {
             "name": "placeLabels",
             "id": 7,
             "x": 0,
@@ -131079,237 +129026,237 @@
                     "id": 1,
                     "name": "Bergen auf R\u00fcgen Label",
                     "type": "",
-                    "x": 1434,
-                    "y": 2077,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1442,
+                    "y": 2069,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Bergen auf R\u00fcgen",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 18,
+                        "color": "#b34700",
                         "wrap": false
                     }
                 },
                 {
                     "id": 2,
-                    "name": "Samtens Label",
+                    "name": "Putbus Label",
                     "type": "",
-                    "x": 813,
-                    "y": 2564,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1642,
+                    "y": 2566,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Samtens",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Putbus",
+                        "pixelsize": 18,
+                        "color": "#b34700",
                         "wrap": false
                     }
                 },
                 {
                     "id": 3,
-                    "name": "Putbus Label",
+                    "name": "Garz/R\u00fcgen Label",
                     "type": "",
-                    "x": 1634,
-                    "y": 2574,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1085,
+                    "y": 2850,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Putbus",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Garz/R\u00fcgen",
+                        "pixelsize": 18,
+                        "color": "#b34700",
                         "wrap": false
                     }
                 },
                 {
                     "id": 4,
-                    "name": "Kasnevitz Label",
+                    "name": "Sassnitz Label",
                     "type": "",
-                    "x": 1398,
-                    "y": 2665,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2406,
+                    "y": 1293,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Kasnevitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Sassnitz",
+                        "pixelsize": 18,
+                        "color": "#b34700",
                         "wrap": false
                     }
                 },
                 {
                     "id": 5,
-                    "name": "Dreschvitz Label",
+                    "name": "Samtens Label",
                     "type": "",
-                    "x": 820,
-                    "y": 2185,
-                    "width": 200,
-                    "height": 20,
+                    "x": 819,
+                    "y": 2558,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Dreschvitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Samtens",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 6,
-                    "name": "Putgarten Label",
+                    "name": "Kasnevitz Label",
                     "type": "",
-                    "x": 1368,
-                    "y": 84,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1404,
+                    "y": 2659,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Putgarten",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Kasnevitz",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 7,
-                    "name": "Lancken Label",
+                    "name": "Dreschvitz Label",
                     "type": "",
-                    "x": 650,
-                    "y": 262,
-                    "width": 200,
-                    "height": 20,
+                    "x": 826,
+                    "y": 2179,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Lancken",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Dreschvitz",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 8,
-                    "name": "Breege Label",
+                    "name": "Putgarten Label",
                     "type": "",
-                    "x": 1092,
-                    "y": 549,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1374,
+                    "y": 78,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Breege",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Putgarten",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 9,
-                    "name": "Wiek Label",
+                    "name": "Lancken Label",
                     "type": "",
-                    "x": 800,
-                    "y": 485,
-                    "width": 200,
-                    "height": 20,
+                    "x": 656,
+                    "y": 256,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Wiek",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Lancken",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 10,
-                    "name": "Dranske Label",
+                    "name": "Breege Label",
                     "type": "",
-                    "x": 528,
-                    "y": 413,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1098,
+                    "y": 543,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Dranske",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Breege",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 11,
-                    "name": "Altenkirchen Label",
+                    "name": "Wiek Label",
                     "type": "",
-                    "x": 1043,
-                    "y": 371,
-                    "width": 200,
-                    "height": 20,
+                    "x": 806,
+                    "y": 479,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Altenkirchen",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Wiek",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 12,
-                    "name": "Juliusruh Label",
+                    "name": "Dranske Label",
                     "type": "",
-                    "x": 1188,
-                    "y": 498,
-                    "width": 200,
-                    "height": 20,
+                    "x": 534,
+                    "y": 407,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Juliusruh",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Dranske",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 13,
-                    "name": "Bobbin Label",
+                    "name": "Altenkirchen Label",
                     "type": "",
-                    "x": 1861,
-                    "y": 1014,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1049,
+                    "y": 365,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Bobbin",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Altenkirchen",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 14,
-                    "name": "Polchow Label",
+                    "name": "Bobbin Label",
                     "type": "",
-                    "x": 1801,
-                    "y": 1100,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1867,
+                    "y": 1008,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Polchow",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Bobbin",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -131317,16 +129264,16 @@
                     "id": 15,
                     "name": "Nipmerow Label",
                     "type": "",
-                    "x": 2232,
-                    "y": 887,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2238,
+                    "y": 881,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Nipmerow",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
@@ -131334,764 +129281,475 @@
                     "id": 16,
                     "name": "Sagard Label",
                     "type": "",
-                    "x": 2001,
-                    "y": 1227,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2007,
+                    "y": 1221,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Sagard",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 17,
-                    "name": "Garz/R\u00fcgen Label",
+                    "name": "Sellin Label",
                     "type": "",
-                    "x": 1077,
-                    "y": 2858,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2630,
+                    "y": 2385,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Garz/R\u00fcgen",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Sellin",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 18,
-                    "name": "Sellin Label",
+                    "name": "Thiessow Label",
                     "type": "",
-                    "x": 2624,
-                    "y": 2391,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2722,
+                    "y": 3173,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Sellin",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Thiessow",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 19,
-                    "name": "Thiessow Label",
+                    "name": "Lancken-Granitz Label",
                     "type": "",
-                    "x": 2716,
-                    "y": 3179,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2350,
+                    "y": 2465,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Thiessow",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Lancken-Granitz",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 20,
-                    "name": "Lancken-Granitz Label",
+                    "name": "Rappin Label",
                     "type": "",
-                    "x": 2344,
-                    "y": 2471,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1230,
+                    "y": 1362,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Lancken-Granitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Rappin",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 21,
-                    "name": "Rappin Label",
+                    "name": "Rambin Label",
                     "type": "",
-                    "x": 1224,
-                    "y": 1368,
-                    "width": 200,
-                    "height": 20,
+                    "x": 411,
+                    "y": 2554,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Rappin",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Rambin",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 22,
-                    "name": "Rambin Label",
+                    "name": "Schaprode Label",
                     "type": "",
-                    "x": 405,
-                    "y": 2560,
-                    "width": 200,
-                    "height": 20,
+                    "x": 250,
+                    "y": 1319,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Rambin",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Schaprode",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 23,
-                    "name": "Schaprode Label",
+                    "name": "Lietzow Label",
                     "type": "",
-                    "x": 244,
-                    "y": 1325,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1784,
+                    "y": 1555,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Schaprode",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Lietzow",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 24,
-                    "name": "Lietzow Label",
+                    "name": "Trent Label",
                     "type": "",
-                    "x": 1778,
-                    "y": 1561,
-                    "width": 200,
-                    "height": 20,
+                    "x": 652,
+                    "y": 1258,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Lietzow",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Trent",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 25,
-                    "name": "Trent Label",
+                    "name": "Poseritz Label",
                     "type": "",
-                    "x": 646,
-                    "y": 1264,
-                    "width": 200,
-                    "height": 20,
+                    "x": 736,
+                    "y": 2988,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Trent",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Poseritz",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 26,
-                    "name": "Ostseebad Baabe Label",
+                    "name": "Neuenkirchen Label",
                     "type": "",
-                    "x": 2669,
-                    "y": 2522,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1001,
+                    "y": 1066,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Ostseebad Baabe",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Neuenkirchen",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 27,
-                    "name": "Poseritz Label",
+                    "name": "Sehlen Label",
                     "type": "",
-                    "x": 730,
-                    "y": 2994,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1241,
+                    "y": 2374,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Poseritz",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Sehlen",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 28,
-                    "name": "Neuenkirchen Label",
+                    "name": "G\u00f6hren Label",
                     "type": "",
-                    "x": 995,
-                    "y": 1072,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2858,
+                    "y": 2668,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Neuenkirchen",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "G\u00f6hren",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 29,
-                    "name": "Sehlen Label",
+                    "name": "Gager Label",
                     "type": "",
-                    "x": 1235,
-                    "y": 2380,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2580,
+                    "y": 2915,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Sehlen",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Gager",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 30,
-                    "name": "G\u00f6hren Label",
+                    "name": "Zirkow Label",
                     "type": "",
-                    "x": 2852,
-                    "y": 2674,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1943,
+                    "y": 2286,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "G\u00f6hren",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Zirkow",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 31,
-                    "name": "Gager Label",
+                    "name": "Ralswiek Label",
                     "type": "",
-                    "x": 2574,
-                    "y": 2921,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1513,
+                    "y": 1632,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Gager",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Ralswiek",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 32,
-                    "name": "Zirkow Label",
+                    "name": "Patzig Label",
                     "type": "",
-                    "x": 1937,
-                    "y": 2292,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1283,
+                    "y": 1690,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Zirkow",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Patzig",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 33,
-                    "name": "Ralswiek Label",
+                    "name": "Parchtitz Label",
                     "type": "",
-                    "x": 1507,
-                    "y": 1638,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1297,
+                    "y": 1910,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Ralswiek",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Parchtitz",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 34,
-                    "name": "Lohme Label",
+                    "name": "Ostseebad Binz Label",
                     "type": "",
-                    "x": 2248,
-                    "y": 785,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2239,
+                    "y": 2198,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Lohme",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Ostseebad Binz",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 35,
-                    "name": "Patzig Label",
+                    "name": "Gustow Label",
                     "type": "",
-                    "x": 1277,
-                    "y": 1696,
-                    "width": 200,
-                    "height": 20,
+                    "x": 455,
+                    "y": 2965,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Patzig",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Gustow",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 36,
-                    "name": "Parchtitz Label",
+                    "name": "Middelhagen Label",
                     "type": "",
-                    "x": 1291,
-                    "y": 1916,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2677,
+                    "y": 2751,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Parchtitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Middelhagen",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 37,
-                    "name": "Ostseebad Binz Label",
+                    "name": "Altef\u00e4hr Label",
                     "type": "",
-                    "x": 2233,
-                    "y": 2204,
-                    "width": 200,
-                    "height": 20,
+                    "x": 67,
+                    "y": 2751,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Ostseebad Binz",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Altef\u00e4hr",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 38,
-                    "name": "Sassnitz Label",
+                    "name": "Kaiseritz Label",
                     "type": "",
-                    "x": 2398,
-                    "y": 1301,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1654,
+                    "y": 2192,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Sassnitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Kaiseritz",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 39,
-                    "name": "Gustow Label",
+                    "name": "Nistelitz Label",
                     "type": "",
-                    "x": 449,
-                    "y": 2971,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2057,
+                    "y": 2474,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Gustow",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Nistelitz",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 40,
-                    "name": "Middelhagen Label",
+                    "name": "Neu Mukran Label",
                     "type": "",
-                    "x": 2671,
-                    "y": 2757,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2091,
+                    "y": 1568,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Middelhagen",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Neu Mukran",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 41,
-                    "name": "Klein Zicker Label",
+                    "name": "Neu Reddevitz Label",
                     "type": "",
-                    "x": 2609,
-                    "y": 3135,
-                    "width": 200,
-                    "height": 20,
+                    "x": 2265,
+                    "y": 2708,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Klein Zicker",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Neu Reddevitz",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 42,
-                    "name": "Lauterbach Label",
+                    "name": "Gingst Label",
                     "type": "",
-                    "x": 1748,
-                    "y": 2652,
-                    "width": 200,
-                    "height": 20,
+                    "x": 667,
+                    "y": 1764,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Lauterbach",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "text": "Gingst",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 },
                 {
                     "id": 43,
-                    "name": "Altef\u00e4hr Label",
-                    "type": "",
-                    "x": 61,
-                    "y": 2757,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Altef\u00e4hr",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 44,
-                    "name": "Vitt Label",
-                    "type": "",
-                    "x": 1435,
-                    "y": 137,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Vitt",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 45,
-                    "name": "Neuendorf Label",
-                    "type": "",
-                    "x": 1675,
-                    "y": 2712,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Neuendorf",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 46,
-                    "name": "Jarnitz Label",
-                    "type": "",
-                    "x": 1466,
-                    "y": 1727,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Jarnitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 47,
-                    "name": "Kaiseritz Label",
-                    "type": "",
-                    "x": 1648,
-                    "y": 2198,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Kaiseritz",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 48,
-                    "name": "G\u00fcstelitz Label",
-                    "type": "",
-                    "x": 1513,
-                    "y": 2540,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "G\u00fcstelitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 49,
-                    "name": "Pantow Label",
-                    "type": "",
-                    "x": 2083,
-                    "y": 2360,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Pantow",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 50,
-                    "name": "Nistelitz Label",
-                    "type": "",
-                    "x": 2051,
-                    "y": 2480,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Nistelitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 51,
-                    "name": "Lobbe Label",
-                    "type": "",
-                    "x": 2738,
-                    "y": 2847,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Lobbe",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 52,
-                    "name": "Neu Mukran Label",
-                    "type": "",
-                    "x": 2085,
-                    "y": 1574,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Neu Mukran",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 53,
-                    "name": "Tilzow Label",
-                    "type": "",
-                    "x": 1371,
-                    "y": 2293,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Tilzow",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 54,
-                    "name": "Hagen Label",
-                    "type": "",
-                    "x": 2285,
-                    "y": 932,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Hagen",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 55,
-                    "name": "Neu Reddevitz Label",
-                    "type": "",
-                    "x": 2259,
-                    "y": 2714,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Neu Reddevitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 56,
-                    "name": "Starrvitz Label",
-                    "type": "",
-                    "x": 774,
-                    "y": 262,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Starrvitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 57,
-                    "name": "Gingst Label",
-                    "type": "",
-                    "x": 661,
-                    "y": 1770,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Gingst",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 58,
-                    "name": "Alt Reddevitz Label",
-                    "type": "",
-                    "x": 2534,
-                    "y": 2746,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Alt Reddevitz",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 59,
                     "name": "Glowe Label",
                     "type": "",
-                    "x": 1618,
-                    "y": 887,
-                    "width": 200,
-                    "height": 20,
+                    "x": 1624,
+                    "y": 881,
+                    "width": 250,
+                    "height": 30,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Glowe",
-                        "pixelsize": 16,
-                        "color": "#000000",
-                        "wrap": false
-                    }
-                },
-                {
-                    "id": 60,
-                    "name": "Gademow Label",
-                    "type": "",
-                    "x": 1282,
-                    "y": 2004,
-                    "width": 200,
-                    "height": 20,
-                    "rotation": 0,
-                    "visible": true,
-                    "text": {
-                        "text": "Gademow",
-                        "pixelsize": 16,
-                        "color": "#000000",
+                        "pixelsize": 15,
+                        "color": "#1d1d1d",
                         "wrap": false
                     }
                 }
