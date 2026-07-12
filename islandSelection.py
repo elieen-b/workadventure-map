@@ -13,7 +13,11 @@ class Island:
 
 islands = [
   Island("Ruegen", 10, 1434381),
-   Island("Sylt", 11, 1576925),
+  Island("Sylt", 11, 1576925),
+  Island("Usedom", 11, 3791269),
+  Island("Hiddensee", 12, 3790660),
+  # Island("Amrum", 12, 3787117),
+  Island("Moen", 11, 5175925),
   # Island("New Guinea", 6, 3986076), # downloaded, but segmentation fails
   # Island("Borneo", 6, 3986083), # extent 0?
   # Island("Great Britain", 6, 6038068), # broken
