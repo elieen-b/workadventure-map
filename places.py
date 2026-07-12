@@ -35,7 +35,10 @@ def createPlaceLabels(places):
   priority = {
     "city": 1,
     "town": 2,
-    "village": 3
+    "village": 3,
+    "suburb": 4,
+    "hamlet": 5,
+    "neighbourhood": 6
   }
 
   sorted_places = sorted(
@@ -45,18 +48,68 @@ def createPlaceLabels(places):
 
   for place in sorted_places:
     name = place.get("name")
-    place_type = place.get("type")
+    place_type = place.get("type", "").lower()
 
     if not name:
       continue
 
-    if place_type not in ["city", "town", "village"]:
+    if place_type not in [
+      "city",
+      "town",
+      "village",
+      "suburb",
+      "hamlet",
+      "neighbourhood"
+    ]:
       continue
 
     x = place["x"]
     y = place["y"]
 
-    minimum_distance = 80
+    if place_type == "city":
+      minimum_distance = 120
+      pixel_size = 30
+      marker_size = 28
+      marker_color = "#d7191c"
+      text_color = "#9b111e"
+      offset_x = 25
+      offset_y = -16
+
+    elif place_type == "town":
+      minimum_distance = 95
+      pixel_size = 26
+      marker_size = 24
+      marker_color = "#ff8c00"
+      text_color = "#b34700"
+      offset_x = 22
+      offset_y = -14
+
+    elif place_type == "village":
+      minimum_distance = 70
+      pixel_size = 22
+      marker_size = 20
+      marker_color = "#ffd43b"
+      text_color = "#222222"
+      offset_x = 20
+      offset_y = -12
+
+    elif place_type == "suburb":
+      minimum_distance = 55
+      pixel_size = 18
+      marker_size = 16
+      marker_color = "#7b61ff"
+      text_color = "#3f2f7f"
+      offset_x = 17
+      offset_y = -10
+
+    else:
+      minimum_distance = 45
+      pixel_size = 16
+      marker_size = 13
+      marker_color = "#2ca25f"
+      text_color = "#1f5132"
+      offset_x = 15
+      offset_y = -9
 
     too_close = False
 
@@ -73,94 +126,35 @@ def createPlaceLabels(places):
 
     used_positions.append((x, y))
 
-    if place_type == "city":
-      pixel_size = 28
-      text_color = "#c62828"
-      marker_color = "#d7191c"
-      offset_x = 22
-      offset_y = -14
-
-    elif place_type == "town":
-      pixel_size = 24
-      text_color = "#c45100"
-      marker_color = "#ff8c00"
-      offset_x = 20
-      offset_y = -12
-
-    else:
-      pixel_size = 20
-      text_color = "#202020"
-      marker_color = "#f2c94c"
-      offset_x = 18
-      offset_y = -12
-
     labels.append({
       "id": label_id,
       "name": name + " Marker",
-
-      "type": "",
-
-      "x": x - 7,
-
-      "y": y - 15,
-
-      "width": 24,
-
-      "height": 24,
-
-      "rotation": 0,
-
-      "visible": True,
-
-      "text": {
-
-        "text": "●",
-
-        "pixelsize": 18,
-
-        "color": marker_color,
-
-        "bold": True,
-
-        "wrap": False
-
-      }
-
-    })
-
-    label_id += 1
-
-    # Ortsname
-
-    labels.append({
-      "id": label_id,
-      "name": name + " Marker",
-      "type": "",
-      "x": x - 7,
-      "y": y - 15,
-      "width": 24,
-      "height": 24,
+      "type": place_type,
+      "x": x - marker_size / 2,
+      "y": y - marker_size / 2,
+      "width": marker_size,
+      "height": marker_size,
       "rotation": 0,
       "visible": True,
       "text": {
         "text": "●",
-        "pixelsize": 18,
+        "pixelsize": marker_size,
         "color": marker_color,
         "bold": True,
         "wrap": False
       }
     })
+
     label_id += 1
 
-    # Ortsname
     labels.append({
       "id": label_id,
       "name": name + " Label",
-      "type": "",
+      "type": place_type,
       "x": x + offset_x,
       "y": y + offset_y,
-      "width": 300,
-      "height": 40,
+      "width": 320,
+      "height": 45,
       "rotation": 0,
       "visible": True,
       "text": {
