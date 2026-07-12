@@ -133,7 +133,15 @@ def island(
       objectLayer("floorLayer", 4, []),
       objectLayer("places", 5, placesData),
       objectLayer("roads", 6, roads),
-      objectLayer("placeLabels", 7, places.createPlaceLabels(placesData))
+
+      objectLayer("placeLabels", 7, places.createPlaceLabels(placesData)),
+
+      objectLayer(
+        "wikipediaAreas",
+        9,
+        places.createWikipediaAreas(placesData)
+      )
+
     ]
   }
 
