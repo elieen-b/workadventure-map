@@ -13,6 +13,7 @@ class Island:
 
 islands = [
   Island("Ruegen", 10, 1434381),
+   Island("Sylt", 11, 1576925),
   # Island("New Guinea", 6, 3986076), # downloaded, but segmentation fails
   # Island("Borneo", 6, 3986083), # extent 0?
   # Island("Great Britain", 6, 6038068), # broken
@@ -235,14 +236,15 @@ def tileIndex(geoJson, shortIslandName, polygon):
      roadsData =  []
      roadLabels =  []
      
-  
+  roadTilesFile = shortIslandName + "-roads-tileset.png"
 
   mapJson = wamap.island(
     index,
     start,
     places,
     roadsData,
-    roadLabels
+    roadLabels,
+    roadTilesFile
   )
   with open('selectedIslands/'+shortIslandName+'-map.json', 'w') as f:
       json.dump(mapJson, f, indent=4)

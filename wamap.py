@@ -68,7 +68,15 @@ def create_osm_roads():
   return []
 
 
-def island(data, start, placesData=None, roads=None, roadLabels=None):
+def island(
+    data,
+    start,
+    placesData=None, 
+    roads=None, 
+    roadLabels=None,
+    roadTilesFile="roads-tileset.png"
+  ):
+
   if placesData is None:
     placesData = []
   if roads is None:
@@ -79,7 +87,8 @@ def island(data, start, placesData=None, roads=None, roadLabels=None):
   roadTileset, roadTileData = roadTiles.create_road_tileset(
      roads,
      mapWidth,
-     mapHeight
+     mapHeight,
+     output_file=roadTilesFile
   )
 
   return {
