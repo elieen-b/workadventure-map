@@ -37,6 +37,37 @@ function drawMap(map) {
 
   const ctx = canvas.getContext("2d");
 
+  function isLandPixel(pixelX, pixelY) {
+  const tileX = Math.floor(pixelX / tileSize);
+  const tileY = Math.floor(pixelY / tileSize);
+
+  if (
+    tileX < 0 ||
+    tileY < 0 ||
+    tileX >= width ||
+    tileY >= height
+  ) {
+    return false;
+  }
+
+  const tileValue = data[tileY * width + tileX];
+
+  if (isTiledMap) {
+    return tileValue !== 1;
+  }
+
+  return tileValue !== 0;
+}
+  function getLabelText(label) {
+    let value = label.text;
+
+    while (value && typeof value === "object") {
+      value = value.text;
+    }
+
+    return typeof value === "string" ? value : "";
+  
+  }
   // Tiles zeichnen
   for (let y = 0; y < height; y++) {
     for (let x = 0; x < width; x++) {
@@ -63,7 +94,7 @@ function drawMap(map) {
       ctx.fillRect(x * tileSize, y * tileSize, tileSize, tileSize);
     }
   }
-
+  
   // Straßen zeichnen
   console.log(map.layers);
   
@@ -76,33 +107,76 @@ function drawMap(map) {
       if (!road.polyline || road.polyline.length < 2) {
         return;
       }
-
+       
+      ctx.save();
       ctx.lineCap = "round";
       ctx.lineJoin = "round";
 
-      // dunkler Rand
-      ctx.strokeStyle = "#7a6a4f";
-      ctx.lineWidth = 6;
-      ctx.beginPath();
-      ctx.moveTo(road.polyline[0].x, road.polyline[0].y);
+      let outerWidth = 5;
+      let innerWidth = 3;
+      let innerColor = "#f7f3e8";
+      let centerColor = null;
 
-      for (let i = 1; i < road.polyline.length; i++) {
-        ctx.lineTo(road.polyline[i].x, road.polyline[i].y);
+      if (road.type === "motorway" || road.type === "trunk") {
+        outerWidth = 9;
+        innerWidth = 6;
+        innerColor = "#f6b26b";
+        centerColor = "#ffffff";
+      
+      } else if (road.type === "primary") {
+        outerWidth = 8;
+        innerWidth = 5;
+        innerColor = "#ffd966";
+        centerColor = "#ffffff";
+
+      } else if (road.type === "secondary") {
+        outerWidth = 7;
+        innerWidth = 4;
+        innerColor = "#fff2cc";
+
+      } else if (road.type === "tertiary") {
+        outerWidth = 6;
+        innerWidth = 3;
+        innerColor = "#f7f3e8";
       }
 
-      ctx.stroke();
-
-      // helle Straße innen
-      ctx.strokeStyle = "#fff6dc";
-      ctx.lineWidth = 3;
-      ctx.beginPath();
-      ctx.moveTo(road.polyline[0].x, road.polyline[0].y);
-
-      for (let i = 1; i < road.polyline.length; i++) {
-        ctx.lineTo(road.polyline[i].x, road.polyline[i].y);
+      function drawRoadPath() {
+        ctx.beginPath();
+        ctx.moveTo(road.polyline[0].x, road.polyline[0].y);
+        
+        for (let i = 1; i < road.polyline.length; i++) {
+          ctx.lineTo(road.polyline[i].x, road.polyline[i].y);
+        }
       }
 
+      // Außenrand
+      ctx.strokeStyle = "#6b6255";
+      ctx.lineWidth = outerWidth;
+      ctx.setLineDash([]);
+      drawRoadPath();
       ctx.stroke();
+
+      // Straßenfläche
+      ctx.strokeStyle = innerColor;
+      ctx.lineWidth = innerWidth;
+      ctx.setLineDash([]);
+      drawRoadPath();
+      ctx.stroke();
+
+      // Mittellinie nur für große Straßen
+      if (centerColor) {
+        ctx.strokeStyle = centerColor;
+        ctx.lineWidth = 1;
+        ctx.setLineDash([6, 5]);
+        drawRoadPath();
+        ctx.stroke();
+
+      }
+
+      ctx.restore();
+
+
+      
     });
   }
 
@@ -117,17 +191,47 @@ function drawMap(map) {
       const placeX = place.x * scale;
       const placeY = place.y * scale;
       const placeSize = place.size || place.width || 10;
-      const placeColor = place.color || "red";
-      const radius = (placeSize * scale) / 2;
+      let placeColor = "#ffd43b";
+
+      if (place.type === "city") {
+        placeColor = "#d7191c";
+      } else if (place.type === "town") {
+        placeColor = "#ff8c00";
+      } else if (place.type === "village") {
+        placeColor = "#ffd43b";
+      }
+
+      const radius = Math.max(
+        4,
+        placeSize * scale * 0.75
+      );
+
+      ctx.save();
+
+      ctx.shadowColor = "rgba(0, 0, 0, 0.35)";
+      ctx.shadowBlur = 3;
+      ctx.shadowOffsetX = 1;
+      ctx.shadowOffsetY = 1;
 
       ctx.fillStyle = placeColor;
       ctx.beginPath();
       ctx.arc(placeX, placeY, radius, 0, 2 * Math.PI);
       ctx.fill();
 
-      ctx.strokeStyle = "black";
+      ctx.shadowColor = "transparent";
+
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.strokeStyle = "#333333";
       ctx.lineWidth = 1;
       ctx.stroke();
+
+      ctx.restore();
+
+
+
     });
   }
   // Straßenlabels zeichnen
@@ -145,11 +249,13 @@ const usedPositions = [];
 
 roadLabelsLayer.objects.forEach(label => {
 
-  if (!label.text || !label.text.text) {
+  const text = getLabelText(label);
+
+  if (!text) {
     return;
   }
 
-  const text = label.text.text;
+  
   
   if (text.length > 16) {
     return;
@@ -166,10 +272,49 @@ roadLabelsLayer.objects.forEach(label => {
   if (tooClose) {
     return;
   }
+  
+
+  if (!isLandPixel(x, y)) {
+    return;
+  }
+
   usedPositions.push({ x, y });
-  ctx.fillStyle = "#333333";
-  ctx.font = "7px Arial";
-  ctx.fillText(text, x +3 , y - 3);
+
+  ctx.save();
+
+  ctx.font = "bold 7px Arial";
+
+  const paddingX = 4;
+  const textWidth = ctx.measureText(text).width;
+
+  const labelX = x + 3;
+  const labelY = y - 10;
+  const boxWidth = textWidth + paddingX * 2;
+  const boxHeight = 11;
+
+  ctx.fillStyle = "rgba(235, 245, 255, 0.92)";
+  ctx.fillRect(
+    labelX - paddingX,
+    labelY - 8,
+    boxWidth,
+    boxHeight
+);
+
+ctx.strokeStyle = "#4a6f91";
+ctx.lineWidth = 0.8;
+ctx.strokeRect(
+  labelX - paddingX,
+  labelY - 8,
+  boxWidth,
+  boxHeight
+);
+
+ctx.fillStyle = "#24445f";
+ctx.fillText(text, labelX, labelY);
+
+ctx.restore();
+
+
 });
 }
   
@@ -183,18 +328,32 @@ roadLabelsLayer.objects.forEach(label => {
 
      placeLabelsLayer.objects.forEach(label => {
 
-      if (!label.text || !label.text.text) {
+      const text = getLabelText(label);
+      if (!text) {
         return;
       }
-      const text = label.text.text;
 
      if (text.length > 12) {
      return;
      }
 
-     ctx.fillStyle = "black";
-     ctx.font = "8px Arial";
-     ctx.fillText(text, label.x * scale + 4 , label.y * scale - 4);
+     const labelX = label.x * scale + 5;
+     const labelY = label.y * scale - 5;
+
+     ctx.save();
+
+     ctx.font = "bold 9px Arial";
+     ctx.lineJoin = "round";
+
+     ctx.strokeStyle = "rgba(255, 255, 255, 0.95)";
+     ctx.lineWidth = 3;
+     ctx.strokeText(text, labelX, labelY);
+
+     ctx.fillStyle = "#1d1d1d";
+     ctx.fillText(text, labelX, labelY);
+
+     ctx.restore();
+
     });
 
   }
