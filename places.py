@@ -56,7 +56,7 @@ def createPlaceLabels(places):
     x = place["x"]
     y = place["y"]
 
-    minimum_distance = 180
+    minimum_distance = 80
 
     too_close = False
 
@@ -74,37 +74,100 @@ def createPlaceLabels(places):
     used_positions.append((x, y))
 
     if place_type == "city":
-      pixel_size = 20
-      text_color = "#8b0000"
-      offset_x = 18
-      offset_y = -18
-
-    elif place_type == "town":
-      pixel_size = 18
-      text_color = "#b34700"
-      offset_x = 16
-      offset_y = -16
-
-    else:
-      pixel_size = 15
-      text_color = "#1d1d1d"
-      offset_x = 14
+      pixel_size = 28
+      text_color = "#c62828"
+      marker_color = "#d7191c"
+      offset_x = 22
       offset_y = -14
 
+    elif place_type == "town":
+      pixel_size = 24
+      text_color = "#c45100"
+      marker_color = "#ff8c00"
+      offset_x = 20
+      offset_y = -12
+
+    else:
+      pixel_size = 20
+      text_color = "#202020"
+      marker_color = "#f2c94c"
+      offset_x = 18
+      offset_y = -12
+
+    labels.append({
+      "id": label_id,
+      "name": name + " Marker",
+
+      "type": "",
+
+      "x": x - 7,
+
+      "y": y - 15,
+
+      "width": 24,
+
+      "height": 24,
+
+      "rotation": 0,
+
+      "visible": True,
+
+      "text": {
+
+        "text": "●",
+
+        "pixelsize": 18,
+
+        "color": marker_color,
+
+        "bold": True,
+
+        "wrap": False
+
+      }
+
+    })
+
+    label_id += 1
+
+    # Ortsname
+
+    labels.append({
+      "id": label_id,
+      "name": name + " Marker",
+      "type": "",
+      "x": x - 7,
+      "y": y - 15,
+      "width": 24,
+      "height": 24,
+      "rotation": 0,
+      "visible": True,
+      "text": {
+        "text": "●",
+        "pixelsize": 18,
+        "color": marker_color,
+        "bold": True,
+        "wrap": False
+      }
+    })
+    label_id += 1
+
+    # Ortsname
     labels.append({
       "id": label_id,
       "name": name + " Label",
       "type": "",
       "x": x + offset_x,
       "y": y + offset_y,
-      "width": 250,
-      "height": 30,
+      "width": 300,
+      "height": 40,
       "rotation": 0,
       "visible": True,
       "text": {
         "text": name,
         "pixelsize": pixel_size,
         "color": text_color,
+        "bold": True,
         "wrap": False
       }
     })

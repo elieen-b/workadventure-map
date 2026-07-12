@@ -10855,86 +10855,271 @@
             "objects": [
                 {
                     "id": 1,
-                    "name": "Vitte Label",
+                    "name": "Vitte Marker",
                     "type": "",
-                    "x": 567,
-                    "y": 750,
-                    "width": 250,
-                    "height": 30,
+                    "x": 546,
+                    "y": 749,
+                    "width": 24,
+                    "height": 24,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Vitte",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 2,
-                    "name": "Neuendorf Label",
+                    "name": "Vitte Marker",
                     "type": "",
-                    "x": 355,
-                    "y": 1650,
-                    "width": 250,
-                    "height": 30,
+                    "x": 546,
+                    "y": 749,
+                    "width": 24,
+                    "height": 24,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Neuendorf",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 3,
-                    "name": "Grieben Label",
+                    "name": "Vitte Label",
                     "type": "",
-                    "x": 844,
-                    "y": 255,
-                    "width": 250,
-                    "height": 30,
+                    "x": 571,
+                    "y": 752,
+                    "width": 300,
+                    "height": 40,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Grieben",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "Vitte",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 4,
-                    "name": "Kloster Label",
+                    "name": "Neuendorf Marker",
                     "type": "",
-                    "x": 602,
-                    "y": 370,
-                    "width": 250,
-                    "height": 30,
+                    "x": 334,
+                    "y": 1649,
+                    "width": 24,
+                    "height": 24,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Kloster",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 5,
+                    "name": "Neuendorf Marker",
+                    "type": "",
+                    "x": 334,
+                    "y": 1649,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 6,
+                    "name": "Neuendorf Label",
+                    "type": "",
+                    "x": 359,
+                    "y": 1652,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Neuendorf",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 7,
+                    "name": "Grieben Marker",
+                    "type": "",
+                    "x": 823,
+                    "y": 254,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 8,
+                    "name": "Grieben Marker",
+                    "type": "",
+                    "x": 823,
+                    "y": 254,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 9,
+                    "name": "Grieben Label",
+                    "type": "",
+                    "x": 848,
+                    "y": 257,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Grieben",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 10,
+                    "name": "Kloster Marker",
+                    "type": "",
+                    "x": 581,
+                    "y": 369,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 11,
+                    "name": "Kloster Marker",
+                    "type": "",
+                    "x": 581,
+                    "y": 369,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 12,
+                    "name": "Kloster Label",
+                    "type": "",
+                    "x": 606,
+                    "y": 372,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Kloster",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 13,
+                    "name": "Seebad Insel Hiddensee Marker",
+                    "type": "",
+                    "x": 399,
+                    "y": 1461,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 14,
+                    "name": "Seebad Insel Hiddensee Marker",
+                    "type": "",
+                    "x": 399,
+                    "y": 1461,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 15,
                     "name": "Seebad Insel Hiddensee Label",
                     "type": "",
-                    "x": 420,
-                    "y": 1462,
-                    "width": 250,
-                    "height": 30,
+                    "x": 424,
+                    "y": 1464,
+                    "width": 300,
+                    "height": 40,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Seebad Insel Hiddensee",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
                         "wrap": false
                     }
                 }
@@ -10976,7 +11161,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -11010,7 +11195,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -11044,7 +11229,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -11078,7 +11263,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -11112,7 +11297,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",

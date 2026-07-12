@@ -13656,7 +13656,7 @@
                 },
                 {
                     "id": 6,
-                    "name": "H\u00f6rnum (Sylt)",
+                    "name": "Hörnum (Sylt)",
                     "type": "village",
                     "x": 65,
                     "y": 3289,
@@ -13765,171 +13765,649 @@
             "objects": [
                 {
                     "id": 1,
-                    "name": "Westerland Label",
+                    "name": "Westerland Marker",
                     "type": "",
-                    "x": 199,
-                    "y": 1651,
-                    "width": 250,
-                    "height": 30,
+                    "x": 176,
+                    "y": 1652,
+                    "width": 24,
+                    "height": 24,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Westerland",
+                        "text": "●",
                         "pixelsize": 18,
-                        "color": "#b34700",
+                        "color": "#ff8c00",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 2,
-                    "name": "List auf Sylt Label",
+                    "name": "Westerland Marker",
                     "type": "",
-                    "x": 1012,
-                    "y": 441,
-                    "width": 250,
-                    "height": 30,
+                    "x": 176,
+                    "y": 1652,
+                    "width": 24,
+                    "height": 24,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "List auf Sylt",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#ff8c00",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 3,
-                    "name": "Wenningstedt Label",
+                    "name": "Westerland Label",
                     "type": "",
-                    "x": 286,
-                    "y": 1331,
-                    "width": 250,
-                    "height": 30,
+                    "x": 203,
+                    "y": 1655,
+                    "width": 300,
+                    "height": 40,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Wenningstedt",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "Westerland",
+                        "pixelsize": 24,
+                        "color": "#c45100",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 4,
-                    "name": "Rantum Label",
+                    "name": "List auf Sylt Marker",
                     "type": "",
-                    "x": 107,
-                    "y": 2295,
-                    "width": 250,
-                    "height": 30,
+                    "x": 991,
+                    "y": 440,
+                    "width": 24,
+                    "height": 24,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Rantum",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 5,
-                    "name": "Kampen (Sylt) Label",
+                    "name": "List auf Sylt Marker",
                     "type": "",
-                    "x": 431,
-                    "y": 1135,
-                    "width": 250,
-                    "height": 30,
+                    "x": 991,
+                    "y": 440,
+                    "width": 24,
+                    "height": 24,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Kampen (Sylt)",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 6,
-                    "name": "H\u00f6rnum (Sylt) Label",
+                    "name": "List auf Sylt Label",
                     "type": "",
-                    "x": 79,
-                    "y": 3275,
-                    "width": 250,
-                    "height": 30,
+                    "x": 1016,
+                    "y": 443,
+                    "width": 300,
+                    "height": 40,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "H\u00f6rnum (Sylt)",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "List auf Sylt",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 7,
-                    "name": "Archsum Label",
+                    "name": "Wenningstedt Marker",
                     "type": "",
-                    "x": 759,
-                    "y": 2013,
-                    "width": 250,
-                    "height": 30,
+                    "x": 265,
+                    "y": 1330,
+                    "width": 24,
+                    "height": 24,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Archsum",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 8,
-                    "name": "Morsum Label",
+                    "name": "Wenningstedt Marker",
                     "type": "",
-                    "x": 974,
-                    "y": 2021,
-                    "width": 250,
-                    "height": 30,
+                    "x": 265,
+                    "y": 1330,
+                    "width": 24,
+                    "height": 24,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Morsum",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 9,
-                    "name": "Keitum Label",
+                    "name": "Wenningstedt Label",
                     "type": "",
-                    "x": 593,
-                    "y": 1778,
-                    "width": 250,
-                    "height": 30,
+                    "x": 290,
+                    "y": 1333,
+                    "width": 300,
+                    "height": 40,
                     "rotation": 0,
                     "visible": true,
                     "text": {
-                        "text": "Keitum",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "text": "Wenningstedt",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
                         "wrap": false
                     }
                 },
                 {
                     "id": 10,
+                    "name": "Rantum Marker",
+                    "type": "",
+                    "x": 86,
+                    "y": 2294,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 11,
+                    "name": "Rantum Marker",
+                    "type": "",
+                    "x": 86,
+                    "y": 2294,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 12,
+                    "name": "Rantum Label",
+                    "type": "",
+                    "x": 111,
+                    "y": 2297,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Rantum",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 13,
+                    "name": "Kampen (Sylt) Marker",
+                    "type": "",
+                    "x": 410,
+                    "y": 1134,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 14,
+                    "name": "Kampen (Sylt) Marker",
+                    "type": "",
+                    "x": 410,
+                    "y": 1134,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 15,
+                    "name": "Kampen (Sylt) Label",
+                    "type": "",
+                    "x": 435,
+                    "y": 1137,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Kampen (Sylt)",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 16,
+                    "name": "Hörnum (Sylt) Marker",
+                    "type": "",
+                    "x": 58,
+                    "y": 3274,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 17,
+                    "name": "Hörnum (Sylt) Marker",
+                    "type": "",
+                    "x": 58,
+                    "y": 3274,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 18,
+                    "name": "Hörnum (Sylt) Label",
+                    "type": "",
+                    "x": 83,
+                    "y": 3277,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Hörnum (Sylt)",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 19,
+                    "name": "Archsum Marker",
+                    "type": "",
+                    "x": 738,
+                    "y": 2012,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 20,
+                    "name": "Archsum Marker",
+                    "type": "",
+                    "x": 738,
+                    "y": 2012,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 21,
+                    "name": "Archsum Label",
+                    "type": "",
+                    "x": 763,
+                    "y": 2015,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Archsum",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 22,
+                    "name": "Morsum Marker",
+                    "type": "",
+                    "x": 953,
+                    "y": 2020,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 23,
+                    "name": "Morsum Marker",
+                    "type": "",
+                    "x": 953,
+                    "y": 2020,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 24,
+                    "name": "Morsum Label",
+                    "type": "",
+                    "x": 978,
+                    "y": 2023,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Morsum",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 25,
+                    "name": "Keitum Marker",
+                    "type": "",
+                    "x": 572,
+                    "y": 1777,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 26,
+                    "name": "Keitum Marker",
+                    "type": "",
+                    "x": 572,
+                    "y": 1777,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 27,
+                    "name": "Keitum Label",
+                    "type": "",
+                    "x": 597,
+                    "y": 1780,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Keitum",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 28,
+                    "name": "Braderup Marker",
+                    "type": "",
+                    "x": 456,
+                    "y": 1374,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 29,
+                    "name": "Braderup Marker",
+                    "type": "",
+                    "x": 456,
+                    "y": 1374,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 30,
                     "name": "Braderup Label",
                     "type": "",
-                    "x": 477,
-                    "y": 1375,
-                    "width": 250,
-                    "height": 30,
+                    "x": 481,
+                    "y": 1377,
+                    "width": 300,
+                    "height": 40,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "Braderup",
-                        "pixelsize": 15,
-                        "color": "#1d1d1d",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 31,
+                    "name": "Tinnum Marker",
+                    "type": "",
+                    "x": 332,
+                    "y": 1733,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 32,
+                    "name": "Tinnum Marker",
+                    "type": "",
+                    "x": 332,
+                    "y": 1733,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 33,
+                    "name": "Tinnum Label",
+                    "type": "",
+                    "x": 357,
+                    "y": 1736,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Tinnum",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 34,
+                    "name": "Osterende Marker",
+                    "type": "",
+                    "x": 969,
+                    "y": 2158,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 35,
+                    "name": "Osterende Marker",
+                    "type": "",
+                    "x": 969,
+                    "y": 2158,
+                    "width": 24,
+                    "height": 24,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "●",
+                        "pixelsize": 18,
+                        "color": "#f2c94c",
+                        "bold": true,
+                        "wrap": false
+                    }
+                },
+                {
+                    "id": 36,
+                    "name": "Osterende Label",
+                    "type": "",
+                    "x": 994,
+                    "y": 2161,
+                    "width": 300,
+                    "height": 40,
+                    "rotation": 0,
+                    "visible": true,
+                    "text": {
+                        "text": "Osterende",
+                        "pixelsize": 20,
+                        "color": "#202020",
+                        "bold": true,
                         "wrap": false
                     }
                 }
@@ -13971,7 +14449,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14005,7 +14483,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14039,7 +14517,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14073,7 +14551,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14107,7 +14585,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14118,7 +14596,7 @@
                 },
                 {
                     "id": 6,
-                    "name": "H\u00f6rnum (Sylt) Wikipedia",
+                    "name": "Hörnum (Sylt) Wikipedia",
                     "type": "area",
                     "class": "area",
                     "x": 33,
@@ -14141,7 +14619,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14175,7 +14653,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14209,7 +14687,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14243,7 +14721,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14277,7 +14755,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14311,7 +14789,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
@@ -14345,7 +14823,7 @@
                         {
                             "name": "openWebsiteTriggerMessage",
                             "type": "string",
-                            "value": "Leertaste dr\u00fccken, um Wikipedia zu \u00f6ffnen"
+                            "value": "Leertaste drücken, um Wikipedia zu öffnen"
                         },
                         {
                             "name": "openWebsiteClosable",
