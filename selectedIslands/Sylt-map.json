@@ -32049,7 +32049,7 @@
             "y": 0,
             "width": 42,
             "height": 107,
-            "visible": true,
+            "visible": false,
             "opacity": 1,
             "type": "objectgroup",
             "objects": [

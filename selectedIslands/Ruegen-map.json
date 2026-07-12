@@ -129018,7 +129018,7 @@
             "y": 0,
             "width": 92,
             "height": 113,
-            "visible": true,
+            "visible": false,
             "opacity": 1,
             "type": "objectgroup",
             "objects": [

@@ -134,7 +134,7 @@ def island(
       objectLayer("places", 5, placesData),
       objectLayer("roads", 6, roads),
 
-      objectLayer("roadLabels", 8, roadLabels, visible=True),
+      objectLayer("roadLabels", 8, roadLabels, visible=False),
 
       objectLayer("placeLabels", 7, places.createPlaceLabels(placesData))
     ]
