@@ -6,6 +6,7 @@ exit="map.json"
 import json
 import roads
 import places
+import roadTiles
 
 osmRoads = []
 
@@ -74,7 +75,13 @@ def island(data, start, placesData=None, roads=None, roadLabels=None):
     roads = []
   if roadLabels is None:
     roadLabels = []
-  
+
+  roadTileset, roadTileData = roadTiles.create_road_tileset(
+     roads,
+     mapWidth,
+     mapHeight
+  )
+
   return {
     "compressionlevel":-1,
     "version":1.4,
@@ -106,13 +113,14 @@ def island(data, start, placesData=None, roads=None, roadLabels=None):
           "value":True
         }]
       }]
-    }],
+    }, roadTileset],
     "layers": [
       # exitLayer("exit", 2, 1, [], exit),
       # linkLayer("link", 3, 1, (), "https:\/\/hlg.github.io\/wamap\/caleidoscope\/index.html"),
       # imageLayer("image", 4, "..\/..\/Downloads\/Ruegen2.png", visible=False), 
       tileLayer("start", 1, start),
       tileLayer("tiles", 2, data),
+      tileLayer("roadTiles", 3, roadTileData),
       objectLayer("floorLayer", 4, []),
       objectLayer("places", 5, placesData),
       objectLayer("roads", 6, roads),
