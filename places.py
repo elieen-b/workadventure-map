@@ -1,3 +1,6 @@
+import urllib.parse
+
+
 def defaultPlaces():
 
   return [
@@ -54,3 +57,62 @@ def createPlaceLabels(places):
     label_id += 1
 
   return labels
+
+
+def createWikipediaAreas(places):
+  areas = []
+  area_id = 1
+
+  for place in places:
+    name = place.get("name", "")
+
+    if not name:
+      continue
+
+    wikipedia_name = urllib.parse.quote(
+      name.replace(" ", "_")
+    )
+
+    wikipedia_url = (
+      "https://de.wikipedia.org/wiki/"
+      + wikipedia_name
+    )
+
+    areas.append({
+      "id": area_id,
+      "name": name + " Wikipedia",
+      "type": "area",
+      "class": "area",
+      "x": place["x"] - 32,
+      "y": place["y"] - 32,
+      "width": 64,
+      "height": 64,
+      "rotation": 0,
+      "visible": True,
+      "properties": [
+        {
+          "name": "openWebsite",
+          "type": "string",
+          "value": wikipedia_url
+        },
+        {
+          "name": "openWebsiteTrigger",
+          "type": "string",
+          "value": "onaction"
+        },
+        {
+          "name": "openWebsiteTriggerMessage",
+          "type": "string",
+          "value": "Leertaste drücken, um Wikipedia zu öffnen"
+        },
+        {
+          "name": "openWebsiteClosable",
+          "type": "bool",
+          "value": True
+        }
+      ]
+    })
+
+    area_id += 1
+
+  return areas
