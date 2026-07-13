@@ -237,8 +237,8 @@ def tileIndex(geoJson, shortIslandName, polygon):
 
   except Exception as e:
      print("OSM roads could not be loaded:", e)
-     roadsData =  []
-     roadLabels =  []
+     roadsData = []
+     roadLabels = []    
      
   roadTilesFile = shortIslandName + "-roads-tileset.png"
 
