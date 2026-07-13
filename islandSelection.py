@@ -1,5 +1,5 @@
 from tile import jsonFromPolygon, jsonFromFile, multiPolyCoords, createMap, scaleFor, createTileIndex
-import os, math, json, wamap, errno
+import os, math, json, wamap, errno, argparse, shutil
 import urllib.request
 import urllib.parse
 import roads
@@ -82,16 +82,46 @@ def downloadOriginal(name, polygon):
         os.makedirs("selectedIslands")
       except OSError as exc:
         if exc.errno != errno.EEXIST:
-          raise 
+          raise
+
+    original_file = (
+      "selectedIslands/"
+      + name.replace(" ", "")
+      + "_original.json"
+    )
+
+    if os.path.isfile(original_file):
+      print("Vorhandene Originaldatei wird verwendet:", original_file)
+      return jsonFromFile(original_file)
+
     geoJson = jsonFromPolygon(polygon, params=None)
-    with open("selectedIslands/"+name.replace(" ","")+"_original.json", "w") as geoJsonFile:
-      json.dump(geoJson, geoJsonFile) 
+
+    with open(original_file, "w") as geoJsonFile:
+      json.dump(geoJson, geoJsonFile)
+
     return geoJson
 
 def downloadSimplified(geoJson, name, polygon):
-    ext = latLongExtension(geoJson)/750
-    geoJsonSimplified = jsonFromPolygon(polygon, params=(0.,ext,ext))
-    with open("selectedIslands/"+name.replace(" ","")+"_simplified.json", "w") as geoJsonFile:
+    simplified_file = (
+      "selectedIslands/"
+      + name.replace(" ", "")
+      + "_simplified.json"
+    )
+
+    if os.path.isfile(simplified_file):
+      print(
+        "Vorhandene vereinfachte Datei wird verwendet:",
+        simplified_file
+      )
+      return
+
+    ext = latLongExtension(geoJson) / 750
+    geoJsonSimplified = jsonFromPolygon(
+      polygon,
+      params=(0., ext, ext)
+    )
+
+    with open(simplified_file, "w") as geoJsonFile:
       json.dump(geoJsonSimplified, geoJsonFile) 
 
 def latLongExtension(geoJson):
@@ -264,9 +294,92 @@ def islandIndex():
       wiki='https://en.wikipedia.org/wiki/'+island.name
     ))
 
+def generateIsland(name, zoom, polygon, output=None):
+  selectedIsland = Island(name, zoom, polygon)
+  previousIslands = list(islands)
+
+  try:
+    islands[:] = [selectedIsland]
+
+    downloadList()
+    readAndMap(tileIndex)
+
+    generatedFile = (
+      "selectedIslands/"
+      + name.replace(" ", "")
+      + "-map.json"
+    )
+
+    if output:
+      outputDirectory = os.path.dirname(output)
+
+      if outputDirectory:
+        os.makedirs(outputDirectory, exist_ok=True)
+
+      if os.path.abspath(generatedFile) != os.path.abspath(output):
+        shutil.copyfile(generatedFile, output)
+
+      return output
+
+    return generatedFile
+
+  finally:
+    islands[:] = previousIslands
+
+
 if __name__ == "__main__":
-  downloadList()
-  readAndMap(tileIndex)
-  # readAndMap(image)
-  # downloadSimplifiedList()
- 
+  parser = argparse.ArgumentParser(
+    description="Erzeugt WorkAdventure-Karten aus OSM-Inselrelationen."
+  )
+
+  parser.add_argument(
+    "--polygon",
+    type=int,
+    help="ID der OSM-Inselrelation"
+  )
+
+  parser.add_argument(
+    "--name",
+    help="Name der Insel, zum Beispiel Ruegen"
+  )
+
+  parser.add_argument(
+    "--zoom",
+    type=int,
+    help="Zoomstufe der Insel, zum Beispiel 10"
+  )
+
+  parser.add_argument(
+    "--output",
+    help="Optionaler Dateiname oder Pfad der erzeugten Karte"
+  )
+
+  args = parser.parse_args()
+
+  parameters = [
+    args.polygon is not None,
+    args.name is not None,
+    args.zoom is not None
+  ]
+
+  if any(parameters) and not all(parameters):
+    parser.error(
+      "--polygon, --name und --zoom müssen gemeinsam angegeben werden."
+    )
+
+  if all(parameters):
+    result = generateIsland(
+      args.name,
+      args.zoom,
+      args.polygon,
+      args.output
+    )
+
+    print("Karte erzeugt:", result)
+
+  else:
+    print("Keine einzelne Insel angegeben.")
+    print("Alle konfigurierten Inseln werden erzeugt.")
+
+    downloadList()
+    readAndMap(tileIndex)
