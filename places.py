@@ -68,8 +68,8 @@ def createPlaceLabels(places):
 
     if place_type == "city":
       minimum_distance = 120
-      pixel_size = 30
-      marker_size = 28
+      pixel_size = 34
+      marker_size = 32
       marker_color = "#d7191c"
       text_color = "#9b111e"
       offset_x = 25
@@ -77,8 +77,8 @@ def createPlaceLabels(places):
 
     elif place_type == "town":
       minimum_distance = 95
-      pixel_size = 26
-      marker_size = 24
+      pixel_size = 30
+      marker_size = 28
       marker_color = "#ff8c00"
       text_color = "#b34700"
       offset_x = 22
@@ -86,8 +86,8 @@ def createPlaceLabels(places):
 
     elif place_type == "village":
       minimum_distance = 70
-      pixel_size = 22
-      marker_size = 20
+      pixel_size = 25
+      marker_size = 23
       marker_color = "#ffd43b"
       text_color = "#222222"
       offset_x = 20
@@ -95,8 +95,8 @@ def createPlaceLabels(places):
 
     elif place_type == "suburb":
       minimum_distance = 55
-      pixel_size = 18
-      marker_size = 16
+      pixel_size = 21
+      marker_size = 19
       marker_color = "#7b61ff"
       text_color = "#3f2f7f"
       offset_x = 17
@@ -104,8 +104,8 @@ def createPlaceLabels(places):
 
     else:
       minimum_distance = 45
-      pixel_size = 16
-      marker_size = 13
+      pixel_size = 18
+      marker_size = 15
       marker_color = "#2ca25f"
       text_color = "#1f5132"
       offset_x = 15

@@ -129026,15 +129026,15 @@
                     "id": 1,
                     "name": "Bergen auf Rügen Marker",
                     "type": "town",
-                    "x": 1414.0,
-                    "y": 2073.0,
-                    "width": 24,
-                    "height": 24,
+                    "x": 1412.0,
+                    "y": 2071.0,
+                    "width": 28,
+                    "height": 28,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 24,
+                        "pixelsize": 28,
                         "color": "#ff8c00",
                         "bold": true,
                         "wrap": false
@@ -129052,7 +129052,7 @@
                     "visible": true,
                     "text": {
                         "text": "Bergen auf Rügen",
-                        "pixelsize": 26,
+                        "pixelsize": 30,
                         "color": "#b34700",
                         "bold": true,
                         "wrap": false
@@ -129062,15 +129062,15 @@
                     "id": 3,
                     "name": "Putbus Marker",
                     "type": "town",
-                    "x": 1614.0,
-                    "y": 2570.0,
-                    "width": 24,
-                    "height": 24,
+                    "x": 1612.0,
+                    "y": 2568.0,
+                    "width": 28,
+                    "height": 28,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 24,
+                        "pixelsize": 28,
                         "color": "#ff8c00",
                         "bold": true,
                         "wrap": false
@@ -129088,7 +129088,7 @@
                     "visible": true,
                     "text": {
                         "text": "Putbus",
-                        "pixelsize": 26,
+                        "pixelsize": 30,
                         "color": "#b34700",
                         "bold": true,
                         "wrap": false
@@ -129098,15 +129098,15 @@
                     "id": 5,
                     "name": "Garz/Rügen Marker",
                     "type": "town",
-                    "x": 1057.0,
-                    "y": 2854.0,
-                    "width": 24,
-                    "height": 24,
+                    "x": 1055.0,
+                    "y": 2852.0,
+                    "width": 28,
+                    "height": 28,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 24,
+                        "pixelsize": 28,
                         "color": "#ff8c00",
                         "bold": true,
                         "wrap": false
@@ -129124,7 +129124,7 @@
                     "visible": true,
                     "text": {
                         "text": "Garz/Rügen",
-                        "pixelsize": 26,
+                        "pixelsize": 30,
                         "color": "#b34700",
                         "bold": true,
                         "wrap": false
@@ -129134,15 +129134,15 @@
                     "id": 7,
                     "name": "Sassnitz Marker",
                     "type": "town",
-                    "x": 2378.0,
-                    "y": 1297.0,
-                    "width": 24,
-                    "height": 24,
+                    "x": 2376.0,
+                    "y": 1295.0,
+                    "width": 28,
+                    "height": 28,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 24,
+                        "pixelsize": 28,
                         "color": "#ff8c00",
                         "bold": true,
                         "wrap": false
@@ -129160,7 +129160,7 @@
                     "visible": true,
                     "text": {
                         "text": "Sassnitz",
-                        "pixelsize": 26,
+                        "pixelsize": 30,
                         "color": "#b34700",
                         "bold": true,
                         "wrap": false
@@ -129170,15 +129170,15 @@
                     "id": 9,
                     "name": "Samtens Marker",
                     "type": "village",
-                    "x": 795.0,
-                    "y": 2562.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 793.5,
+                    "y": 2560.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129196,7 +129196,7 @@
                     "visible": true,
                     "text": {
                         "text": "Samtens",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129206,15 +129206,15 @@
                     "id": 11,
                     "name": "Kasnevitz Marker",
                     "type": "village",
-                    "x": 1380.0,
-                    "y": 2663.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1378.5,
+                    "y": 2661.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129232,7 +129232,7 @@
                     "visible": true,
                     "text": {
                         "text": "Kasnevitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129242,15 +129242,15 @@
                     "id": 13,
                     "name": "Dreschvitz Marker",
                     "type": "village",
-                    "x": 802.0,
-                    "y": 2183.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 800.5,
+                    "y": 2181.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129268,7 +129268,7 @@
                     "visible": true,
                     "text": {
                         "text": "Dreschvitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129278,15 +129278,15 @@
                     "id": 15,
                     "name": "Putgarten Marker",
                     "type": "village",
-                    "x": 1350.0,
-                    "y": 82.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1348.5,
+                    "y": 80.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129304,7 +129304,7 @@
                     "visible": true,
                     "text": {
                         "text": "Putgarten",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129314,15 +129314,15 @@
                     "id": 17,
                     "name": "Lancken Marker",
                     "type": "village",
-                    "x": 632.0,
-                    "y": 260.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 630.5,
+                    "y": 258.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129340,7 +129340,7 @@
                     "visible": true,
                     "text": {
                         "text": "Lancken",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129350,15 +129350,15 @@
                     "id": 19,
                     "name": "Breege Marker",
                     "type": "village",
-                    "x": 1074.0,
-                    "y": 547.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1072.5,
+                    "y": 545.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129376,7 +129376,7 @@
                     "visible": true,
                     "text": {
                         "text": "Breege",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129386,15 +129386,15 @@
                     "id": 21,
                     "name": "Wiek Marker",
                     "type": "village",
-                    "x": 782.0,
-                    "y": 483.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 780.5,
+                    "y": 481.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129412,7 +129412,7 @@
                     "visible": true,
                     "text": {
                         "text": "Wiek",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129422,15 +129422,15 @@
                     "id": 23,
                     "name": "Dranske Marker",
                     "type": "village",
-                    "x": 510.0,
-                    "y": 411.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 508.5,
+                    "y": 409.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129448,7 +129448,7 @@
                     "visible": true,
                     "text": {
                         "text": "Dranske",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129458,15 +129458,15 @@
                     "id": 25,
                     "name": "Altenkirchen Marker",
                     "type": "village",
-                    "x": 1025.0,
-                    "y": 369.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1023.5,
+                    "y": 367.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129484,7 +129484,7 @@
                     "visible": true,
                     "text": {
                         "text": "Altenkirchen",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129494,15 +129494,15 @@
                     "id": 27,
                     "name": "Juliusruh Marker",
                     "type": "village",
-                    "x": 1170.0,
-                    "y": 496.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1168.5,
+                    "y": 494.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129520,7 +129520,7 @@
                     "visible": true,
                     "text": {
                         "text": "Juliusruh",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129530,15 +129530,15 @@
                     "id": 29,
                     "name": "Bobbin Marker",
                     "type": "village",
-                    "x": 1843.0,
-                    "y": 1012.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1841.5,
+                    "y": 1010.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129556,7 +129556,7 @@
                     "visible": true,
                     "text": {
                         "text": "Bobbin",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129566,15 +129566,15 @@
                     "id": 31,
                     "name": "Polchow Marker",
                     "type": "village",
-                    "x": 1783.0,
-                    "y": 1098.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1781.5,
+                    "y": 1096.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129592,7 +129592,7 @@
                     "visible": true,
                     "text": {
                         "text": "Polchow",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129602,15 +129602,15 @@
                     "id": 33,
                     "name": "Nipmerow Marker",
                     "type": "village",
-                    "x": 2214.0,
-                    "y": 885.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2212.5,
+                    "y": 883.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129628,7 +129628,7 @@
                     "visible": true,
                     "text": {
                         "text": "Nipmerow",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129638,15 +129638,15 @@
                     "id": 35,
                     "name": "Sagard Marker",
                     "type": "village",
-                    "x": 1983.0,
-                    "y": 1225.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1981.5,
+                    "y": 1223.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129664,7 +129664,7 @@
                     "visible": true,
                     "text": {
                         "text": "Sagard",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129674,15 +129674,15 @@
                     "id": 37,
                     "name": "Sellin Marker",
                     "type": "village",
-                    "x": 2606.0,
-                    "y": 2389.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2604.5,
+                    "y": 2387.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129700,7 +129700,7 @@
                     "visible": true,
                     "text": {
                         "text": "Sellin",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129710,15 +129710,15 @@
                     "id": 39,
                     "name": "Thiessow Marker",
                     "type": "village",
-                    "x": 2698.0,
-                    "y": 3177.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2696.5,
+                    "y": 3175.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129736,7 +129736,7 @@
                     "visible": true,
                     "text": {
                         "text": "Thiessow",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129746,15 +129746,15 @@
                     "id": 41,
                     "name": "Lancken-Granitz Marker",
                     "type": "village",
-                    "x": 2326.0,
-                    "y": 2469.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2324.5,
+                    "y": 2467.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129772,7 +129772,7 @@
                     "visible": true,
                     "text": {
                         "text": "Lancken-Granitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129782,15 +129782,15 @@
                     "id": 43,
                     "name": "Rappin Marker",
                     "type": "village",
-                    "x": 1206.0,
-                    "y": 1366.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1204.5,
+                    "y": 1364.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129808,7 +129808,7 @@
                     "visible": true,
                     "text": {
                         "text": "Rappin",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129818,15 +129818,15 @@
                     "id": 45,
                     "name": "Rambin Marker",
                     "type": "village",
-                    "x": 387.0,
-                    "y": 2558.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 385.5,
+                    "y": 2556.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129844,7 +129844,7 @@
                     "visible": true,
                     "text": {
                         "text": "Rambin",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129854,15 +129854,15 @@
                     "id": 47,
                     "name": "Schaprode Marker",
                     "type": "village",
-                    "x": 226.0,
-                    "y": 1323.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 224.5,
+                    "y": 1321.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129880,7 +129880,7 @@
                     "visible": true,
                     "text": {
                         "text": "Schaprode",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129890,15 +129890,15 @@
                     "id": 49,
                     "name": "Lietzow Marker",
                     "type": "village",
-                    "x": 1760.0,
-                    "y": 1559.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1758.5,
+                    "y": 1557.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129916,7 +129916,7 @@
                     "visible": true,
                     "text": {
                         "text": "Lietzow",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129926,15 +129926,15 @@
                     "id": 51,
                     "name": "Trent Marker",
                     "type": "village",
-                    "x": 628.0,
-                    "y": 1262.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 626.5,
+                    "y": 1260.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129952,7 +129952,7 @@
                     "visible": true,
                     "text": {
                         "text": "Trent",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129962,15 +129962,15 @@
                     "id": 53,
                     "name": "Ostseebad Baabe Marker",
                     "type": "village",
-                    "x": 2651.0,
-                    "y": 2520.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2649.5,
+                    "y": 2518.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -129988,7 +129988,7 @@
                     "visible": true,
                     "text": {
                         "text": "Ostseebad Baabe",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -129998,15 +129998,15 @@
                     "id": 55,
                     "name": "Poseritz Marker",
                     "type": "village",
-                    "x": 712.0,
-                    "y": 2992.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 710.5,
+                    "y": 2990.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130024,7 +130024,7 @@
                     "visible": true,
                     "text": {
                         "text": "Poseritz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130034,15 +130034,15 @@
                     "id": 57,
                     "name": "Neuenkirchen Marker",
                     "type": "village",
-                    "x": 977.0,
-                    "y": 1070.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 975.5,
+                    "y": 1068.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130060,7 +130060,7 @@
                     "visible": true,
                     "text": {
                         "text": "Neuenkirchen",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130070,15 +130070,15 @@
                     "id": 59,
                     "name": "Sehlen Marker",
                     "type": "village",
-                    "x": 1217.0,
-                    "y": 2378.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1215.5,
+                    "y": 2376.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130096,7 +130096,7 @@
                     "visible": true,
                     "text": {
                         "text": "Sehlen",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130106,15 +130106,15 @@
                     "id": 61,
                     "name": "Göhren Marker",
                     "type": "village",
-                    "x": 2834.0,
-                    "y": 2672.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2832.5,
+                    "y": 2670.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130132,7 +130132,7 @@
                     "visible": true,
                     "text": {
                         "text": "Göhren",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130142,15 +130142,15 @@
                     "id": 63,
                     "name": "Gager Marker",
                     "type": "village",
-                    "x": 2556.0,
-                    "y": 2919.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2554.5,
+                    "y": 2917.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130168,7 +130168,7 @@
                     "visible": true,
                     "text": {
                         "text": "Gager",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130178,15 +130178,15 @@
                     "id": 65,
                     "name": "Zirkow Marker",
                     "type": "village",
-                    "x": 1919.0,
-                    "y": 2290.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1917.5,
+                    "y": 2288.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130204,7 +130204,7 @@
                     "visible": true,
                     "text": {
                         "text": "Zirkow",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130214,15 +130214,15 @@
                     "id": 67,
                     "name": "Ralswiek Marker",
                     "type": "village",
-                    "x": 1489.0,
-                    "y": 1636.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1487.5,
+                    "y": 1634.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130240,7 +130240,7 @@
                     "visible": true,
                     "text": {
                         "text": "Ralswiek",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130250,15 +130250,15 @@
                     "id": 69,
                     "name": "Lohme Marker",
                     "type": "village",
-                    "x": 2230.0,
-                    "y": 783.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2228.5,
+                    "y": 781.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130276,7 +130276,7 @@
                     "visible": true,
                     "text": {
                         "text": "Lohme",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130286,15 +130286,15 @@
                     "id": 71,
                     "name": "Patzig Marker",
                     "type": "village",
-                    "x": 1259.0,
-                    "y": 1694.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1257.5,
+                    "y": 1692.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130312,7 +130312,7 @@
                     "visible": true,
                     "text": {
                         "text": "Patzig",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130322,15 +130322,15 @@
                     "id": 73,
                     "name": "Parchtitz Marker",
                     "type": "village",
-                    "x": 1273.0,
-                    "y": 1914.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1271.5,
+                    "y": 1912.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130348,7 +130348,7 @@
                     "visible": true,
                     "text": {
                         "text": "Parchtitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130358,15 +130358,15 @@
                     "id": 75,
                     "name": "Ostseebad Binz Marker",
                     "type": "village",
-                    "x": 2215.0,
-                    "y": 2202.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2213.5,
+                    "y": 2200.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130384,7 +130384,7 @@
                     "visible": true,
                     "text": {
                         "text": "Ostseebad Binz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130394,15 +130394,15 @@
                     "id": 77,
                     "name": "Gustow Marker",
                     "type": "village",
-                    "x": 431.0,
-                    "y": 2969.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 429.5,
+                    "y": 2967.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130420,7 +130420,7 @@
                     "visible": true,
                     "text": {
                         "text": "Gustow",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130430,15 +130430,15 @@
                     "id": 79,
                     "name": "Middelhagen Marker",
                     "type": "village",
-                    "x": 2653.0,
-                    "y": 2755.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2651.5,
+                    "y": 2753.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130456,7 +130456,7 @@
                     "visible": true,
                     "text": {
                         "text": "Middelhagen",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130466,15 +130466,15 @@
                     "id": 81,
                     "name": "Klein Zicker Marker",
                     "type": "village",
-                    "x": 2591.0,
-                    "y": 3133.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2589.5,
+                    "y": 3131.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130492,7 +130492,7 @@
                     "visible": true,
                     "text": {
                         "text": "Klein Zicker",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130502,15 +130502,15 @@
                     "id": 83,
                     "name": "Lauterbach Marker",
                     "type": "village",
-                    "x": 1730.0,
-                    "y": 2650.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1728.5,
+                    "y": 2648.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130528,7 +130528,7 @@
                     "visible": true,
                     "text": {
                         "text": "Lauterbach",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130538,15 +130538,15 @@
                     "id": 85,
                     "name": "Altefähr Marker",
                     "type": "village",
-                    "x": 43.0,
-                    "y": 2755.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 41.5,
+                    "y": 2753.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130564,7 +130564,7 @@
                     "visible": true,
                     "text": {
                         "text": "Altefähr",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130574,15 +130574,15 @@
                     "id": 87,
                     "name": "Vitt Marker",
                     "type": "village",
-                    "x": 1417.0,
-                    "y": 135.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1415.5,
+                    "y": 133.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130600,7 +130600,7 @@
                     "visible": true,
                     "text": {
                         "text": "Vitt",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130610,15 +130610,15 @@
                     "id": 89,
                     "name": "Neuendorf Marker",
                     "type": "village",
-                    "x": 1657.0,
-                    "y": 2710.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1655.5,
+                    "y": 2708.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130636,7 +130636,7 @@
                     "visible": true,
                     "text": {
                         "text": "Neuendorf",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130646,15 +130646,15 @@
                     "id": 91,
                     "name": "Jarnitz Marker",
                     "type": "village",
-                    "x": 1448.0,
-                    "y": 1725.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1446.5,
+                    "y": 1723.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130672,7 +130672,7 @@
                     "visible": true,
                     "text": {
                         "text": "Jarnitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130682,15 +130682,15 @@
                     "id": 93,
                     "name": "Kaiseritz Marker",
                     "type": "village",
-                    "x": 1630.0,
-                    "y": 2196.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1628.5,
+                    "y": 2194.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130708,7 +130708,7 @@
                     "visible": true,
                     "text": {
                         "text": "Kaiseritz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130718,15 +130718,15 @@
                     "id": 95,
                     "name": "Güstelitz Marker",
                     "type": "village",
-                    "x": 1495.0,
-                    "y": 2538.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1493.5,
+                    "y": 2536.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130744,7 +130744,7 @@
                     "visible": true,
                     "text": {
                         "text": "Güstelitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130754,15 +130754,15 @@
                     "id": 97,
                     "name": "Pantow Marker",
                     "type": "village",
-                    "x": 2065.0,
-                    "y": 2358.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2063.5,
+                    "y": 2356.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130780,7 +130780,7 @@
                     "visible": true,
                     "text": {
                         "text": "Pantow",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130790,15 +130790,15 @@
                     "id": 99,
                     "name": "Nistelitz Marker",
                     "type": "village",
-                    "x": 2033.0,
-                    "y": 2478.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2031.5,
+                    "y": 2476.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130816,7 +130816,7 @@
                     "visible": true,
                     "text": {
                         "text": "Nistelitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130826,15 +130826,15 @@
                     "id": 101,
                     "name": "Lobbe Marker",
                     "type": "village",
-                    "x": 2720.0,
-                    "y": 2845.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2718.5,
+                    "y": 2843.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130852,7 +130852,7 @@
                     "visible": true,
                     "text": {
                         "text": "Lobbe",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130862,15 +130862,15 @@
                     "id": 103,
                     "name": "Neu Mukran Marker",
                     "type": "village",
-                    "x": 2067.0,
-                    "y": 1572.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2065.5,
+                    "y": 1570.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130888,7 +130888,7 @@
                     "visible": true,
                     "text": {
                         "text": "Neu Mukran",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130898,15 +130898,15 @@
                     "id": 105,
                     "name": "Tilzow Marker",
                     "type": "village",
-                    "x": 1353.0,
-                    "y": 2291.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1351.5,
+                    "y": 2289.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130924,7 +130924,7 @@
                     "visible": true,
                     "text": {
                         "text": "Tilzow",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130934,15 +130934,15 @@
                     "id": 107,
                     "name": "Neu Reddevitz Marker",
                     "type": "village",
-                    "x": 2241.0,
-                    "y": 2712.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2239.5,
+                    "y": 2710.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130960,7 +130960,7 @@
                     "visible": true,
                     "text": {
                         "text": "Neu Reddevitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -130970,15 +130970,15 @@
                     "id": 109,
                     "name": "Starrvitz Marker",
                     "type": "village",
-                    "x": 756.0,
-                    "y": 260.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 754.5,
+                    "y": 258.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -130996,7 +130996,7 @@
                     "visible": true,
                     "text": {
                         "text": "Starrvitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -131006,15 +131006,15 @@
                     "id": 111,
                     "name": "Gingst Marker",
                     "type": "village",
-                    "x": 643.0,
-                    "y": 1768.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 641.5,
+                    "y": 1766.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -131032,7 +131032,7 @@
                     "visible": true,
                     "text": {
                         "text": "Gingst",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -131042,15 +131042,15 @@
                     "id": 113,
                     "name": "Alt Reddevitz Marker",
                     "type": "village",
-                    "x": 2516.0,
-                    "y": 2744.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 2514.5,
+                    "y": 2742.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -131068,7 +131068,7 @@
                     "visible": true,
                     "text": {
                         "text": "Alt Reddevitz",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -131078,15 +131078,15 @@
                     "id": 115,
                     "name": "Glowe Marker",
                     "type": "village",
-                    "x": 1600.0,
-                    "y": 885.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1598.5,
+                    "y": 883.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -131104,7 +131104,7 @@
                     "visible": true,
                     "text": {
                         "text": "Glowe",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -131114,15 +131114,15 @@
                     "id": 117,
                     "name": "Gademow Marker",
                     "type": "village",
-                    "x": 1264.0,
-                    "y": 2002.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 1262.5,
+                    "y": 2000.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -131140,7 +131140,7 @@
                     "visible": true,
                     "text": {
                         "text": "Gademow",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false

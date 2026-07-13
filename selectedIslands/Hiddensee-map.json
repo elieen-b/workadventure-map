@@ -10857,15 +10857,15 @@
                     "id": 1,
                     "name": "Vitte Marker",
                     "type": "village",
-                    "x": 543.0,
-                    "y": 754.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 541.5,
+                    "y": 752.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -10883,7 +10883,7 @@
                     "visible": true,
                     "text": {
                         "text": "Vitte",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -10893,15 +10893,15 @@
                     "id": 3,
                     "name": "Neuendorf Marker",
                     "type": "village",
-                    "x": 331.0,
-                    "y": 1654.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 329.5,
+                    "y": 1652.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -10919,7 +10919,7 @@
                     "visible": true,
                     "text": {
                         "text": "Neuendorf",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -10929,15 +10929,15 @@
                     "id": 5,
                     "name": "Grieben Marker",
                     "type": "village",
-                    "x": 820.0,
-                    "y": 259.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 818.5,
+                    "y": 257.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -10955,7 +10955,7 @@
                     "visible": true,
                     "text": {
                         "text": "Grieben",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -10965,15 +10965,15 @@
                     "id": 7,
                     "name": "Kloster Marker",
                     "type": "village",
-                    "x": 578.0,
-                    "y": 374.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 576.5,
+                    "y": 372.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -10991,7 +10991,7 @@
                     "visible": true,
                     "text": {
                         "text": "Kloster",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -11001,15 +11001,15 @@
                     "id": 9,
                     "name": "Seebad Insel Hiddensee Marker",
                     "type": "village",
-                    "x": 396.0,
-                    "y": 1466.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 394.5,
+                    "y": 1464.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -11027,7 +11027,7 @@
                     "visible": true,
                     "text": {
                         "text": "Seebad Insel Hiddensee",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false

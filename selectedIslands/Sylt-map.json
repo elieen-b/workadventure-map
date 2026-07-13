@@ -13767,15 +13767,15 @@
                     "id": 1,
                     "name": "Westerland Marker",
                     "type": "town",
-                    "x": 171.0,
-                    "y": 1655.0,
-                    "width": 24,
-                    "height": 24,
+                    "x": 169.0,
+                    "y": 1653.0,
+                    "width": 28,
+                    "height": 28,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 24,
+                        "pixelsize": 28,
                         "color": "#ff8c00",
                         "bold": true,
                         "wrap": false
@@ -13793,7 +13793,7 @@
                     "visible": true,
                     "text": {
                         "text": "Westerland",
-                        "pixelsize": 26,
+                        "pixelsize": 30,
                         "color": "#b34700",
                         "bold": true,
                         "wrap": false
@@ -13803,15 +13803,15 @@
                     "id": 3,
                     "name": "List auf Sylt Marker",
                     "type": "village",
-                    "x": 988.0,
-                    "y": 445.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 986.5,
+                    "y": 443.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -13829,7 +13829,7 @@
                     "visible": true,
                     "text": {
                         "text": "List auf Sylt",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -13839,15 +13839,15 @@
                     "id": 5,
                     "name": "Wenningstedt Marker",
                     "type": "village",
-                    "x": 262.0,
-                    "y": 1335.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 260.5,
+                    "y": 1333.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -13865,7 +13865,7 @@
                     "visible": true,
                     "text": {
                         "text": "Wenningstedt",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -13875,15 +13875,15 @@
                     "id": 7,
                     "name": "Rantum Marker",
                     "type": "village",
-                    "x": 83.0,
-                    "y": 2299.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 81.5,
+                    "y": 2297.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -13901,7 +13901,7 @@
                     "visible": true,
                     "text": {
                         "text": "Rantum",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -13911,15 +13911,15 @@
                     "id": 9,
                     "name": "Kampen (Sylt) Marker",
                     "type": "village",
-                    "x": 407.0,
-                    "y": 1139.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 405.5,
+                    "y": 1137.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -13937,7 +13937,7 @@
                     "visible": true,
                     "text": {
                         "text": "Kampen (Sylt)",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -13947,15 +13947,15 @@
                     "id": 11,
                     "name": "Hörnum (Sylt) Marker",
                     "type": "village",
-                    "x": 55.0,
-                    "y": 3279.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 53.5,
+                    "y": 3277.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -13973,7 +13973,7 @@
                     "visible": true,
                     "text": {
                         "text": "Hörnum (Sylt)",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -13983,15 +13983,15 @@
                     "id": 13,
                     "name": "Archsum Marker",
                     "type": "village",
-                    "x": 735.0,
-                    "y": 2017.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 733.5,
+                    "y": 2015.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -14009,7 +14009,7 @@
                     "visible": true,
                     "text": {
                         "text": "Archsum",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -14019,15 +14019,15 @@
                     "id": 15,
                     "name": "Morsum Marker",
                     "type": "village",
-                    "x": 950.0,
-                    "y": 2025.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 948.5,
+                    "y": 2023.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -14045,7 +14045,7 @@
                     "visible": true,
                     "text": {
                         "text": "Morsum",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -14055,15 +14055,15 @@
                     "id": 17,
                     "name": "Keitum Marker",
                     "type": "village",
-                    "x": 569.0,
-                    "y": 1782.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 567.5,
+                    "y": 1780.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -14081,7 +14081,7 @@
                     "visible": true,
                     "text": {
                         "text": "Keitum",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -14091,15 +14091,15 @@
                     "id": 19,
                     "name": "Braderup Marker",
                     "type": "village",
-                    "x": 453.0,
-                    "y": 1379.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 451.5,
+                    "y": 1377.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -14117,7 +14117,7 @@
                     "visible": true,
                     "text": {
                         "text": "Braderup",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -14127,15 +14127,15 @@
                     "id": 21,
                     "name": "Tinnum Marker",
                     "type": "village",
-                    "x": 329.0,
-                    "y": 1738.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 327.5,
+                    "y": 1736.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -14153,7 +14153,7 @@
                     "visible": true,
                     "text": {
                         "text": "Tinnum",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false
@@ -14163,15 +14163,15 @@
                     "id": 23,
                     "name": "Osterende Marker",
                     "type": "village",
-                    "x": 966.0,
-                    "y": 2163.0,
-                    "width": 20,
-                    "height": 20,
+                    "x": 964.5,
+                    "y": 2161.5,
+                    "width": 23,
+                    "height": 23,
                     "rotation": 0,
                     "visible": true,
                     "text": {
                         "text": "●",
-                        "pixelsize": 20,
+                        "pixelsize": 23,
                         "color": "#ffd43b",
                         "bold": true,
                         "wrap": false
@@ -14189,7 +14189,7 @@
                     "visible": true,
                     "text": {
                         "text": "Osterende",
-                        "pixelsize": 22,
+                        "pixelsize": 25,
                         "color": "#222222",
                         "bold": true,
                         "wrap": false

@@ -45,28 +45,28 @@ def create_road_tileset(
 
         road_type = road.get("type", "road")
 
-        outer_width = 12
-        inner_width = 7
+        outer_width = 14
+        inner_width = 8
         inner_color = "#f7f3e8"
 
         if road_type in ("motorway", "trunk"):
-            outer_width = 18
-            inner_width = 12
+            outer_width = 20
+            inner_width = 14
             inner_color = "#f6b26b"
 
         elif road_type == "primary":
-            outer_width = 16
-            inner_width = 10
+            outer_width = 18
+            inner_width = 12
             inner_color = "#ffd966"
 
         elif road_type == "secondary":
-            outer_width = 14
-            inner_width = 8
+            outer_width = 16
+            inner_width = 10
             inner_color = "#fff2cc"
 
         elif road_type == "tertiary":
-            outer_width = 12
-            inner_width = 7
+            outer_width = 14
+            inner_width = 8
             inner_color = "#f7f3e8"
 
         # Dunkler Straßenrand
